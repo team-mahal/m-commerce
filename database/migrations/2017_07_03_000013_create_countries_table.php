@@ -18,6 +18,7 @@ class CreateCountriesTable extends Migration
             $table->increments('id');
             $table->string('code', 50)->nullable()->default(null);
             $table->string('name', 250)->nullable()->default(null);
+            $table->timestamps();
         });
     }
 

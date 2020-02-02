@@ -18,6 +18,7 @@ class CreateOrderStatusesTable extends Migration
             $table->increments('id');
             $table->string('name', 50)->nullable()->default(null);
             $table->integer('notification')->default(1);
+            $table->timestamps();
         });
     }
 

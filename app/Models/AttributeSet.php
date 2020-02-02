@@ -17,7 +17,6 @@ class AttributeSet extends Model
 
     protected $table = 'attribute_sets';
     //protected $primaryKey = 'id';
-    public $timestamps = false;
     // protected $guarded = ['id'];
     protected $fillable = ['name'];
     // protected $hidden = [];

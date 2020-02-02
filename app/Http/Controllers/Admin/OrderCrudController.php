@@ -69,6 +69,19 @@ class OrderCrudController extends CrudController
         ]);
 
 
+        // daterange filter
+        $this->crud->addFilter([
+          'type'  => 'date_range',
+          'name'  => 'from_to',
+          'label' => 'Date range'
+        ],
+          false,
+          function ($value) { // if the filter is active, apply these constraints
+              $dates = json_decode($value);
+              $this->crud->addClause('where', 'created_at', '>=', $dates->from);
+              $this->crud->addClause('where', 'created_at', '<=', $dates->to . ' 23:59:59');
+          });
+
         /*
         |--------------------------------------------------------------------------
         | PERMISSIONS

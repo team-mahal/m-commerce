@@ -76,6 +76,39 @@ class ProductCrudController extends CrudController
             ]
             ]);
 
+
+        /*
+        |--------------------------------------------------------------------------
+        | FILTER
+        |--------------------------------------------------------------------------
+        */
+        // daterange filter
+        $this->crud->addFilter([
+          'type'  => 'date_range',
+          'name'  => 'from_to',
+          'label' => 'Date range'
+        ],
+          false,
+          function ($value) { // if the filter is active, apply these constraints
+              $dates = json_decode($value);
+              $this->crud->addClause('where', 'created_at', '>=', $dates->from);
+              $this->crud->addClause('where', 'created_at', '<=', $dates->to . ' 23:59:59');
+          });
+
+        // // dropdown filter
+        // $this->crud->addFilter([
+        //   'name' => 'status',
+        //   'type' => 'dropdown',
+        //   'label'=> 'Status'
+        // ], [
+        //   1 => 'In stock',
+        //   2 => 'In provider stock',
+        //   3 => 'Available upon ordering',
+        //   4 => 'Not available',
+        // ], function($value) { // if the filter is active
+        //   $this->crud->addClause('where', 'status', $value);
+        // });
+
         /*
         |--------------------------------------------------------------------------
         | PERMISSIONS

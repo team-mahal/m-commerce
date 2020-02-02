@@ -17,6 +17,7 @@ class CreateAttributeSetsTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('name', 45)->nullable()->default(null);
+            $table->timestamps();
         });
     }
 

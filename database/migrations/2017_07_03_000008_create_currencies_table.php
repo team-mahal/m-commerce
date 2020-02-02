@@ -20,6 +20,7 @@ class CreateCurrenciesTable extends Migration
             $table->string('iso', 45)->nullable()->default(null);
             $table->string('value', 45)->nullable()->default(null);
             $table->tinyInteger('default')->default(0);
+            $table->timestamps();
         });
     }
 

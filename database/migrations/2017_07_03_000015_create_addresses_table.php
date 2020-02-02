@@ -27,7 +27,6 @@ class CreateAddressesTable extends Migration
             $table->string('phone', 50)->nullable()->default(null);
             $table->string('mobile_phone', 50)->nullable()->default(null);
             $table->mediumText('comment')->nullable()->default(null);
-            $table->nullableTimestamps();
 
 
             $table->foreign('country_id')
@@ -39,6 +38,7 @@ class CreateAddressesTable extends Migration
                 ->references('id')->on('users')
                 ->onDelete('no action')
                 ->onUpdate('no action');
+            $table->timestamps();
         });
     }
 

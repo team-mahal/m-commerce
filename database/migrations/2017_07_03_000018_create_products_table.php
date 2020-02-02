@@ -25,7 +25,6 @@ class CreateProductsTable extends Migration
             $table->string('sku', 100);
             $table->integer('stock')->nullable()->default('0');
             $table->tinyInteger('active')->default('0');
-            $table->nullableTimestamps();
 
             $table->unique(["sku"], 'unique_skus');
 
@@ -44,6 +43,7 @@ class CreateProductsTable extends Migration
                 ->references('id')->on('product_groups')
                 ->onDelete('no action')
                 ->onUpdate('no action');
+            $table->timestamps();
         });
     }
 

@@ -20,6 +20,7 @@ class CreateCarriersTable extends Migration
             $table->decimal('price', 13, 2);
             $table->string('delivery_text', 255)->nullable()->default(null);
             $table->string('logo', 255)->nullable()->default(null);
+            $table->timestamps();
         });
     }
 

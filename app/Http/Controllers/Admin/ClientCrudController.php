@@ -21,10 +21,10 @@ class ClientCrudController extends CrudController
         $this->crud->setModel('App\User');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/clients');
         $this->crud->setEntityNameStrings('client', 'clients');
-        $this->crud->addClause('whereHas', 'roles', function ($query) {
-            $clientRoleName = env('CLIENT_ROLE_NAME');
-            $query->whereName($clientRoleName ?: 'client');
-        });
+        // $this->crud->addClause('whereHas', 'roles', function ($query) {
+        //     $clientRoleName = env('CLIENT_ROLE_NAME');
+        //     $query->whereName($clientRoleName ?: 'client');
+        // });
 
         /*
         |--------------------------------------------------------------------------

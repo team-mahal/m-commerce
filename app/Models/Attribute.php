@@ -17,7 +17,6 @@ class Attribute extends Model
 
     protected $table = 'attributes';
     //protected $primaryKey = 'id';
-    public $timestamps = false;
     // protected $guarded = ['id'];
     protected $fillable = [
     	'type',

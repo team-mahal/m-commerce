@@ -17,7 +17,6 @@ class CartRule extends Model
 
     protected $table = 'cart_rules';
     protected $primaryKey = 'id';
-    public $timestamps = false;
     // protected $guarded = ['id'];
     protected $fillable = [
         'name',

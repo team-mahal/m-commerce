@@ -19,7 +19,6 @@ class SpecificPrice extends Model
 
     protected $table = 'specific_prices';
     protected $primaryKey = 'id';
-    public $timestamps = false;
     // protected $guarded = ['id'];
     protected $fillable = ['reduction',
                            'start_date',

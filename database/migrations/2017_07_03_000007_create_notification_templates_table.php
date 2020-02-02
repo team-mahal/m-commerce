@@ -20,6 +20,7 @@ class CreateNotificationTemplatesTable extends Migration
             $table->string('slug', 255)->unique()->nullable()->default(null);
             $table->string('model', 255)->nullable()->default(null);
             $table->longText('body')->nullable()->default(null);
+            $table->timestamps();
         });
     }
 

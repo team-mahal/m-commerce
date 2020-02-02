@@ -18,6 +18,7 @@ class CreateAttributesTable extends Migration
             $table->increments('id');
             $table->string('type', 50)->nullable()->default(null);
             $table->string('name', 100)->nullable()->default(null);
+            $table->timestamps();
         });
     }
 

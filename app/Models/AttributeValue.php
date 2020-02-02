@@ -17,7 +17,6 @@ class AttributeValue extends Model
 
     protected $table = 'attribute_values';
     //protected $primaryKey = 'id';
-    public $timestamps = false;
     // protected $guarded = ['id'];
     protected $fillable = [
     	'attribute_id',

@@ -16,7 +16,6 @@ class NotificationTemplate extends Model
     */
 
     protected $table = 'notification_templates';
-    public $timestamps = false;
     //protected $primaryKey = 'id';
     // protected $guarded = ['id'];
     protected $fillable = [

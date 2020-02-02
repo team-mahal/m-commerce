@@ -17,7 +17,7 @@ class UsersTableSeeder extends Seeder
             // Admin
             [
         		'name'	        => 'Admin',
-                'email'         => 'admin@ecommerce.com',
+                'email'         => 'admin@admin.com',
                 'password'      => '$2y$10$QNf5iYdhmFxVn7OMrtZJQemkt46VPLZtGmU6ncJk3LERyd1r/zSqW', // Encrypted password is: adminpass
                 'salutation'    => 'Mr.',
         		'birthday'		=> \Carbon\Carbon::now()->toDateString(),

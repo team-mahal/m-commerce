@@ -24,9 +24,8 @@ class CreateUsersTable extends Migration
             $table->tinyInteger('gender')->nullable()->default(null);
             $table->tinyInteger('active')->default(0);
             $table->string('remember_token', 100)->nullable()->default(null);
-
             $table->unique(["email"], 'unique_users');
-            $table->nullableTimestamps();
+            $table->timestamps();
         });
     }
 

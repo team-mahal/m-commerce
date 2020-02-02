@@ -17,7 +17,6 @@ class Currency extends Model
 
     protected $table = 'currencies';
     //protected $primaryKey = 'id';
-    public $timestamps = false;
     // protected $guarded = ['id'];
     protected $fillable = [
     	'iso',
