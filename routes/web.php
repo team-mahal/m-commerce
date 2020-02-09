@@ -4,12 +4,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Auth::routes();
 // Admin Interface
-Route::group(['middleware' => 'admin',
+Route::group(['middleware' => ['admin','isadmin'],
 			  'prefix'     => 'admin',
               'namespace'  => 'Admin'
 ], function () {
-
+	Route::get('dashboard', 'DashboardController@dashboard');
 	CRUD::resource('categories', 'CategoryCrudController');
 	CRUD::resource('currencies', 'CurrencyCrudController');
 	CRUD::resource('carriers', 'CarrierCrudController');
@@ -24,6 +25,21 @@ Route::group(['middleware' => 'admin',
 	CRUD::resource('cart-rules', 'CartRuleCrudController');
 	CRUD::resource('specific-prices', 'SpecificPriceCrudController');
 	CRUD::resource('notification-templates', 'NotificationTemplateCrudController');
+	CRUD::resource('paymentmethod', 'PaymentMethodCrudController');
+	CRUD::resource('posts', 'PostCrudController');
+	CRUD::resource('supplier', 'SupplierCrudController');
+	CRUD::resource('purchasereceipt', 'PurchaseReceiptCrudController');
+	CRUD::resource('purchase', 'PurchaseCrudController');
+	CRUD::resource('stock', 'StockCrudController');
+	CRUD::resource('blogcategory', 'BlogcategoryCrudController');
+
+	// listing
+	Route::get('purchaslisting','OtherController@purchaselisting');
+	Route::get('recepts','OtherController@recepts');
+	Route::get('/allproductbelogntopurchase/{id}','OtherController@allproductbelogntopurchase');
+	Route::get('/product/search/{query}','OtherController@products');
+	Route::get('/product/search/','OtherController@products');
+	Route::post('/purchaselisting/createlisting ','OtherController@createlisting');
 
 	// Clone Products
 	Route::post('products/clone', ['as' => 'clone.product', 'uses' => 'ProductCrudController@cloneProduct']);
@@ -34,7 +50,7 @@ Route::group(['middleware' => 'admin',
 
 
 // Ajax
-Route::group(['middleware' => 'admin',
+Route::group(['middleware' => ['admin','isadmin'],
 			  'prefix' => 'ajax',
 			  'namespace' => 'Admin'
 ], function() {
@@ -65,3 +81,5 @@ Route::group(['middleware' => 'admin',
 	// Notification templates
 	Route::post('notification-templates/list-model-variables', ['as' => 'listModelVars', 'uses' => 'NotificationTemplateCrudController@listModelVars']);
 });
+
+Route::get('/home', 'HomeController@index')->name('home');

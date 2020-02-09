@@ -54,7 +54,7 @@
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                            
                             <div class="col-md-12">
-                                <input type="email" placeholder="E-mail" class="form-control" name="email" value="{{ old('email') }}">
+                                <input type="email" value="admin@admin.com" placeholder="E-mail" class="form-control" name="email" value="{{ old('email') }}">
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
@@ -66,7 +66,7 @@
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <div class="col-md-12">
-                                <input type="password" placeholder="Password" class="form-control" name="password">
+                                <input type="password" value="adminpass" placeholder="Password" class="form-control" name="password">
 
                                 @if ($errors->has('password'))
                                     <span class="help-block">
@@ -77,7 +77,7 @@
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
+                            <div class="col-md-12">
                                 <div class="checkbox">
                                     <label>
                                         <input type="checkbox" name="remember"> {{ trans('backpack::base.remember_me') }}
@@ -87,7 +87,7 @@
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
+                            <div class="col-md-12 text-center">
                                 <button type="submit" class="btn btn-primary">
                                     {{ trans('backpack::base.login') }}
                                 </button>

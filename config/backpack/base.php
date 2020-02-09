@@ -12,20 +12,20 @@ return [
     */
 
     // Project name. Shown in the breadcrumbs and a few other places.
-    'project_name' => 'eStarter',
+    'project_name' => 'Shop Name',
 
     // Menu logos
-    'logo_lg'   => '<b>e</b>Starter',
-    'logo_mini' => '<b>e</b>S',
+    'logo_lg'   => '<b>Shop</b>Name',
+    'logo_mini' => '<b>S</b>N',
 
     // Developer or company name. Shown in footer.
-    'developer_name' => 'updivision',
+    'developer_name' => 'techics',
 
     // Developer website. Link in footer.
-    'developer_link' => 'http://updivision.com',
+    'developer_link' => 'http://techics.com',
 
     // Show powered by Laravel Backpack in the footer?
-    'show_powered_by' => true,
+    'show_powered_by' => false,
 
     // The AdminLTE skin. Affects menu color and primary/secondary colors used throughout the application.
     'skin' => 'skin-blue',

@@ -136,10 +136,10 @@
 
         // Ajax calls should always have the CSRF token attached to them, otherwise they won't work
         $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
             
         // Set active state on menu element
         var current_url = "{{ Request::fullUrl() }}";

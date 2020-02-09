@@ -42,39 +42,39 @@ class ProductCrudController extends CrudController
         */
         $this->crud->addColumns([
             [
-            'name'  => 'name',
-            'label' => trans('product.name'),
+                'name'  => 'name',
+                'label' => trans('product.name'),
             ],
             [
-            'type'      => "select_multiple",
-            'label'     => trans('category.categories'),
-            'name'      => 'categories',
-            'entity'    => 'categories',
-            'attribute' => "name",
-            'model'     => "App\Models\Category",
+                'type'      => "select_multiple",
+                'label'     => trans('category.categories'),
+                'name'      => 'categories',
+                'entity'    => 'categories',
+                'attribute' => "name",
+                'model'     => "App\Models\Category",
             ],
             [
-            'name'  => 'sku',
-            'label' => trans('product.sku'),
+                'name'  => 'sku',
+                'label' => trans('product.sku'),
             ],
             [
-            'name'  => 'price',
-            'label' => trans('product.price'),
+                'name'  => 'price',
+                'label' => trans('product.price'),
             ],
             [
-            'name'  => 'stock',
-            'label' => trans('product.stock'),
+                'name'  => 'stock',
+                'label' => trans('product.stock'),
             ],
             [
-            'name'      => 'active',
-            'label'     => trans('common.status'),
-            'type'      => 'boolean',
-            'options'   => [
-            0 => trans('common.inactive'),
-            1 => trans('common.active')
-            ],
+                'name'      => 'active',
+                'label'     => trans('common.status'),
+                'type'      => 'boolean',
+                'options'   => [
+                    0 => trans('common.inactive'),
+                    1 => trans('common.active')
+                ],
             ]
-            ]);
+        ]);
 
 
         /*

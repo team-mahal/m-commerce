@@ -20,7 +20,10 @@ class CreateProductsTable extends Migration
             $table->integer('attribute_set_id')->unsigned()->default('0');
             $table->string('name', 255)->nullable()->default(null);
             $table->longText('description')->nullable()->default(null);
+            $table->string('meta_title')->nullable();
+            $table->text('meta_desc')->nullable();
             $table->integer('tax_id')->unsigned();
+            $table->decimal('bprice', 13, 2)->nullable()->default(null);
             $table->decimal('price', 13, 2)->nullable()->default(null);
             $table->string('sku', 100);
             $table->integer('stock')->nullable()->default('0');

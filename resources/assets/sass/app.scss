@@ -1,9 +1,36 @@
-
-// Fonts
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
-
 // Variables
 @import "variables";
+.d-flex{
+	display: flex;
+}
+.field-main-slider{
+    margin-top: -18px!important;
+}
+.links{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 0px;
+	margin:0px;
+	height: 30px;
+	div{
+		padding: 10px;
+		margin:0px;
 
-// Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+	}
+}
+.bg-black{
+	background: black;
+}
+#sticky_top{
+	min-width: unset;
+}
+.w-50{
+	width: 50%;
+}
+.search{
+	padding-top: 10px; 
+}
+#header .header-top{
+	line-height: 0px;
+}
