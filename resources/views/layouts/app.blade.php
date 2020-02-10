@@ -242,8 +242,11 @@
 <body id="index" class="lang-en country-us currency-usd layout-full-width page-index tax-display-disabled fullwidth" style="overflow-x: hidden;">
     {{-- @include('layouts.inc.theamsetting'); --}}
     @include('layouts.inc.header');
-    @yield('content')
-    {{-- @include('layouts.inc.footer'); --}}
+    <main>
+        @yield('content')
+     
+        @include('layouts.inc.footer')
+    </main>
     <script type="text/javascript" src="{{ asset('js/bottom-4deda2.js') }}"></script>
 </body>
 </html>

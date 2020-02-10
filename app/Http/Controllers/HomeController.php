@@ -3,26 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Post;
+use App\Models\Product;
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
+    public function index()
+    {   
+        return view('welcome')->with('posts',Post::orderBy('id','desc')->take(10)->get())->with('newarrivels',Product::orderBy('id','desc')->take(10)->get());
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function productdetails()
     {
-        return view('home');
+        return view('productdetails');
+    }
+
+    public function allproduct()
+    {
+    	return view('allproduct');
     }
 }

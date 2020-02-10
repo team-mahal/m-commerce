@@ -1,12 +1,12 @@
-.d-flex {
+#header .d-flex {
   display: flex;
 }
 
-.field-main-slider {
+#header .field-main-slider {
   margin-top: -18px !important;
 }
 
-.links {
+#header .links {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -15,24 +15,24 @@
   height: 30px;
 }
 
-.links div {
+#header .links div {
   padding: 10px;
   margin: 0px;
 }
 
-.bg-black {
+#header .bg-black {
   background: black;
 }
 
-#sticky_top {
+#header #sticky_top {
   min-width: unset;
 }
 
-.w-50 {
+#header .w-50 {
   width: 50%;
 }
 
-.search {
+#header .search {
   padding-top: 10px;
 }
 

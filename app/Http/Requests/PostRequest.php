@@ -25,9 +25,9 @@ class PostRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
     public function rules()
     {
         return [
-            'name' => 'required',
+            'title' => 'required',
             'image' => 'required',
-            'blogcategories_id' => 'required',
+            'blogcategory_id' => 'required',
             'description' => 'required',
         ];
     }

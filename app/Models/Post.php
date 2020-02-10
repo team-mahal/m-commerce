@@ -37,7 +37,7 @@ class Post extends Model
 
     public function blogcategorie()
     {
-        return $this->belongsTo("App\Models\Blogcategory");
+        return $this->belongsTo("App\Models\Blogcategory",'blogcategory_id');
     }
 
     /*

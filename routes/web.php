@@ -1,8 +1,26 @@
 <?php
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index');
+
+Route::get('/productdetails', 'HomeController@productdetails');
+Route::get('/allproduct', 'HomeController@allproduct');
+
+	
+// blog
+Route::get('/blogs', 'BlogController@index');
+Route::get('/post/{id}', 'BlogController@post');
+
+
+
+// concentric-olive-wheavb1hbty7lmjqf80jn0wz.herokudns.com
+
+
+
+
+
+
+
+
 
 Auth::routes();
 // Admin Interface

@@ -10,9 +10,9 @@ use App\Http\Requests\PostRequest as UpdateRequest;
 
 class PostCrudController extends CrudController
 {
+
     public function setup()
     {
-
         /*
         |--------------------------------------------------------------------------
         | BASIC CRUD INFORMATION
@@ -21,7 +21,6 @@ class PostCrudController extends CrudController
         $this->crud->setModel('App\Models\Post');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/posts');
         $this->crud->setEntityNameStrings('post', 'posts');
-
         /*
         |--------------------------------------------------------------------------
         | BASIC CRUD INFORMATION
@@ -40,10 +39,9 @@ class PostCrudController extends CrudController
 
         $this->crud->addColumn(
             [
-                'type'      => "select",
-                'label'     => 'Category',
-                'name'      => 'Category',
-                'entity'    => 'Category',
+                'name'      => 'blogcategory_id',
+                'type' => "select",
+                'entity'    => 'blogcategorie',
                 'attribute' => "name",
                 'model'     => "App\Models\Blogcategory",
             ],
@@ -67,12 +65,11 @@ class PostCrudController extends CrudController
 
         $this->crud->addField([ // image
             'label' => "Image",
-            'name' => "Image",
+            'name' => "image",
             'type' => 'image',
             'upload' => true,
 
             'crop' => true, 
-            'aspect_ratio' => 10, 
             'prefix' => 'paymentmethods' 
         ]);
         // ------ CRUD FIELDS
