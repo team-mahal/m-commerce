@@ -4,6 +4,10 @@ Route::get('/', 'HomeController@index');
 
 Route::get('/productdetails', 'HomeController@productdetails');
 Route::get('/allproduct', 'HomeController@allproduct');
+Route::get('/cart', 'HomeController@cart');
+Route::get('/remove/{id}', 'HomeController@remove');
+Route::get('/quickview/{id}', 'HomeController@quickview');
+Route::post('/addtocart', 'HomeController@addtocart');
 
 	
 // blog

@@ -1,4 +1,4 @@
-<div class="modal-backdrop fade in" style="display: none;"></div>
+<div class="modal-backdrop fade in" id="modal-backdrop" style="display: none;"></div>
                                                                     
 <div id="quickview-modal-18-0" class="modal fade quickview in" tabindex="-1" role="dialog" style="display: node;">
     <div class="modal-dialog" role="document">

@@ -44,53 +44,7 @@ class SpecificPrice extends Model
     |--------------------------------------------------------------------------
     */
 
-    public function getReduction()
-    {
-        $reduction = $this->reduction;
 
-        if(isset($reduction)){
-            if($this->discount_type=='Percent') {
-                return $reduction . ' %';
-            }
-            return $reduction;
-        }
-        return '-'; 
-    }
-
-    public function getOldPrice()
-    {
-        $product = Product::find($this->product_id);
-        if(isset($product)) {
-            return number_format($product->price . $product->currency, 2);
-        }
-        return '-';
-    }
-
-    public function getReducedPrice()
-    {  
-        $product = Product::find($this->product_id);
-
-        if(isset($product)) {
-            $oldPrice = $product->price;
-            if($this->discount_type == 'Percent'){
-                return number_format($oldPrice - $this->reduction/100 * $oldPrice, 2);
-            }
-            if($this->discount_type == 'Amount'){
-                return number_format($oldPrice - $this->reduction, 2);
-            }
-            return number_format($product->price, 2);
-        }
-        return '-';
-    }
-
-    public function getProductName()
-    {
-        $product = Product::find($this->product_id);
-        if(isset($product)) {
-            return $product->name;
-        }
-        return "-";
-    }
 
 
     /*
@@ -100,7 +54,7 @@ class SpecificPrice extends Model
     */
 
     public function product(){
-        return $this->hasOne('App\Models\Product');
+        return $this->belongsTo('App\Models\Product');
     }
 
     /*

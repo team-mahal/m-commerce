@@ -60,68 +60,52 @@
                                     </div>
 
                                     <div class="js-qv-mask mask">
-                                        <div class="product-images product-images-69640165 js-qv-product-images carousel-grid owl-carousel owl-theme" style="opacity: 1; display: block;">
-                                            <div class="owl-wrapper-outer">
-                                                <div class="owl-wrapper" style="width: 1130px; left: 0px; display: block;">
-                                                    <div class="owl-item" style="width: 113px;">
-                                                        <div class="thumb-container">
-                                                            <img class="thumb js-thumb  selected " data-image-medium-src="https://demo.fieldthemes.com/ps_medicine/home2/104-medium_default/aliquam-tincidunt-mauris.jpg" data-image-large-src="https://demo.fieldthemes.com/ps_medicine/home2/104-large_default/aliquam-tincidunt-mauris.jpg" src="https://demo.fieldthemes.com/ps_medicine/home2/104-home_default/aliquam-tincidunt-mauris.jpg" alt="" title="" width="100" itemprop="image">
-                                                        </div>
+                                        <div class="product-images js-qv-product-images carousel-grid" style="opacity: 1; display: block;">
+
+                                            <div class="owl-wrapper product-images-69640165 owl-carousel owl-theme" >
+                                                <div class="item" style="width: 113px;">
+                                                    <div class="thumb-container">
+                                                        <img class="thumb js-thumb " data-image-medium-src="https://demo.fieldthemes.com/ps_medicine/home2/105-medium_default/aliquam-tincidunt-mauris.jpg" data-image-large-src="https://demo.fieldthemes.com/ps_medicine/home2/105-large_default/aliquam-tincidunt-mauris.jpg" src="https://demo.fieldthemes.com/ps_medicine/home2/105-home_default/aliquam-tincidunt-mauris.jpg" alt="" title="" width="100" itemprop="image">
                                                     </div>
-                                                    <div class="owl-item" style="width: 113px;">
-                                                        <div class="thumb-container">
-                                                            <img class="thumb js-thumb " data-image-medium-src="https://demo.fieldthemes.com/ps_medicine/home2/105-medium_default/aliquam-tincidunt-mauris.jpg" data-image-large-src="https://demo.fieldthemes.com/ps_medicine/home2/105-large_default/aliquam-tincidunt-mauris.jpg" src="https://demo.fieldthemes.com/ps_medicine/home2/105-home_default/aliquam-tincidunt-mauris.jpg" alt="" title="" width="100" itemprop="image">
-                                                        </div>
+                                                </div>
+                                                <div class="item" style="width: 113px;">
+                                                    <div class="thumb-container">
+                                                        <img class="thumb js-thumb " data-image-medium-src="https://demo.fieldthemes.com/ps_medicine/home2/190-medium_default/aliquam-tincidunt-mauris.jpg" data-image-large-src="https://demo.fieldthemes.com/ps_medicine/home2/190-large_default/aliquam-tincidunt-mauris.jpg" src="https://demo.fieldthemes.com/ps_medicine/home2/190-home_default/aliquam-tincidunt-mauris.jpg" alt="" title="" width="100" itemprop="image">
                                                     </div>
-                                                    <div class="owl-item" style="width: 113px;">
-                                                        <div class="thumb-container">
-                                                            <img class="thumb js-thumb " data-image-medium-src="https://demo.fieldthemes.com/ps_medicine/home2/190-medium_default/aliquam-tincidunt-mauris.jpg" data-image-large-src="https://demo.fieldthemes.com/ps_medicine/home2/190-large_default/aliquam-tincidunt-mauris.jpg" src="https://demo.fieldthemes.com/ps_medicine/home2/190-home_default/aliquam-tincidunt-mauris.jpg" alt="" title="" width="100" itemprop="image">
-                                                        </div>
+                                                </div>
+                                                <div class="item" style="width: 113px;">
+                                                    <div class="thumb-container">
+                                                        <img class="thumb js-thumb " data-image-medium-src="https://demo.fieldthemes.com/ps_medicine/home2/191-medium_default/aliquam-tincidunt-mauris.jpg" data-image-large-src="https://demo.fieldthemes.com/ps_medicine/home2/191-large_default/aliquam-tincidunt-mauris.jpg" src="https://demo.fieldthemes.com/ps_medicine/home2/191-home_default/aliquam-tincidunt-mauris.jpg" alt="" title="" width="100" itemprop="image">
                                                     </div>
-                                                    <div class="owl-item" style="width: 113px;">
-                                                        <div class="thumb-container">
-                                                            <img class="thumb js-thumb " data-image-medium-src="https://demo.fieldthemes.com/ps_medicine/home2/191-medium_default/aliquam-tincidunt-mauris.jpg" data-image-large-src="https://demo.fieldthemes.com/ps_medicine/home2/191-large_default/aliquam-tincidunt-mauris.jpg" src="https://demo.fieldthemes.com/ps_medicine/home2/191-home_default/aliquam-tincidunt-mauris.jpg" alt="" title="" width="100" itemprop="image">
-                                                        </div>
-                                                    </div>
-                                                    <div class="owl-item" style="width: 113px;">
-                                                        <div class="thumb-container">
-                                                            <img class="thumb js-thumb " data-image-medium-src="https://demo.fieldthemes.com/ps_medicine/home2/192-medium_default/aliquam-tincidunt-mauris.jpg" data-image-large-src="https://demo.fieldthemes.com/ps_medicine/home2/192-large_default/aliquam-tincidunt-mauris.jpg" src="https://demo.fieldthemes.com/ps_medicine/home2/192-home_default/aliquam-tincidunt-mauris.jpg" alt="" title="" width="100" itemprop="image">
-                                                        </div>
+                                                </div>
+                                                <div class="item" style="width: 113px;">
+                                                    <div class="thumb-container">
+                                                        <img class="thumb js-thumb " data-image-medium-src="https://demo.fieldthemes.com/ps_medicine/home2/192-medium_default/aliquam-tincidunt-mauris.jpg" data-image-large-src="https://demo.fieldthemes.com/ps_medicine/home2/192-large_default/aliquam-tincidunt-mauris.jpg" src="https://demo.fieldthemes.com/ps_medicine/home2/192-home_default/aliquam-tincidunt-mauris.jpg" alt="" title="" width="100" itemprop="image">
                                                     </div>
                                                 </div>
                                             </div>
 
-                                            <div class="owl-controls clickable">
-                                                <div class="owl-buttons">
-                                                    <div class="owl-prev">
-                                                        <div class="carousel-previous disable-select"><span class="fa fa-angle-left"></span></div>
-                                                    </div>
-                                                    <div class="owl-next">
-                                                        <div class="carousel-next disable-select"><span class="fa fa-angle-right"></span></div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
+
                                     <script type="text/javascript">
                                         $(document).ready(function() {
-                                            $('.product-images-69640165').owlCarousel({
-                                                itemsCustom: [
-                                                    [0, 1],
-                                                    [320, 1],
-                                                    [992, 3]
-                                                ],
-                                                responsiveRefreshRate: 50,
-                                                slideSpeed: 200,
-                                                paginationSpeed: 500,
-                                                rewindSpeed: 600,
-                                                autoPlay: false,
-                                                stopOnHover: false,
-                                                rewindNav: true,
-                                                pagination: false,
-                                                navigation: true,
-                                                navigationText: ['<div class="carousel-previous disable-select"><span class="fa fa-angle-left"></span></div>', '<div class="carousel-next disable-select"><span class="fa fa-angle-right"></span></div>']
-                                            });
+                                            $('.owl-carousel').owlCarousel({
+                                                loop:true,
+                                                margin:10,
+                                                nav:true,
+                                                responsive:{
+                                                    0:{
+                                                        items:1
+                                                    },
+                                                    600:{
+                                                        items:3
+                                                    },
+                                                    1000:{
+                                                        items:5
+                                                    }
+                                                }
+                                            })
                                         });
                                     </script>
 

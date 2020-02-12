@@ -17,12 +17,13 @@
 
     <link rel="stylesheet" href="{{ asset('css/theme-min.css') }}" type="text/css" media="all">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}" type="text/css" media="all">
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}" type="text/css" media="all">
 
     <script type="text/javascript" src="{{ asset('js/jquery-1.11.0.min.js') }}"></script>
     <script type="text/javascript">
         var LANG_RTL = 0;
         var langIso = 'en-us';
-        var baseUri = 'https://demo.fieldthemes.com/ps_medicine/home2/';
+        var baseUri = 'http://127.0.0.1:3000/';
         var FIELD_enableCountdownTimer = true;
         var FIELD_stickyMenu = true;
         var FIELD_stickySearch = true;
@@ -231,12 +232,13 @@
                 "protocol_content": "https:\/\/"
             },
             "time": 1581157833,
-            "static_token": "d25bc0f4d821fe67c876730ee3cf24a9",
-            "token": "5fac7ac04c58321bbae987a00bea2240"
+            "static_token": "sdsf",
+            "token": "sdfsdf"
         };
-        var search_url = "https:\/\/demo.fieldthemes.com\/ps_medicine\/home2\/en\/search";
+        var search_url = "sdfsdf";
     </script>
 
+    
 </head>
 
 <body id="index" class="lang-en country-us currency-usd layout-full-width page-index tax-display-disabled fullwidth" style="overflow-x: hidden;">
@@ -247,6 +249,11 @@
      
         @include('layouts.inc.footer')
     </main>
+    <script>
+        var base_url = "{{ URL::to('/') }}";
+    </script>
     <script type="text/javascript" src="{{ asset('js/bottom-4deda2.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/custome.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/owl.carousel.min.js') }}"></script>
 </body>
 </html>

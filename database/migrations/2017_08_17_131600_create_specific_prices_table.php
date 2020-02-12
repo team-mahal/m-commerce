@@ -27,6 +27,7 @@ class CreateSpecificPricesTable extends Migration
                 ->references('id')->on('products')
                 ->onDelete('no action')
                 ->onUpdate('no action');
+            $table->timestamps();
         });
     }
 

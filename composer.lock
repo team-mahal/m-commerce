@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "70ad68115ac7870322a2375d9ab0ae0e",
+    "content-hash": "dc94f7e1d0abf34fde20886f1237aee2",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -434,16 +434,16 @@
         },
         {
             "name": "creativeorange/gravatar",
-            "version": "v1.0.10",
+            "version": "1.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/creativeorange/gravatar.git",
-                "reference": "9affd46be10f1ebb11d5d9f03440f804c09f2b59"
+                "reference": "a0e84f0c8e8922ad151168d6ebd8db6a1b2d8cd2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/creativeorange/gravatar/zipball/9affd46be10f1ebb11d5d9f03440f804c09f2b59",
-                "reference": "9affd46be10f1ebb11d5d9f03440f804c09f2b59",
+                "url": "https://api.github.com/repos/creativeorange/gravatar/zipball/a0e84f0c8e8922ad151168d6ebd8db6a1b2d8cd2",
+                "reference": "a0e84f0c8e8922ad151168d6ebd8db6a1b2d8cd2",
                 "shasum": ""
             },
             "require": {
@@ -451,16 +451,6 @@
                 "php": ">=5.4.0"
             },
             "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Creativeorange\\Gravatar\\GravatarServiceProvider"
-                    ],
-                    "aliases": {
-                        "Gravatar": "Creativeorange\\Gravatar\\Facades\\Gravatar"
-                    }
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Creativeorange\\Gravatar\\": "src/"
@@ -478,13 +468,13 @@
                     "role": "Developer"
                 }
             ],
-            "description": "Gravatar for Laravel 5.0.x through 5.5.x package for retrieving gravatar image URLs or checking the existance of an image.",
+            "description": "A Laravel 5.0, 5.1, 5.2 and 5.3 gravatar package for retrieving gravatar image URLs or checking the existance of an image.",
             "keywords": [
                 "avatar",
                 "gravatar",
                 "laravel"
             ],
-            "time": "2017-08-08T22:14:26+00:00"
+            "time": "2017-02-15T22:07:40+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -1057,6 +1047,66 @@
                 "parser"
             ],
             "time": "2017-11-14T20:44:03+00:00"
+        },
+        {
+            "name": "gloudemans/shoppingcart",
+            "version": "2.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Crinsane/LaravelShoppingcart.git",
+                "reference": "f460ab7312cce32cb428cf39a500a2d16600b1d6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Crinsane/LaravelShoppingcart/zipball/f460ab7312cce32cb428cf39a500a2d16600b1d6",
+                "reference": "f460ab7312cce32cb428cf39a500a2d16600b1d6",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/events": "5.1.* || 5.2.* || 5.3.* || 5.4.* || 5.5.*|| 5.6.* || 5.7.*",
+                "illuminate/session": "5.1.* || 5.2.* || 5.3.* || 5.4.* || 5.5.*|| 5.6.* || 5.7.*",
+                "illuminate/support": "5.1.* || 5.2.* || 5.3.* || 5.4.* || 5.5.*|| 5.6.* || 5.7.*"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9.0",
+                "orchestra/testbench": "~3.1",
+                "phpunit/phpunit": "~5.0 || ~6.0 || ~7.0"
+            },
+            "suggest": {
+                "gloudemans/notify": "Simple flash notifications for Laravel"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Gloudemans\\Shoppingcart\\ShoppingcartServiceProvider"
+                    ],
+                    "aliases": {
+                        "Cart": "Gloudemans\\Shoppingcart\\Facades\\Cart"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Gloudemans\\Shoppingcart\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rob Gloudemans",
+                    "email": "info@robgloudemans.nl"
+                }
+            ],
+            "description": "Laravel Shoppingcart",
+            "keywords": [
+                "laravel",
+                "shoppingcart"
+            ],
+            "time": "2019-02-04T14:29:34+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -2161,17 +2211,17 @@
             ],
             "authors": [
                 {
-                    "name": "Ben Ramsey",
-                    "email": "ben@benramsey.com",
-                    "homepage": "https://benramsey.com"
-                },
-                {
                     "name": "Marijn Huizendveld",
                     "email": "marijn.huizendveld@gmail.com"
                 },
                 {
                     "name": "Thibaud Fabre",
                     "email": "thibaud@aztech.io"
+                },
+                {
+                    "name": "Ben Ramsey",
+                    "email": "ben@benramsey.com",
+                    "homepage": "https://benramsey.com"
                 }
             ],
             "description": "Formerly rhumsaa/uuid. A PHP 5.4+ library for generating RFC 4122 version 1, 3, 4, and 5 universally unique identifiers (UUID).",

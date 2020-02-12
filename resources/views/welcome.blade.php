@@ -33,18 +33,11 @@
                                                                             <a href=""
                                                                                 class="thumbnail product-thumbnail">
                                                                                 <span class="cover_image">
-                                                                                    <img
-                                                                                      src = "https://demo.fieldthemes.com/ps_medicine/home2/84-home_default/fusce-porttitor-augue-lectus.jpg"
-                                                                                      data-full-size-image-url = "https://demo.fieldthemes.com/ps_medicine/home2/84-large_default/fusce-porttitor-augue-lectus.jpg"
-                                                                                    alt=""
-                                                                                    >
-                                                                                </span>
-                                                                                <span class="hover_image">
-                                                                                    <img 
-                                                                                      src = "https://demo.fieldthemes.com/ps_medicine/home2/124-home_default/fusce-porttitor-augue-lectus.jpg"
-                                                                                      data-full-size-image-url = "https://demo.fieldthemes.com/ps_medicine/home2/124-home_default/fusce-porttitor-augue-lectus.jpg"
-                                                                                      alt=""
-                                                                                    > 
+                                                                                    @if($new->images && count($new->images)>0)
+                                                                                        <img src="{{ asset('uploads/products/'.$new->images[0]->name) }}" alt="{{ $new->name }}">
+                                                                                    @else
+                                                                                        <img src="{{ asset('/assets/download.png') }}" alt="{{ $new->name }}">
+                                                                                    @endif
                                                                                 </span>
                                                                             </a>
                                                                             <div class="conditions-box">
@@ -55,29 +48,35 @@
                                                                                 <span class="item-countdown-time" data-time="2020-12-31 00:00:00"></span>
                                                                             </span>
                                                                             <div class="quick-view-product">
-                                                                                <a href="javascript:void(0)" class="quick-view" data-link-action="quickview" title="Quick view">
+                                                                                <a href="javascript:void(0)" onclick="quickview({{ $new->id }})" class="quick-view" title="Quick view">
                                                                                     <i class="fa fa-eye"></i> Quick view
                                                                                 </a>
                                                                             </div>
                                                                         </div>
                                                                         <div class="right-product">
                                                                             <div class="product-description">
-                                                                                <div class="product_name"><a href="https://demo.fieldthemes.com/ps_medicine/home2/en/product-categories/20-fusce-porttitor-augue-lectus.html">Fusce porttitor augue...</a></div>
+                                                                                <div class="product_name"><a href="">{{ $new->name }}</a></div>
                                                                                 <div class="product-price-and-shipping">
-                                                                                    <span class="price">$45.10</span>
+                                                                                    @if($new->specificPrice)
+                                                                                        <span class="price">{{ $new->price-$new->specificPrice->reduction }}</span>
+                                                                                    @else
+                                                                                        <span class="price">{{ $new->price }}</span>
+                                                                                    @endif
 
-                                                                                    <span class="regular-price">$60.59</span>
+                                                                                    @if($new->specificPrice)
+                                                                                        <span class="regular-price">{{ $new->price }}</span>
+                                                                                    @endif
 
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                         <div class="addtocart">
-                                                                            <form action="https://demo.fieldthemes.com/ps_medicine/home2/en/cart" method="post">
-                                                                                <input type="hidden" name="token" value="d25bc0f4d821fe67c876730ee3cf24a9">
-                                                                                <input type="hidden" name="id_product" value="20">
-                                                                                <button class="add-to-cart" data-button-action="add-to-cart" type="submit">
+                                                                            <form action="{{ url('addtocart') }}" method="post">
+                                                                                 {{csrf_field()}}
+                                                                                <input type="hidden" name="product_id" value="{{ $new->id }}">
+                                                                                <button class="add-to-cart" type="submit">
                                                                                     <span title="Add to cart"><i class="fa fa-shopping-cart"></i>
-                                                                                    ADD TO CART
+                                                                                        ADD TO CART
                                                                                     </span>
                                                                                 </button>
                                                                             </form>

@@ -10,7 +10,8 @@
         "backpack/base": "^0.8.0",
         "backpack/crud": "^3.3.0",
         "backpack/settings": "^2.0",
-        "backpack/permissionmanager": "^2.1"
+        "backpack/permissionmanager": "^2.1",
+        "gloudemans/shoppingcart": "^2.6"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

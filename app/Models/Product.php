@@ -107,7 +107,7 @@ class Product extends Model
 
     public function specificPrice()
     {
-        return $this->belongsTo('App\Models\SpecificPrice');
+        return $this->hasOne('App\Models\SpecificPrice');
     }
 
 
