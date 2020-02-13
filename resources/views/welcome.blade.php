@@ -30,8 +30,7 @@
                                                                 <div class="item-inner">
                                                                     <div class="product-miniature js-product-miniature">
                                                                         <div class="left-product">
-                                                                            <a href=""
-                                                                                class="thumbnail product-thumbnail">
+                                                                            <a href="" class="thumbnail product-thumbnail">
                                                                                 <span class="cover_image">
                                                                                     @if($new->images && count($new->images)>0)
                                                                                         <img src="{{ asset('uploads/products/'.$new->images[0]->name) }}" alt="{{ $new->name }}">
@@ -48,7 +47,7 @@
                                                                                 <span class="item-countdown-time" data-time="2020-12-31 00:00:00"></span>
                                                                             </span>
                                                                             <div class="quick-view-product">
-                                                                                <a href="javascript:void(0)" onclick="quickview({{ $new->id }})" class="quick-view" title="Quick view">
+                                                                                <a href="javascript:void(0)" data-id="{{ $new->id }}" class="quick-view" title="Quick view" data-toggle="modal" data-target="#quickview-modal-18-0">
                                                                                     <i class="fa fa-eye"></i> Quick view
                                                                                 </a>
                                                                             </div>

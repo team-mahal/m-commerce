@@ -243,7 +243,7 @@
 
 <body id="index" class="lang-en country-us currency-usd layout-full-width page-index tax-display-disabled fullwidth" style="overflow-x: hidden;">
     {{-- @include('layouts.inc.theamsetting'); --}}
-    @include('layouts.inc.header');
+    @include('layouts.inc.header')
     <main>
         @yield('content')
      

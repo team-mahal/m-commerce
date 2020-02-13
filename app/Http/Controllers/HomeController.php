@@ -9,8 +9,9 @@ class HomeController extends Controller
 {
     public function index()
     {   
-        $newarrivels=Product::orderBy('id','desc')->with('specificPrice')->with('images')->take(10)->get();
-        return view('welcome')->with('posts',Post::orderBy('id','desc')->take(10)->get())->with('newarrivels',$newarrivels);
+        $newarrivels=Product::orderBy('id','desc')->with('specificPrice')->with('images')->take(12)->get();
+        $mostview=Product::orderBy('id','desc')->with('specificPrice')->with('images')->skip(12)->take(12)->get();
+        return view('welcome')->with('posts',Post::orderBy('id','desc')->take(10)->get())->with('newarrivels',$newarrivels)->with('mostview',$mostview);
     }
 
     public function cart()
@@ -21,7 +22,9 @@ class HomeController extends Controller
     public function quickview($id='')
     {
         $product= Product::with('specificPrice')->with('images')->find($id);
-        return response($product);
+
+        return view('inc.dynamicmodel')->with('product',$product);
+        
     }
 
     public function addtocart(Request $request)
@@ -51,7 +54,8 @@ class HomeController extends Controller
     }
 
     public function allproduct()
-    {
-    	return view('allproduct');
+    {   
+        $products=Product::orderBy('id','desc')->with('specificPrice')->paginate(10);
+    	return view('allproduct')->with('products',$products);
     }
 }

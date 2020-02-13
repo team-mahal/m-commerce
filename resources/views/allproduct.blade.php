@@ -103,10 +103,10 @@
                 <!-- MODULE News Products Products -->
                 <div id="best-sellers_block_right" class="block vertical_mode clearfix">
                     <h4 class="title_block title_font">      
-        <a href="https://demo.fieldthemes.com/ps_medicine/home2/en/best-sales" title="View a top sellers products">
-            Top sellers
-        </a>
-    </h4>
+                        <a href="https://demo.fieldthemes.com/ps_medicine/home2/en/best-sales" title="View a top sellers products">
+                            Top sellers
+                        </a>
+                    </h4>
 
                     <div class="row">
                         <div id="field_bestsellers" class="carousel-grid owl-carousel owl-theme" style="opacity: 1; display: block;">
@@ -121,8 +121,8 @@
                                                     <div class="left-product">
                                                         <a href="https://demo.fieldthemes.com/ps_medicine/home2/en/product-categories/21-nam-mollis-porta-facilisis.html" class="thumbnail product-thumbnail">
                                                             <span class="cover_image">
-                            <img src="https://demo.fieldthemes.com/ps_medicine/home2/85-small_default/nam-mollis-porta-facilisis.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/85-large_default/nam-mollis-porta-facilisis.jpg">
-                        </span>
+                                                                <img src="https://demo.fieldthemes.com/ps_medicine/home2/85-small_default/nam-mollis-porta-facilisis.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/85-large_default/nam-mollis-porta-facilisis.jpg">
+                                                            </span>
                                                         </a>
                                                     </div>
                                                     <div class="right-product">
@@ -177,8 +177,8 @@
                                                     <div class="left-product">
                                                         <a href="https://demo.fieldthemes.com/ps_medicine/home2/en/product-categories/17-quisque-at-orci-gravid-.html" class="thumbnail product-thumbnail">
                                                             <span class="cover_image">
-                            <img src="https://demo.fieldthemes.com/ps_medicine/home2/81-small_default/quisque-at-orci-gravid-.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/81-large_default/quisque-at-orci-gravid-.jpg">
-                        </span>
+                                                                <img src="https://demo.fieldthemes.com/ps_medicine/home2/81-small_default/quisque-at-orci-gravid-.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/81-large_default/quisque-at-orci-gravid-.jpg">
+                                                            </span>
                                                         </a>
                                                     </div>
                                                     <div class="right-product">
@@ -277,34 +277,33 @@
                         <div id="js-product-list-top" class="products-selection">
                             <div class="click-product-list-grid">
                                 <div class="click-product-grid"><i class="fa fa-th"></i></div>
-                                <div class="click-product-list"><i class="fa fa-align-justify"></i></div>
                             </div>
                             <div class="box-sort-by">
 
                                 <span class="sort-by">Sort by:</span>
                                 <div class="products-sort-order dropdown">
                                     <a class="select-title" rel="nofollow" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Price, high to low    <i class="fa fa-angle-down"></i>
-  </a>
+                                        Price, high to low    <i class="fa fa-angle-down"></i>
+                                      </a>
                                     <div class="dropdown-menu">
                                         <a rel="nofollow" href="https://demo.fieldthemes.com/ps_medicine/home2/en/new-products?order=product.date_add.desc" class="select-list js-search-link">
-        Date added, newest to oldest
-      </a>
+                                            Date added, newest to oldest
+                                          </a>
                                         <a rel="nofollow" href="https://demo.fieldthemes.com/ps_medicine/home2/en/new-products?order=product.date_add.asc" class="select-list js-search-link">
-        Date added, oldest to newest
-      </a>
+                                            Date added, oldest to newest
+                                          </a>
                                         <a rel="nofollow" href="https://demo.fieldthemes.com/ps_medicine/home2/en/new-products?order=product.name.asc" class="select-list js-search-link">
-        Name, A to Z
-      </a>
+                                            Name, A to Z
+                                          </a>
                                         <a rel="nofollow" href="https://demo.fieldthemes.com/ps_medicine/home2/en/new-products?order=product.name.desc" class="select-list js-search-link">
-        Name, Z to A
-      </a>
+                                            Name, Z to A
+                                          </a>
                                         <a rel="nofollow" href="https://demo.fieldthemes.com/ps_medicine/home2/en/new-products?order=product.price.asc" class="select-list js-search-link">
-        Price, low to high
-      </a>
+                                            Price, low to high
+                                          </a>
                                         <a rel="nofollow" href="https://demo.fieldthemes.com/ps_medicine/home2/en/new-products?order=product.price.desc" class="select-list current js-search-link">
-        Price, high to low
-      </a>
+                                            Price, high to low
+                                          </a>
                                     </div>
                                 </div>
 
@@ -325,18 +324,18 @@
                                 <div class="products horizontal_mode">
                                     <div id="box-product-grid">
                                         <div class="row">
-
+                                        @foreach($products as $product)
                                             <div class="item col-xs-12 col-sm-6 col-md-4">
                                                 <div class="item-inner">
                                                     <div class="product-miniature js-product-miniature" data-id-product="24" data-id-product-attribute="0" itemscope="" itemtype="http://schema.org/Product">
                                                         <div class="left-product">
                                                             <a href="https://demo.fieldthemes.com/ps_medicine/home2/en/toprating/24-aollis-porta-facilisis.html" class="thumbnail product-thumbnail">
                                                                 <span class="cover_image">
-                            <img src="https://demo.fieldthemes.com/ps_medicine/home2/88-home_default/aollis-porta-facilisis.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/88-large_default/aollis-porta-facilisis.jpg">
-                        </span>
-                                                                <span class="hover_image">
-                            <img src="https://demo.fieldthemes.com/ps_medicine/home2/144-home_default/aollis-porta-facilisis.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/144-home_default/aollis-porta-facilisis.jpg"> 
-                        </span>
+                                                                    <img src="https://demo.fieldthemes.com/ps_medicine/home2/88-home_default/aollis-porta-facilisis.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/88-large_default/aollis-porta-facilisis.jpg">
+                                                                </span>
+                                                                                                        <span class="hover_image">
+                                                                    <img src="https://demo.fieldthemes.com/ps_medicine/home2/144-home_default/aollis-porta-facilisis.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/144-home_default/aollis-porta-facilisis.jpg"> 
+                                                                </span>
 
                                                             </a>
                                                             <div class="conditions-box">
@@ -364,892 +363,18 @@
                                                                 <input type="hidden" name="id_product" value="24">
                                                                 <button class="add-to-cart" data-button-action="add-to-cart" type="submit">
                                                                     <span title="Add to cart"><i class="fa fa-shopping-cart"></i>
-                                ADD TO CART
-                                </span>
-
+                                                                        ADD TO CART
+                                                                    </span>
                                                                 </button>
                                                             </form>
                                                         </div>
                                                     </div>
-
                                                 </div>
                                             </div>
-
-                                            <div class="item col-xs-12 col-sm-6 col-md-4">
-                                                <div class="item-inner">
-                                                    <div class="product-miniature js-product-miniature" data-id-product="26" data-id-product-attribute="0" itemscope="" itemtype="http://schema.org/Product">
-                                                        <div class="left-product">
-                                                            <a href="https://demo.fieldthemes.com/ps_medicine/home2/en/toprating/26-aliquam-tincidunt-mau.html" class="thumbnail product-thumbnail">
-                                                                <span class="cover_image">
-                            <img src="https://demo.fieldthemes.com/ps_medicine/home2/90-home_default/aliquam-tincidunt-mau.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/90-large_default/aliquam-tincidunt-mau.jpg">
-                        </span>
-                                                                <span class="hover_image">
-                            <img src="https://demo.fieldthemes.com/ps_medicine/home2/161-home_default/aliquam-tincidunt-mau.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/161-home_default/aliquam-tincidunt-mau.jpg"> 
-                        </span>
-
-                                                            </a>
-                                                            <div class="conditions-box">
-
-                                                            </div>
-                                                            <div class="quick-view-product">
-                                                                <a href="javascript:void(0)" class="quick-view" data-link-action="quickview" title="Quick view">
-                                                                    <i class="fa fa-eye"></i> Quick view
-                                                                </a>
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="right-product">
-                                                            <div class="product-description">
-                                                                <div class="product_name"><a href="https://demo.fieldthemes.com/ps_medicine/home2/en/toprating/26-aliquam-tincidunt-mau.html">Aliquam tincidunt mau</a></div>
-                                                                <div class="product-price-and-shipping">
-                                                                    <span class="price">$48.55</span>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="addtocart">
-                                                            <form action="https://demo.fieldthemes.com/ps_medicine/home2/en/cart" method="post">
-                                                                <input type="hidden" name="token" value="d25bc0f4d821fe67c876730ee3cf24a9">
-                                                                <input type="hidden" name="id_product" value="26">
-                                                                <button class="add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                    <span title="Add to cart"><i class="fa fa-shopping-cart"></i>
-                                ADD TO CART
-                                </span>
-
-                                                                </button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="item col-xs-12 col-sm-6 col-md-4">
-                                                <div class="item-inner">
-                                                    <div class="product-miniature js-product-miniature" data-id-product="27" data-id-product-attribute="0" itemscope="" itemtype="http://schema.org/Product">
-                                                        <div class="left-product">
-                                                            <a href="https://demo.fieldthemes.com/ps_medicine/home2/en/toprating/27-quisque-at-orci-gravida.html" class="thumbnail product-thumbnail">
-                                                                <span class="cover_image">
-                            <img src="https://demo.fieldthemes.com/ps_medicine/home2/91-home_default/quisque-at-orci-gravida.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/91-large_default/quisque-at-orci-gravida.jpg">
-                        </span>
-                                                                <span class="hover_image">
-                            <img src="https://demo.fieldthemes.com/ps_medicine/home2/152-home_default/quisque-at-orci-gravida.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/152-home_default/quisque-at-orci-gravida.jpg"> 
-                        </span>
-
-                                                            </a>
-                                                            <div class="conditions-box">
-
-                                                            </div>
-                                                            <div class="quick-view-product">
-                                                                <a href="javascript:void(0)" class="quick-view" data-link-action="quickview" title="Quick view">
-                                                                    <i class="fa fa-eye"></i> Quick view
-                                                                </a>
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="right-product">
-                                                            <div class="product-description">
-                                                                <div class="product_name"><a href="https://demo.fieldthemes.com/ps_medicine/home2/en/toprating/27-quisque-at-orci-gravida.html">Quisque at orci gravida</a></div>
-                                                                <div class="product-price-and-shipping">
-                                                                    <span class="price">$45.49</span>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="addtocart">
-                                                            <form action="https://demo.fieldthemes.com/ps_medicine/home2/en/cart" method="post">
-                                                                <input type="hidden" name="token" value="d25bc0f4d821fe67c876730ee3cf24a9">
-                                                                <input type="hidden" name="id_product" value="27">
-                                                                <button class="add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                    <span title="Add to cart"><i class="fa fa-shopping-cart"></i>
-                                ADD TO CART
-                                </span>
-
-                                                                </button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="item col-xs-12 col-sm-6 col-md-4">
-                                                <div class="item-inner">
-                                                    <div class="product-miniature js-product-miniature" data-id-product="30" data-id-product-attribute="0" itemscope="" itemtype="http://schema.org/Product">
-                                                        <div class="left-product">
-                                                            <a href="https://demo.fieldthemes.com/ps_medicine/home2/en/most-view/30-integer-cursus-auctor.html" class="thumbnail product-thumbnail">
-                                                                <span class="cover_image">
-                            <img src="https://demo.fieldthemes.com/ps_medicine/home2/95-home_default/integer-cursus-auctor.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/95-large_default/integer-cursus-auctor.jpg">
-                        </span>
-                                                                <span class="hover_image">
-                            <img src="https://demo.fieldthemes.com/ps_medicine/home2/174-home_default/integer-cursus-auctor.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/174-home_default/integer-cursus-auctor.jpg"> 
-                        </span>
-
-                                                            </a>
-                                                            <div class="conditions-box">
-
-                                                            </div>
-                                                            <div class="quick-view-product">
-                                                                <a href="javascript:void(0)" class="quick-view" data-link-action="quickview" title="Quick view">
-                                                                    <i class="fa fa-eye"></i> Quick view
-                                                                </a>
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="right-product">
-                                                            <div class="product-description">
-                                                                <div class="product_name"><a href="https://demo.fieldthemes.com/ps_medicine/home2/en/most-view/30-integer-cursus-auctor.html">Integer cursus auctor</a></div>
-                                                                <div class="product-price-and-shipping">
-                                                                    <span class="price">$45.33</span>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="addtocart">
-                                                            <form action="https://demo.fieldthemes.com/ps_medicine/home2/en/cart" method="post">
-                                                                <input type="hidden" name="token" value="d25bc0f4d821fe67c876730ee3cf24a9">
-                                                                <input type="hidden" name="id_product" value="30">
-                                                                <button class="add-to-cart" data-button-action="add-to-cart" type="submit" disabled="">
-                                                                    <i class="fa fa-ban"></i>OUT OF STOCK
-
-                                                                </button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="item col-xs-12 col-sm-6 col-md-4">
-                                                <div class="item-inner">
-                                                    <div class="product-miniature js-product-miniature" data-id-product="19" data-id-product-attribute="0" itemscope="" itemtype="http://schema.org/Product">
-                                                        <div class="left-product">
-                                                            <a href="https://demo.fieldthemes.com/ps_medicine/home2/en/product-categories/19-auctor-ex-id-accumsan.html" class="thumbnail product-thumbnail">
-                                                                <span class="cover_image">
-                            <img src="https://demo.fieldthemes.com/ps_medicine/home2/83-home_default/auctor-ex-id-accumsan.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/83-large_default/auctor-ex-id-accumsan.jpg">
-                        </span>
-                                                                <span class="hover_image">
-                            <img src="https://demo.fieldthemes.com/ps_medicine/home2/123-home_default/auctor-ex-id-accumsan.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/123-home_default/auctor-ex-id-accumsan.jpg"> 
-                        </span>
-
-                                                            </a>
-                                                            <div class="conditions-box">
-                                                                <span class="new_product">New</span>
-
-                                                            </div>
-                                                            <div class="quick-view-product">
-                                                                <a href="javascript:void(0)" class="quick-view" data-link-action="quickview" title="Quick view">
-                                                                    <i class="fa fa-eye"></i> Quick view
-                                                                </a>
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="right-product">
-                                                            <div class="product-description">
-                                                                <div class="product_name"><a href="https://demo.fieldthemes.com/ps_medicine/home2/en/product-categories/19-auctor-ex-id-accumsan.html">Auctor ex id accumsan</a></div>
-                                                                <div class="product-price-and-shipping">
-                                                                    <span class="price">$38.35</span>
-
-                                                                    <span class="regular-price">$40.37</span>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="addtocart">
-                                                            <form action="https://demo.fieldthemes.com/ps_medicine/home2/en/cart" method="post">
-                                                                <input type="hidden" name="token" value="d25bc0f4d821fe67c876730ee3cf24a9">
-                                                                <input type="hidden" name="id_product" value="19">
-                                                                <button class="add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                    <span title="Add to cart"><i class="fa fa-shopping-cart"></i>
-                                ADD TO CART
-                                </span>
-
-                                                                </button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="item col-xs-12 col-sm-6 col-md-4">
-                                                <div class="item-inner">
-                                                    <div class="product-miniature js-product-miniature" data-id-product="36" data-id-product-attribute="19" itemscope="" itemtype="http://schema.org/Product">
-                                                        <div class="left-product">
-                                                            <a href="https://demo.fieldthemes.com/ps_medicine/home2/en/dresses/36-19-aliquam-tincidunt-mauris.html#/4-size-one_size/13-color-orange" class="thumbnail product-thumbnail">
-                                                                <span class="cover_image">
-                            <img src="https://demo.fieldthemes.com/ps_medicine/home2/106-home_default/aliquam-tincidunt-mauris.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/106-large_default/aliquam-tincidunt-mauris.jpg">
-                        </span>
-                                                                <span class="hover_image">
-                            <img src="https://demo.fieldthemes.com/ps_medicine/home2/126-home_default/aliquam-tincidunt-mauris.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/126-home_default/aliquam-tincidunt-mauris.jpg"> 
-                        </span>
-
-                                                            </a>
-                                                            <div class="conditions-box">
-
-                                                            </div>
-                                                            <div class="quick-view-product">
-                                                                <a href="javascript:void(0)" class="quick-view" data-link-action="quickview" title="Quick view">
-                                                                    <i class="fa fa-eye"></i> Quick view
-                                                                </a>
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="right-product">
-                                                            <div class="product-description">
-                                                                <div class="product_name"><a href="https://demo.fieldthemes.com/ps_medicine/home2/en/dresses/36-19-aliquam-tincidunt-mauris.html#/4-size-one_size/13-color-orange">Aliquam tincidunt mauris.</a></div>
-                                                                <div class="product-price-and-shipping">
-                                                                    <span class="price">$36.49</span>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="addtocart">
-                                                            <form action="https://demo.fieldthemes.com/ps_medicine/home2/en/cart" method="post">
-                                                                <input type="hidden" name="token" value="d25bc0f4d821fe67c876730ee3cf24a9">
-                                                                <input type="hidden" name="id_product" value="36">
-                                                                <button class="add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                    <span title="Add to cart"><i class="fa fa-shopping-cart"></i>
-                                ADD TO CART
-                                </span>
-
-                                                                </button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="item col-xs-12 col-sm-6 col-md-4">
-                                                <div class="item-inner">
-                                                    <div class="product-miniature js-product-miniature" data-id-product="35" data-id-product-attribute="18" itemscope="" itemtype="http://schema.org/Product">
-                                                        <div class="left-product">
-                                                            <a href="https://demo.fieldthemes.com/ps_medicine/home2/en/dresses/35-18-aliquam-tincidunt-mauris.html#/4-size-one_size/8-color-white" class="thumbnail product-thumbnail">
-                                                                <span class="cover_image">
-                            <img src="https://demo.fieldthemes.com/ps_medicine/home2/104-home_default/aliquam-tincidunt-mauris.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/104-large_default/aliquam-tincidunt-mauris.jpg">
-                        </span>
-                                                                <span class="hover_image">
-                            <img src="https://demo.fieldthemes.com/ps_medicine/home2/105-home_default/aliquam-tincidunt-mauris.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/105-home_default/aliquam-tincidunt-mauris.jpg"> 
-                        </span>
-
-                                                            </a>
-                                                            <div class="conditions-box">
-
-                                                            </div>
-                                                            <div class="quick-view-product">
-                                                                <a href="javascript:void(0)" class="quick-view" data-link-action="quickview" title="Quick view">
-                                                                    <i class="fa fa-eye"></i> Quick view
-                                                                </a>
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="right-product">
-                                                            <div class="product-description">
-                                                                <div class="product_name"><a href="https://demo.fieldthemes.com/ps_medicine/home2/en/dresses/35-18-aliquam-tincidunt-mauris.html#/4-size-one_size/8-color-white">Aliquam tincidunt mauris.</a></div>
-                                                                <div class="product-price-and-shipping">
-                                                                    <span class="price">$36.49</span>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="addtocart">
-                                                            <form action="https://demo.fieldthemes.com/ps_medicine/home2/en/cart" method="post">
-                                                                <input type="hidden" name="token" value="d25bc0f4d821fe67c876730ee3cf24a9">
-                                                                <input type="hidden" name="id_product" value="35">
-                                                                <button class="add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                    <span title="Add to cart"><i class="fa fa-shopping-cart"></i>
-                                ADD TO CART
-                                </span>
-
-                                                                </button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="item col-xs-12 col-sm-6 col-md-4">
-                                                <div class="item-inner">
-                                                    <div class="product-miniature js-product-miniature" data-id-product="16" data-id-product-attribute="0" itemscope="" itemtype="http://schema.org/Product">
-                                                        <div class="left-product">
-                                                            <a href="https://demo.fieldthemes.com/ps_medicine/home2/en/product-categories/16-aliquam-tincidunt-mauris.html" class="thumbnail product-thumbnail">
-                                                                <span class="cover_image">
-                            <img src="https://demo.fieldthemes.com/ps_medicine/home2/80-home_default/aliquam-tincidunt-mauris.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/80-large_default/aliquam-tincidunt-mauris.jpg">
-                        </span>
-                                                                <span class="hover_image">
-                            <img src="https://demo.fieldthemes.com/ps_medicine/home2/120-home_default/aliquam-tincidunt-mauris.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/120-home_default/aliquam-tincidunt-mauris.jpg"> 
-                        </span>
-
-                                                            </a>
-                                                            <div class="conditions-box">
-
-                                                            </div>
-                                                            <div class="quick-view-product">
-                                                                <a href="javascript:void(0)" class="quick-view" data-link-action="quickview" title="Quick view">
-                                                                    <i class="fa fa-eye"></i> Quick view
-                                                                </a>
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="right-product">
-                                                            <div class="product-description">
-                                                                <div class="product_name"><a href="https://demo.fieldthemes.com/ps_medicine/home2/en/product-categories/16-aliquam-tincidunt-mauris.html">Aliquam tincidunt mauris.</a></div>
-                                                                <div class="product-price-and-shipping">
-                                                                    <span class="price">$36.40</span>
-
-                                                                    <span class="regular-price">$40.50</span>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="addtocart">
-                                                            <form action="https://demo.fieldthemes.com/ps_medicine/home2/en/cart" method="post">
-                                                                <input type="hidden" name="token" value="d25bc0f4d821fe67c876730ee3cf24a9">
-                                                                <input type="hidden" name="id_product" value="16">
-                                                                <button class="add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                    <span title="Add to cart"><i class="fa fa-shopping-cart"></i>
-                                ADD TO CART
-                                </span>
-
-                                                                </button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="item col-xs-12 col-sm-6 col-md-4">
-                                                <div class="item-inner">
-                                                    <div class="product-miniature js-product-miniature" data-id-product="14" data-id-product-attribute="13" itemscope="" itemtype="http://schema.org/Product">
-                                                        <div class="left-product">
-                                                            <a href="https://demo.fieldthemes.com/ps_medicine/home2/en/product-categories/14-13-integer-cursus-auctor-ex.html#/4-size-one_size/11-color-black/23-shoes_size-40" class="thumbnail product-thumbnail">
-                                                                <span class="cover_image">
-                            <img src="https://demo.fieldthemes.com/ps_medicine/home2/79-home_default/integer-cursus-auctor-ex.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/79-large_default/integer-cursus-auctor-ex.jpg">
-                        </span>
-                                                                <span class="hover_image">
-                            <img src="https://demo.fieldthemes.com/ps_medicine/home2/100-home_default/integer-cursus-auctor-ex.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/100-home_default/integer-cursus-auctor-ex.jpg"> 
-                        </span>
-
-                                                            </a>
-                                                            <div class="conditions-box">
-
-                                                            </div>
-                                                            <div class="quick-view-product">
-                                                                <a href="javascript:void(0)" class="quick-view" data-link-action="quickview" title="Quick view">
-                                                                    <i class="fa fa-eye"></i> Quick view
-                                                                </a>
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="right-product">
-                                                            <div class="product-description">
-                                                                <div class="product_name"><a href="https://demo.fieldthemes.com/ps_medicine/home2/en/product-categories/14-13-integer-cursus-auctor-ex.html#/4-size-one_size/11-color-black/23-shoes_size-40">Integer cursus auctor ex</a></div>
-                                                                <div class="product-price-and-shipping">
-                                                                    <span class="price">$33.39</span>
-
-                                                                    <span class="regular-price">$39.45</span>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="addtocart">
-                                                            <form action="https://demo.fieldthemes.com/ps_medicine/home2/en/cart" method="post">
-                                                                <input type="hidden" name="token" value="d25bc0f4d821fe67c876730ee3cf24a9">
-                                                                <input type="hidden" name="id_product" value="14">
-                                                                <button class="add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                    <span title="Add to cart"><i class="fa fa-shopping-cart"></i>
-                                ADD TO CART
-                                </span>
-
-                                                                </button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
+                                        @endforeach
                                         </div>
                                     </div>
-                                    <div id="box-product-list">
-                                        <div class="item-product-list">
-                                            <div class="js-product-miniature" data-id-product="24" data-id-product-attribute="0" itemscope="" itemtype="http://schema.org/Product">
-                                                <div class="left-product">
-                                                    <a href="https://demo.fieldthemes.com/ps_medicine/home2/en/toprating/24-aollis-porta-facilisis.html" class="thumbnail product-thumbnail">
-                                                        <span class="cover_image">
-                                <img class="img-responsive" src="https://demo.fieldthemes.com/ps_medicine/home2/88-home_default/aollis-porta-facilisis.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/88-large_default/aollis-porta-facilisis.jpg" alt="Aollis porta facilisis.">
-                            </span>
-                                                        <span class="hover_image">
-                                <img class="img-responsive" src="https://demo.fieldthemes.com/ps_medicine/home2/144-home_default/aollis-porta-facilisis.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/144-home_default/aollis-porta-facilisis.jpg" alt="Aollis porta facilisis."> 
-                            </span>
 
-                                                    </a>
-                                                    <div class="conditions-box">
-
-                                                    </div>
-                                                </div>
-                                                <div class="right-product">
-                                                    <div class="description-product">
-                                                        <div class="product_name"><a href="https://demo.fieldthemes.com/ps_medicine/home2/en/toprating/24-aollis-porta-facilisis.html">Aollis porta facilisis.</a></div>
-                                                        <div class="product-price-and-shipping">
-
-                                                            <span class="price">$53.67</span>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="decriptions-short">
-                                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam&nbsp; mod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                                                    </div>
-                                                    <div class="product-availability-list">
-                                                    </div>
-                                                    <div class="variant-links-list">
-                                                    </div>
-                                                    <div class="quick-view-product-list">
-                                                        <a href="javascript:void(0)" class="quick-view" data-link-action="quickview">
-                                                            <i class="fa fa-eye"></i> Quick view
-                                                        </a>
-                                                    </div>
-                                                    <div class="addtocart">
-                                                        <form action="https://demo.fieldthemes.com/ps_medicine/home2/en/cart" method="post">
-                                                            <input type="hidden" name="token" value="d25bc0f4d821fe67c876730ee3cf24a9">
-                                                            <input type="hidden" name="id_product" value="24">
-                                                            <button class="add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                <span title="Add to cart"><i class="fa fa-shopping-cart"></i>
-                                ADD TO CART
-                                </span>
-
-                                                            </button>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item-product-list">
-                                            <div class="js-product-miniature" data-id-product="26" data-id-product-attribute="0" itemscope="" itemtype="http://schema.org/Product">
-                                                <div class="left-product">
-                                                    <a href="https://demo.fieldthemes.com/ps_medicine/home2/en/toprating/26-aliquam-tincidunt-mau.html" class="thumbnail product-thumbnail">
-                                                        <span class="cover_image">
-                                <img class="img-responsive" src="https://demo.fieldthemes.com/ps_medicine/home2/90-home_default/aliquam-tincidunt-mau.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/90-large_default/aliquam-tincidunt-mau.jpg" alt="Aliquam tincidunt mau">
-                            </span>
-                                                        <span class="hover_image">
-                                <img class="img-responsive" src="https://demo.fieldthemes.com/ps_medicine/home2/161-home_default/aliquam-tincidunt-mau.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/161-home_default/aliquam-tincidunt-mau.jpg" alt="Aliquam tincidunt mau"> 
-                            </span>
-
-                                                    </a>
-                                                    <div class="conditions-box">
-
-                                                    </div>
-                                                </div>
-                                                <div class="right-product">
-                                                    <div class="description-product">
-                                                        <div class="product_name"><a href="https://demo.fieldthemes.com/ps_medicine/home2/en/toprating/26-aliquam-tincidunt-mau.html">Aliquam tincidunt mau</a></div>
-                                                        <div class="product-price-and-shipping">
-
-                                                            <span class="price">$48.55</span>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="decriptions-short">
-                                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam&nbsp; mod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                                                    </div>
-                                                    <div class="product-availability-list">
-                                                    </div>
-                                                    <div class="variant-links-list">
-                                                    </div>
-                                                    <div class="quick-view-product-list">
-                                                        <a href="javascript:void(0)" class="quick-view" data-link-action="quickview">
-                                                            <i class="fa fa-eye"></i> Quick view
-                                                        </a>
-                                                    </div>
-                                                    <div class="addtocart">
-                                                        <form action="https://demo.fieldthemes.com/ps_medicine/home2/en/cart" method="post">
-                                                            <input type="hidden" name="token" value="d25bc0f4d821fe67c876730ee3cf24a9">
-                                                            <input type="hidden" name="id_product" value="26">
-                                                            <button class="add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                <span title="Add to cart"><i class="fa fa-shopping-cart"></i>
-                                ADD TO CART
-                                </span>
-
-                                                            </button>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item-product-list">
-                                            <div class="js-product-miniature" data-id-product="27" data-id-product-attribute="0" itemscope="" itemtype="http://schema.org/Product">
-                                                <div class="left-product">
-                                                    <a href="https://demo.fieldthemes.com/ps_medicine/home2/en/toprating/27-quisque-at-orci-gravida.html" class="thumbnail product-thumbnail">
-                                                        <span class="cover_image">
-                                <img class="img-responsive" src="https://demo.fieldthemes.com/ps_medicine/home2/91-home_default/quisque-at-orci-gravida.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/91-large_default/quisque-at-orci-gravida.jpg" alt="Quisque at orci gravida">
-                            </span>
-                                                        <span class="hover_image">
-                                <img class="img-responsive" src="https://demo.fieldthemes.com/ps_medicine/home2/152-home_default/quisque-at-orci-gravida.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/152-home_default/quisque-at-orci-gravida.jpg" alt="Quisque at orci gravida"> 
-                            </span>
-
-                                                    </a>
-                                                    <div class="conditions-box">
-
-                                                    </div>
-                                                </div>
-                                                <div class="right-product">
-                                                    <div class="description-product">
-                                                        <div class="product_name"><a href="https://demo.fieldthemes.com/ps_medicine/home2/en/toprating/27-quisque-at-orci-gravida.html">Quisque at orci gravida</a></div>
-                                                        <div class="product-price-and-shipping">
-
-                                                            <span class="price">$45.49</span>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="decriptions-short">
-                                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam&nbsp; mod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                                                    </div>
-                                                    <div class="product-availability-list">
-                                                    </div>
-                                                    <div class="variant-links-list">
-                                                    </div>
-                                                    <div class="quick-view-product-list">
-                                                        <a href="javascript:void(0)" class="quick-view" data-link-action="quickview">
-                                                            <i class="fa fa-eye"></i> Quick view
-                                                        </a>
-                                                    </div>
-                                                    <div class="addtocart">
-                                                        <form action="https://demo.fieldthemes.com/ps_medicine/home2/en/cart" method="post">
-                                                            <input type="hidden" name="token" value="d25bc0f4d821fe67c876730ee3cf24a9">
-                                                            <input type="hidden" name="id_product" value="27">
-                                                            <button class="add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                <span title="Add to cart"><i class="fa fa-shopping-cart"></i>
-                                ADD TO CART
-                                </span>
-
-                                                            </button>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item-product-list">
-                                            <div class="js-product-miniature" data-id-product="30" data-id-product-attribute="0" itemscope="" itemtype="http://schema.org/Product">
-                                                <div class="left-product">
-                                                    <a href="https://demo.fieldthemes.com/ps_medicine/home2/en/most-view/30-integer-cursus-auctor.html" class="thumbnail product-thumbnail">
-                                                        <span class="cover_image">
-                                <img class="img-responsive" src="https://demo.fieldthemes.com/ps_medicine/home2/95-home_default/integer-cursus-auctor.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/95-large_default/integer-cursus-auctor.jpg" alt="Integer cursus auctor">
-                            </span>
-                                                        <span class="hover_image">
-                                <img class="img-responsive" src="https://demo.fieldthemes.com/ps_medicine/home2/174-home_default/integer-cursus-auctor.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/174-home_default/integer-cursus-auctor.jpg" alt="Integer cursus auctor"> 
-                            </span>
-
-                                                    </a>
-                                                    <div class="conditions-box">
-
-                                                    </div>
-                                                </div>
-                                                <div class="right-product">
-                                                    <div class="description-product">
-                                                        <div class="product_name"><a href="https://demo.fieldthemes.com/ps_medicine/home2/en/most-view/30-integer-cursus-auctor.html">Integer cursus auctor</a></div>
-                                                        <div class="product-price-and-shipping">
-
-                                                            <span class="price">$45.33</span>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="decriptions-short">
-                                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam&nbsp; mod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                                                    </div>
-                                                    <div class="product-availability-list">
-                                                        <i class="fa fa-ban"></i> Out of stock
-                                                    </div>
-                                                    <div class="variant-links-list">
-                                                    </div>
-                                                    <div class="quick-view-product-list">
-                                                        <a href="javascript:void(0)" class="quick-view" data-link-action="quickview">
-                                                            <i class="fa fa-eye"></i> Quick view
-                                                        </a>
-                                                    </div>
-                                                    <div class="addtocart">
-                                                        <form action="https://demo.fieldthemes.com/ps_medicine/home2/en/cart" method="post">
-                                                            <input type="hidden" name="token" value="d25bc0f4d821fe67c876730ee3cf24a9">
-                                                            <input type="hidden" name="id_product" value="30">
-                                                            <button class="add-to-cart" data-button-action="add-to-cart" type="submit" disabled="">
-                                                                <i class="fa fa-ban"></i> OUT OF STOCK
-
-                                                            </button>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item-product-list">
-                                            <div class="js-product-miniature" data-id-product="19" data-id-product-attribute="0" itemscope="" itemtype="http://schema.org/Product">
-                                                <div class="left-product">
-                                                    <a href="https://demo.fieldthemes.com/ps_medicine/home2/en/product-categories/19-auctor-ex-id-accumsan.html" class="thumbnail product-thumbnail">
-                                                        <span class="cover_image">
-                                <img class="img-responsive" src="https://demo.fieldthemes.com/ps_medicine/home2/83-home_default/auctor-ex-id-accumsan.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/83-large_default/auctor-ex-id-accumsan.jpg" alt="Auctor ex id accumsan">
-                            </span>
-                                                        <span class="hover_image">
-                                <img class="img-responsive" src="https://demo.fieldthemes.com/ps_medicine/home2/123-home_default/auctor-ex-id-accumsan.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/123-home_default/auctor-ex-id-accumsan.jpg" alt="Auctor ex id accumsan"> 
-                            </span>
-
-                                                    </a>
-                                                    <div class="conditions-box">
-                                                        <span class="new_product">New</span>
-
-                                                    </div>
-                                                </div>
-                                                <div class="right-product">
-                                                    <div class="description-product">
-                                                        <div class="product_name"><a href="https://demo.fieldthemes.com/ps_medicine/home2/en/product-categories/19-auctor-ex-id-accumsan.html">Auctor ex id accumsan</a></div>
-                                                        <div class="product-price-and-shipping">
-
-                                                            <span class="price">$38.35</span>
-
-                                                            <span class="regular-price">$40.37</span>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="decriptions-short">
-                                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam&nbsp; mod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                                                    </div>
-                                                    <div class="product-availability-list">
-                                                    </div>
-                                                    <div class="variant-links-list">
-                                                    </div>
-                                                    <div class="quick-view-product-list">
-                                                        <a href="javascript:void(0)" class="quick-view" data-link-action="quickview">
-                                                            <i class="fa fa-eye"></i> Quick view
-                                                        </a>
-                                                    </div>
-                                                    <div class="addtocart">
-                                                        <form action="https://demo.fieldthemes.com/ps_medicine/home2/en/cart" method="post">
-                                                            <input type="hidden" name="token" value="d25bc0f4d821fe67c876730ee3cf24a9">
-                                                            <input type="hidden" name="id_product" value="19">
-                                                            <button class="add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                <span title="Add to cart"><i class="fa fa-shopping-cart"></i>
-                                ADD TO CART
-                                </span>
-
-                                                            </button>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item-product-list">
-                                            <div class="js-product-miniature" data-id-product="36" data-id-product-attribute="19" itemscope="" itemtype="http://schema.org/Product">
-                                                <div class="left-product">
-                                                    <a href="https://demo.fieldthemes.com/ps_medicine/home2/en/dresses/36-19-aliquam-tincidunt-mauris.html#/4-size-one_size/13-color-orange" class="thumbnail product-thumbnail">
-                                                        <span class="cover_image">
-                                <img class="img-responsive" src="https://demo.fieldthemes.com/ps_medicine/home2/106-home_default/aliquam-tincidunt-mauris.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/106-large_default/aliquam-tincidunt-mauris.jpg" alt="Aliquam tincidunt mauris.">
-                            </span>
-                                                        <span class="hover_image">
-                                <img class="img-responsive" src="https://demo.fieldthemes.com/ps_medicine/home2/126-home_default/aliquam-tincidunt-mauris.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/126-home_default/aliquam-tincidunt-mauris.jpg" alt="Aliquam tincidunt mauris."> 
-                            </span>
-
-                                                    </a>
-                                                    <div class="conditions-box">
-
-                                                    </div>
-                                                </div>
-                                                <div class="right-product">
-                                                    <div class="description-product">
-                                                        <div class="product_name"><a href="https://demo.fieldthemes.com/ps_medicine/home2/en/dresses/36-19-aliquam-tincidunt-mauris.html#/4-size-one_size/13-color-orange">Aliquam tincidunt mauris.</a></div>
-                                                        <div class="product-price-and-shipping">
-
-                                                            <span class="price">$36.49</span>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="decriptions-short">
-                                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam&nbsp; mod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                                                    </div>
-                                                    <div class="product-availability-list">
-                                                    </div>
-                                                    <div class="variant-links-list">
-                                                    </div>
-                                                    <div class="quick-view-product-list">
-                                                        <a href="javascript:void(0)" class="quick-view" data-link-action="quickview">
-                                                            <i class="fa fa-eye"></i> Quick view
-                                                        </a>
-                                                    </div>
-                                                    <div class="addtocart">
-                                                        <form action="https://demo.fieldthemes.com/ps_medicine/home2/en/cart" method="post">
-                                                            <input type="hidden" name="token" value="d25bc0f4d821fe67c876730ee3cf24a9">
-                                                            <input type="hidden" name="id_product" value="36">
-                                                            <button class="add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                <span title="Add to cart"><i class="fa fa-shopping-cart"></i>
-                                ADD TO CART
-                                </span>
-
-                                                            </button>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item-product-list">
-                                            <div class="js-product-miniature" data-id-product="35" data-id-product-attribute="18" itemscope="" itemtype="http://schema.org/Product">
-                                                <div class="left-product">
-                                                    <a href="https://demo.fieldthemes.com/ps_medicine/home2/en/dresses/35-18-aliquam-tincidunt-mauris.html#/4-size-one_size/8-color-white" class="thumbnail product-thumbnail">
-                                                        <span class="cover_image">
-                                <img class="img-responsive" src="https://demo.fieldthemes.com/ps_medicine/home2/104-home_default/aliquam-tincidunt-mauris.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/104-large_default/aliquam-tincidunt-mauris.jpg" alt="Aliquam tincidunt mauris.">
-                            </span>
-                                                        <span class="hover_image">
-                                <img class="img-responsive" src="https://demo.fieldthemes.com/ps_medicine/home2/105-home_default/aliquam-tincidunt-mauris.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/105-home_default/aliquam-tincidunt-mauris.jpg" alt="Aliquam tincidunt mauris."> 
-                            </span>
-
-                                                    </a>
-                                                    <div class="conditions-box">
-
-                                                    </div>
-                                                </div>
-                                                <div class="right-product">
-                                                    <div class="description-product">
-                                                        <div class="product_name"><a href="https://demo.fieldthemes.com/ps_medicine/home2/en/dresses/35-18-aliquam-tincidunt-mauris.html#/4-size-one_size/8-color-white">Aliquam tincidunt mauris.</a></div>
-                                                        <div class="product-price-and-shipping">
-
-                                                            <span class="price">$36.49</span>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="decriptions-short">
-                                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam&nbsp; mod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                                                    </div>
-                                                    <div class="product-availability-list">
-                                                    </div>
-                                                    <div class="variant-links-list">
-                                                    </div>
-                                                    <div class="quick-view-product-list">
-                                                        <a href="javascript:void(0)" class="quick-view" data-link-action="quickview">
-                                                            <i class="fa fa-eye"></i> Quick view
-                                                        </a>
-                                                    </div>
-                                                    <div class="addtocart">
-                                                        <form action="https://demo.fieldthemes.com/ps_medicine/home2/en/cart" method="post">
-                                                            <input type="hidden" name="token" value="d25bc0f4d821fe67c876730ee3cf24a9">
-                                                            <input type="hidden" name="id_product" value="35">
-                                                            <button class="add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                <span title="Add to cart"><i class="fa fa-shopping-cart"></i>
-                                ADD TO CART
-                                </span>
-
-                                                            </button>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item-product-list">
-                                            <div class="js-product-miniature" data-id-product="16" data-id-product-attribute="0" itemscope="" itemtype="http://schema.org/Product">
-                                                <div class="left-product">
-                                                    <a href="https://demo.fieldthemes.com/ps_medicine/home2/en/product-categories/16-aliquam-tincidunt-mauris.html" class="thumbnail product-thumbnail">
-                                                        <span class="cover_image">
-                                <img class="img-responsive" src="https://demo.fieldthemes.com/ps_medicine/home2/80-home_default/aliquam-tincidunt-mauris.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/80-large_default/aliquam-tincidunt-mauris.jpg" alt="Aliquam tincidunt mauris.">
-                            </span>
-                                                        <span class="hover_image">
-                                <img class="img-responsive" src="https://demo.fieldthemes.com/ps_medicine/home2/120-home_default/aliquam-tincidunt-mauris.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/120-home_default/aliquam-tincidunt-mauris.jpg" alt="Aliquam tincidunt mauris."> 
-                            </span>
-
-                                                    </a>
-                                                    <div class="conditions-box">
-
-                                                    </div>
-                                                </div>
-                                                <div class="right-product">
-                                                    <div class="description-product">
-                                                        <div class="product_name"><a href="https://demo.fieldthemes.com/ps_medicine/home2/en/product-categories/16-aliquam-tincidunt-mauris.html">Aliquam tincidunt mauris.</a></div>
-                                                        <div class="product-price-and-shipping">
-
-                                                            <span class="price">$36.40</span>
-
-                                                            <span class="regular-price">$40.50</span>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="decriptions-short">
-                                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam&nbsp; mod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                                                    </div>
-                                                    <div class="product-availability-list">
-                                                    </div>
-                                                    <div class="variant-links-list">
-                                                    </div>
-                                                    <div class="quick-view-product-list">
-                                                        <a href="javascript:void(0)" class="quick-view" data-link-action="quickview">
-                                                            <i class="fa fa-eye"></i> Quick view
-                                                        </a>
-                                                    </div>
-                                                    <div class="addtocart">
-                                                        <form action="https://demo.fieldthemes.com/ps_medicine/home2/en/cart" method="post">
-                                                            <input type="hidden" name="token" value="d25bc0f4d821fe67c876730ee3cf24a9">
-                                                            <input type="hidden" name="id_product" value="16">
-                                                            <button class="add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                <span title="Add to cart"><i class="fa fa-shopping-cart"></i>
-                                ADD TO CART
-                                </span>
-
-                                                            </button>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item-product-list">
-                                            <div class="js-product-miniature" data-id-product="14" data-id-product-attribute="13" itemscope="" itemtype="http://schema.org/Product">
-                                                <div class="left-product">
-                                                    <a href="https://demo.fieldthemes.com/ps_medicine/home2/en/product-categories/14-13-integer-cursus-auctor-ex.html#/4-size-one_size/11-color-black/23-shoes_size-40" class="thumbnail product-thumbnail">
-                                                        <span class="cover_image">
-                                <img class="img-responsive" src="https://demo.fieldthemes.com/ps_medicine/home2/79-home_default/integer-cursus-auctor-ex.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/79-large_default/integer-cursus-auctor-ex.jpg" alt="Integer cursus auctor ex">
-                            </span>
-                                                        <span class="hover_image">
-                                <img class="img-responsive" src="https://demo.fieldthemes.com/ps_medicine/home2/100-home_default/integer-cursus-auctor-ex.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/100-home_default/integer-cursus-auctor-ex.jpg" alt="Integer cursus auctor ex"> 
-                            </span>
-
-                                                    </a>
-                                                    <div class="conditions-box">
-
-                                                    </div>
-                                                </div>
-                                                <div class="right-product">
-                                                    <div class="description-product">
-                                                        <div class="product_name"><a href="https://demo.fieldthemes.com/ps_medicine/home2/en/product-categories/14-13-integer-cursus-auctor-ex.html#/4-size-one_size/11-color-black/23-shoes_size-40">Integer cursus auctor ex</a></div>
-                                                        <div class="product-price-and-shipping">
-
-                                                            <span class="price">$33.39</span>
-
-                                                            <span class="regular-price">$39.45</span>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="decriptions-short">
-                                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam&nbsp; mod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                                                    </div>
-                                                    <div class="product-availability-list">
-                                                    </div>
-                                                    <div class="variant-links-list">
-                                                    </div>
-                                                    <div class="quick-view-product-list">
-                                                        <a href="javascript:void(0)" class="quick-view" data-link-action="quickview">
-                                                            <i class="fa fa-eye"></i> Quick view
-                                                        </a>
-                                                    </div>
-                                                    <div class="addtocart">
-                                                        <form action="https://demo.fieldthemes.com/ps_medicine/home2/en/cart" method="post">
-                                                            <input type="hidden" name="token" value="d25bc0f4d821fe67c876730ee3cf24a9">
-                                                            <input type="hidden" name="id_product" value="14">
-                                                            <button class="add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                <span title="Add to cart"><i class="fa fa-shopping-cart"></i>
-                                ADD TO CART
-                                </span>
-
-                                                            </button>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
 
                                 <!-- templates/_partials/pagination.tpl -->
@@ -1258,72 +383,10 @@
                                         Showing 10-18 of 23 item(s)
                                     </div>
                                     <div class="col-md-6">
-                                        <ul class="page-list clearfix text-xs-center">
-                                            <li>
-                                                <a rel="" href="https://demo.fieldthemes.com/ps_medicine/home2/en/new-products?order=product.price.desc&amp;page=1" class=" js-search-link">
-                                                    <i class="material-icons"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a rel="nofollow" href="https://demo.fieldthemes.com/ps_medicine/home2/en/new-products?order=product.price.desc&amp;page=1" class="js-search-link">
-                              1
-                          </a>
-                                            </li>
-                                            <li class="current">
-                                                <a rel="nofollow" href="https://demo.fieldthemes.com/ps_medicine/home2/en/new-products?order=product.price.desc&amp;page=2" class="disabled js-search-link">
-                              2
-                          </a>
-                                            </li>
-                                            <li>
-                                                <a rel="nofollow" href="https://demo.fieldthemes.com/ps_medicine/home2/en/new-products?order=product.price.desc&amp;page=3" class="js-search-link">
-                              3
-                          </a>
-                                            </li>
-                                            <li>
-                                                <a rel="" href="https://demo.fieldthemes.com/ps_medicine/home2/en/new-products?order=product.price.desc&amp;page=3" class=" js-search-link">
-                                                    <i class="material-icons"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
+                                        {{ $products->links('inc.pagination') }}
                                     </div>
                                 </nav>
 
-                                <script type="text/javascript">
-                                    $(document).ready(function() {
-                                        $(".click-product-grid").click(function(e) {
-                                            $("#products").removeClass("active_list");
-                                            $("#products").addClass("active_grid");
-                                            setCookie('status_list_product', 'active_grid', 1);
-                                        });
-                                        $(".click-product-list").click(function(e) {
-                                            $("#products").removeClass("active_grid");
-                                            $("#products").addClass("active_list");
-                                            setCookie('status_list_product', 'active_list', 1);
-                                        });
-                                        if (getCookie('status_list_product') !== "" && getCookie('status_list_product') !== "active_grid") {
-                                            $("#products").removeClass("active_grid");
-                                            $("#products").addClass("active_list");
-                                        }
-                                    });
-
-                                    function setCookie(cname, cvalue, exdays) {
-                                        var d = new Date();
-                                        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-                                        var expires = "expires=" + d.toUTCString();
-                                        document.cookie = cname + "=" + cvalue + "; " + expires;
-                                    }
-
-                                    function getCookie(cname) {
-                                        var name = cname + "=";
-                                        var ca = document.cookie.split(';');
-                                        for (var i = 0; i < ca.length; i++) {
-                                            var c = ca[i];
-                                            while (c.charAt(0) == ' ') c = c.substring(1);
-                                            if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
-                                        }
-                                        return "";
-                                    }
-                                </script>
                             </div>
 
                         </div>

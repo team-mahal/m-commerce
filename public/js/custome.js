@@ -1,12 +1,10 @@
-
+var image='';
 function quickview(id) {
 	$.ajax({
 		url: base_url+'/quickview/'+id,
 	})
 	.done(function(re) {
-		console.log(re);
-		$("#quickview-modal-18-0").css('display', 'block');
-		$(".modal-backdrop").css('display', 'block');
+		$('#quickview-modal-18-0').find('.modal-body').html(re)
 	})
 	.fail(function() {
 		console.log("error");
@@ -17,9 +15,8 @@ function quickview(id) {
 	
 }
 
-jQuery(document).ready(function($) {
-	$('.close').click(function(event) {
-		$("#quickview-modal-18-0").css('display', 'none');
-		$("#modal-backdrop").css('display', 'none');
-	});
-});
+$('#quickview-modal-18-0').on('show.bs.modal', function (event) {
+   var button = $(event.relatedTarget)
+   var id= button.data('id')
+   quickview(id)
+})
