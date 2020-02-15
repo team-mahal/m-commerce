@@ -53,9 +53,15 @@ class HomeController extends Controller
         return view('productdetails');
     }
 
-    public function allproduct()
+    public function allproduct(Request $request)
     {   
-        $products=Product::orderBy('id','desc')->with('specificPrice')->paginate(10);
-    	return view('allproduct')->with('products',$products);
+        $filter= $request->filter;
+        $products=Product::orderBy('id','desc')
+                            ->with('specificPrice')
+                            ->orderBy('price','asc');
+        if(isset($filter)){
+            $products->where('id',1);
+        }
+    	return view('allproduct')->with('products',$products->paginate(12));
     }
 }

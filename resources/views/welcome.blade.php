@@ -57,15 +57,14 @@
                                                                                 <div class="product_name"><a href="">{{ $new->name }}</a></div>
                                                                                 <div class="product-price-and-shipping">
                                                                                     @if($new->specificPrice)
-                                                                                        <span class="price">{{ $new->price-$new->specificPrice->reduction }}</span>
+                                                                                        <span class="price">৳{{ $new->price-$new->specificPrice->reduction }}</span>
                                                                                     @else
-                                                                                        <span class="price">{{ $new->price }}</span>
+                                                                                        <span class="price">৳{{ $new->price }}</span>
                                                                                     @endif
 
                                                                                     @if($new->specificPrice)
-                                                                                        <span class="regular-price">{{ $new->price }}</span>
+                                                                                        <span class="regular-price">৳{{ $new->price }}</span>
                                                                                     @endif
-
                                                                                 </div>
                                                                             </div>
                                                                         </div>

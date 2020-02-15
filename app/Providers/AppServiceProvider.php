@@ -5,7 +5,8 @@ namespace App\Providers;
 use App\Models\AttributeSet;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
-
+use App\Models\Category;
+use Illuminate\Contracts\View\View;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -15,7 +16,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        view()->composer('*', function(View $view) {
+            $categories = Category::with('children')->whereParentId(null)->get();
+            $view->with('categories', $categories);
+        });
     }
 
     /**
