@@ -8,20 +8,29 @@
         <div class="row">
 
             <div id="left-column" class="col-xs-12 col-sm-4 col-md-3">
-
                 <div class="block-categories hidden-sm-down">
-                    <ul class="category-top-menu">
-                        <li><a class="text-uppercase h6" href="https://demo.fieldthemes.com/ps_medicine/home2/en/2-product-categories">Product Categories</a></li>
+                    <ul class="category-top-menu ">
                         <li>
-                            <ul class="category-sub-menu">
-                                @foreach($categories as $key => $category) 
-                                    <li data-depth="{{ $key }}">
-                                        <a href="">{{ $category->name }}</a>
-                                        @if(isset($category->children))
-                                            @include('inc.categories',['key'=>$key++,'children'=>$category->children])
+                            <ul id="tree1" class="category-sub-menu">
+                                <li>
+                                    <h3>Category List</h3>
+                                </li>
+                                @foreach($categories as $category)
+
+                                    <li>
+
+                                        {{ $category->name }}
+
+                                        @if(count($category->childs))
+
+                                            @include('inc.manageChild',['childs' => $category->childs])
+
                                         @endif
+
                                     </li>
+
                                 @endforeach
+
                             </ul>
                         </li>
                     </ul>

@@ -27,25 +27,28 @@ class HomeController extends Controller
         
     }
 
-    public function addtocart(Request $request)
+    public function addtocart($id='')
     {
-        $product= Product::with('specificPrice')->with('images')->find($request->product_id);
+        if(!$id==''){
+            $product= Product::with('specificPrice')->with('images')->find($id);
+            $img='';
+            if($product->images && count($product->images)>0){
+                $img=$product->images[0]->name;
+            }
 
-        $img='';
-        if($product->images && count($product->images)>0){
-            $img=$product->images[0]->name;
+            \Cart::add(
+              ['id' => $product->id, 'name' => $product->name, 'qty' => 1,'taxRate'=>0, 'price' => $product->price,'options'=>['image'=>$img]],
+            );
+            return view('inc.cart');
+        }else{
+            return view('inc.cart');
         }
-
-        \Cart::add(
-          ['id' => $product->id, 'name' => $product->name, 'qty' => 1,'taxRate'=>0, 'price' => $product->price,'options'=>['image'=>$img]],
-        );
-        return redirect()->back();
     }
 
     public function remove($id='')
     {
         \Cart::remove($id);
-        return redirect()->back();
+        return view('inc.cart');
     }
 
     public function productdetails()

@@ -1,34 +1,140 @@
-/* Fix select 2 style */
-.select2-container--default .select2-selection--single {
-	border-radius: 0 !important;
-	border: 1px SOLID #ccc !important;
+.tree, .tree ul {
+
+    margin:0;
+
+    padding:0;
+
+    list-style:none
+
 }
 
-.select2-container .select2-selection--single {
-	height: 34px !important;
+.panel-primary > .panel-heading {
+    color: #fff;
+    background-color: #606ec3;
+    border-color: #606ec3;
 }
 
-.select2-container .select2-selection--single .select2-selection__rendered {
-	padding-left: 2px !important;
+.panel-primary {
+
+    border-color: #606ec3;
+    margin: 3%;
+
+}
+.tree ul {
+
+    margin-left:1em;
+
+    position:relative
+
 }
 
-.select2-container--default .select2-selection--single .select2-selection__arrow b {
-	margin-top: 1px !important;
+.tree ul ul {
+
+    margin-left:.5em
+
 }
 
-.select2-container--bootstrap .select2-selection--single .select2-selection__rendered {
-	padding-top: 4px !important;
+.tree ul:before {
+
+    content:"";
+
+    display:block;
+
+    width:0;
+
+    position:absolute;
+
+    top:0;
+
+    bottom:0;
+
+    left:0;
+
+    border-left:1px solid
+
 }
 
-.tr-current-product {
-	background-color: #e1e9fb !important;
-	font-weight: bold;
+.tree li {
+
+    margin:0;
+
+    padding:0 1em;
+
+    line-height:2em;
+
+    color:#369;
+
+    font-weight:700;
+
+    position:relative
+
 }
 
-.table tbody>tr>td.vertical-align-middle {
-	vertical-align: middle;
+.tree ul li:before {
+
+    content:"";
+
+    display:block;
+
+    width:10px;
+
+    height:0;
+
+    border-top:1px solid;
+
+    margin-top:-1px;
+
+    position:absolute;
+
+    top:1em;
+
+    left:0
+
+}
+.block-categories>ul>li:first-child{
+    margin-left: 0px;
+}
+.tree ul li:last-child:before {
+
+    background:#fff;
+
+    height:auto;
+
+    top:1em;
+
+    bottom:0
+
 }
 
-.font-12 {
-	font-size: 12px;
+.indicator {
+
+    margin-right:5px;
+
 }
+
+.tree li a {
+
+    text-decoration: none;
+
+    color:#369;
+
+}
+
+.tree li button, .tree li button:active, .tree li button:focus {
+
+    text-decoration: none;
+
+    color:#369;
+
+    border:none;
+
+    background:transparent;
+
+    margin:0px 0px 0px 0px;
+
+    padding:0px 0px 0px 0px;
+
+    outline: 0;
+
+}
+

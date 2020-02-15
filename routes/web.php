@@ -8,6 +8,8 @@ Route::get('/cart', 'HomeController@cart');
 Route::get('/remove/{id}', 'HomeController@remove');
 Route::get('/quickview/{id}', 'HomeController@quickview');
 Route::post('/addtocart', 'HomeController@addtocart');
+Route::get('/addtocart/{id}', 'HomeController@addtocart');
+Route::get('/addtocart/', 'HomeController@addtocart');
 
 	
 // blog

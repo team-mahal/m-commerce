@@ -17,6 +17,7 @@
 
     <link rel="stylesheet" href="{{ asset('css/theme-min.css') }}" type="text/css" media="all">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}" type="text/css" media="all">
+    <link rel="stylesheet" href="{{ asset('css/custom.css') }}" type="text/css" media="all">
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}" type="text/css" media="all">
 
     <script type="text/javascript" src="{{ asset('js/jquery-1.11.0.min.js') }}"></script>

@@ -69,15 +69,11 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="addtocart">
-                                                                            <form action="{{ url('addtocart') }}" method="post">
-                                                                                 {{csrf_field()}}
-                                                                                <input type="hidden" name="product_id" value="{{ $new->id }}">
-                                                                                <button class="add-to-cart" type="submit">
-                                                                                    <span title="Add to cart"><i class="fa fa-shopping-cart"></i>
-                                                                                        ADD TO CART
-                                                                                    </span>
-                                                                                </button>
-                                                                            </form>
+                                                                            <button class="add-to-cart" type="submit" onclick="cart('{{ $new->id }}')">
+                                                                                <span title="Add to cart"><i class="fa fa-shopping-cart"></i>
+                                                                                    ADD TO CART
+                                                                                </span>
+                                                                            </button>
                                                                         </div>
                                                                     </div>
                                                                 </div>

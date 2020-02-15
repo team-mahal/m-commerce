@@ -56,6 +56,11 @@ class Category extends Model
         return $this->belongsToMany('App\Models\CartRule');
     }
 
+    public function childs()
+    {
+        return $this->hasMany('App\Models\Category', 'parent_id');
+    }
+
     /*
 	|--------------------------------------------------------------------------
 	| SCOPES

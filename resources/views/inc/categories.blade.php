@@ -4,7 +4,7 @@
 </div>
 <div class="collapse" id="exCollapsingNavbar52">
     <ul class="category-sub-menu">
-        @foreach($children as $category)
+        @foreach($childrens as $category)
             <li data-depth="{{ $key+1 }}">
                 <a class="category-sub-link" href="">{{ $category->name }}</a>
                 <span class="arrows" data-toggle="collapse" data-target="#exCollapsingNavbar53">
@@ -12,7 +12,7 @@
                     <i class="fa fa-minus-square arrow-down"></i>
                 </span>
                 @if(isset($category->children))
-                    @include('inc.categories',['key'=>$key++,'children'=>$category->children])
+                    @include('inc.categories',['key'=>$key++,'childrens'=>$category->children])
                 @endif
             </li>
         @endforeach
