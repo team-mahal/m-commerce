@@ -45,17 +45,22 @@
         <div class="product-prices">
 
             <div class="product-price h5">
-                <link itemprop="availability">
-                <div class="current-price">
-                    <span></span>
-                </div>
+                @if($product->specificPrice)
+                    <span class="price">৳{{ $product->price-$product->specificPrice->reduction }}</span>
+                @else
+                    <span class="price">৳{{ $product->price }}</span>
+                @endif
+
+                @if($product->specificPrice)
+                    <span class="regular-price">৳{{ $product->price }}</span>
+                @endif
             </div>
 
             <div class="tax-shipping-delivery-label">
 
             </div>
         </div>
-
+        
         <div id="product-description-short">
             <p class="description">{{ $product->description }}</p>
         </div>
@@ -72,7 +77,7 @@
 
                     <div class="product-quantity">
                         <div class="add">
-                            <button class="btn btn-primary add-to-cart" type="submit">
+                            <button class="btn btn-primary add-to-cart" type="button" onclick="cart('{{ $product->id }}')">
                                 <i class="fa fa-shopping-cart shopping-cart"></i> Add to cart
                             </button>
                             <span id="product-availability">
@@ -95,10 +100,10 @@
         <div class="social-sharing">
             <span>Share</span>
             <ul>
-                <li class="facebook icon-gray"><a href="http://www.facebook.com/sharer.php?u=https://demo.fieldthemes.com/ps_medicine/home2/en/product-categories/18-aliquam-tincidunt-mauris.html" class="text-hide" title="Share" target="_blank">Share</a></li>
-                <li class="twitter icon-gray"><a href="https://twitter.com/intent/tweet?text=Aliquam tincidunt mauris. https://demo.fieldthemes.com/ps_medicine/home2/en/product-categories/18-aliquam-tincidunt-mauris.html" class="text-hide" title="Tweet" target="_blank">Tweet</a></li>
-                <li class="googleplus icon-gray"><a href="https://plus.google.com/share?url=https://demo.fieldthemes.com/ps_medicine/home2/en/product-categories/18-aliquam-tincidunt-mauris.html" class="text-hide" title="Google+" target="_blank">Google+</a></li>
-                <li class="pinterest icon-gray"><a href="http://www.pinterest.com/pin/create/button/?media=https://demo.fieldthemes.com/ps_medicine/home2/82/aliquam-tincidunt-mauris.jpg&amp;url=https://demo.fieldthemes.com/ps_medicine/home2/en/product-categories/18-aliquam-tincidunt-mauris.html" class="text-hide" title="Pinterest" target="_blank">Pinterest</a></li>
+                <li class="facebook icon-gray"><a href="" class="text-hide" title="Share" target="_blank">Share</a></li>
+                <li class="twitter icon-gray"><a href="" class="text-hide" title="Tweet" target="_blank">Tweet</a></li>
+                <li class="googleplus icon-gray"><a href="" class="text-hide" title="Google+" target="_blank">Google+</a></li>
+                <li class="pinterest icon-gray"><a href="" class="text-hide" title="Pinterest" target="_blank">Pinterest</a></li>
             </ul>
         </div>
 

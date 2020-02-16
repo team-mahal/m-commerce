@@ -2,7 +2,7 @@
 
 Route::get('/', 'HomeController@index');
 
-Route::get('/productdetails', 'HomeController@productdetails');
+Route::get('/productdetails/{id}', 'HomeController@productdetails');
 Route::get('/allproduct', 'HomeController@allproduct');
 Route::get('/cart', 'HomeController@cart');
 Route::get('/remove/{id}', 'HomeController@remove');

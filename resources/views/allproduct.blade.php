@@ -251,10 +251,10 @@
                                                             </div>
                                                         </div>
                                                         <div class="addtocart">
-                                                            <form action="https://demo.fieldthemes.com/ps_medicine/home2/en/cart" method="post">
+                                                            <form action="" method="post">
                                                                 <input type="hidden" name="token" value="d25bc0f4d821fe67c876730ee3cf24a9">
                                                                 <input type="hidden" name="id_product" value="24">
-                                                                <button class="add-to-cart" data-button-action="add-to-cart" type="submit">
+                                                                <button class="add-to-cart" data-button-action="add-to-cart" type="button" onclick="cart('{{ $product->id }}')">
                                                                     <span title="Add to cart"><i class="fa fa-shopping-cart"></i>
                                                                         ADD TO CART
                                                                     </span>

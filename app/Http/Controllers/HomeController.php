@@ -51,9 +51,10 @@ class HomeController extends Controller
         return view('inc.cart');
     }
 
-    public function productdetails()
+    public function productdetails($id)
     {
-        return view('productdetails');
+        $product= Product::with('specificPrice')->with('images')->find($id);
+        return view('productdetails')->with('product',$product);
     }
 
     public function allproduct(Request $request)

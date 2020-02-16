@@ -148,34 +148,7 @@
                                                 </ul>
                                             </div>
                                         </div>
-
-                                        <div class="row">
-                                            <div class="col-xs-12 col-md-6">
-                                                <div class="row">
-                                                    <div class="banner_top_1">
-                                                        <div class="image-link">
-                                                            <a href="{{ asset('productdetails') }}">
-                                                                <img src="/ps_medicine/home2/modules/fieldstaticblocks/images/banner2_2.jpg" alt="" height="200" width="570" />
-                                                            </a>
-                                                            <div class="overplay"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-12 col-md-6">
-                                                <div class="row">
-                                                    <div class="banner_top_1">
-                                                        <div class="image-link">
-                                                            <a href="{{ asset('productdetails') }}">
-                                                                <img src="/ps_medicine/home2/modules/fieldstaticblocks/images/banner2_1.jpg" alt="" height="200" width="570" />
-                                                            </a>
-                                                            <div class="overplay"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
+                                     
                                     </div>
 
                                     @include('inc.mostviewproduct')
