@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\CrudTrait;
-
+use Illuminate\Support\Facades\Route;
 class Product extends Model
 {
     use CrudTrait;
@@ -22,7 +22,8 @@ class Product extends Model
     protected $fillable = [
     	'group_id',
     	'attribute_set_id',
-    	'name',
+        'name',
+    	'slug',
     	'description',
     	'price',
     	'tax_id',
@@ -133,6 +134,11 @@ class Product extends Model
 	| ACCESORS
 	|--------------------------------------------------------------------------
 	*/
+
+    public function getRouteAttribute()
+    {
+        return Route::has($this->slug) ? route($this->slug) : route('productdetails',['id'=>$this->id]);
+    }
 
     /*
 	|--------------------------------------------------------------------------

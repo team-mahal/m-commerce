@@ -186,7 +186,7 @@
 
                             </div>
                             <div class="total-products">
-                                <p>There are 9 products.</p>
+                                <p>There are {{ count($products) }} products.</p>
                             </div>
 
                         </div>
@@ -273,7 +273,7 @@
                                 <!-- templates/_partials/pagination.tpl -->
                                 <nav class="pagination">
                                     <div class="col-md-6">
-                                        Showing 10-18 of 23 item(s)
+                                        Showing 10-18 of {{ count($products) }} item(s)
                                     </div>
                                     <div class="col-md-6">
                                         {{ $products->links('inc.pagination') }}

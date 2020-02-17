@@ -35,9 +35,9 @@
                                         <div class="product-images js-qv-product-images carousel-grid" style="opacity: 1; display: block;">
                                             <div class="owl-wrapper product-images-69640165 owl-carousel owl-theme owl-carousel-img">
                                                 @foreach($product->images as $image)
-                                                    <div class="item">
+                                                    <div class="item" style="padding: 0px">
                                                          <div class="thumb-container">
-                                                            <img class="thumb js-thumb " data-image-medium-src="{{ asset('uploads/products/'.$image->name) }}" data-image-large-src="{{ asset('uploads/products/'.$image->name) }}" src="{{ asset('uploads/products/'.$image->name) }}" alt="" title="" width="100" itemprop="image">
+                                                            <img style="width: 60px;height: 60px" class="thumb js-thumb " data-image-medium-src="{{ asset('uploads/products/'.$image->name) }}" data-image-large-src="{{ asset('uploads/products/'.$image->name) }}" src="{{ asset('uploads/products/'.$image->name) }}" alt="" title="" width="100" itemprop="image">
                                                         </div>
                                                     </div>
                                                 @endforeach
@@ -163,9 +163,7 @@
                                                 <div class="qty">
                                                     <span class="control-label">Quantity</span>
                                                     <div class="input-group bootstrap-touchspin">
-                                                        <span class="input-group-addon bootstrap-touchspin-prefix" style="display: none;"></span>
                                                         <input type="text" name="qty" id="quantity_wanted" value="1" class="input-group form-control" min="1" style="display: block;">
-                                                        <span class="input-group-addon bootstrap-touchspin-postfix" style="display: none;"></span>
                                                         <span class="input-group-btn-vertical">
                                                             <button class="btn btn-touchspin js-touchspin bootstrap-touchspin-up" type="button">
                                                                 <i class="material-icons touchspin-up"></i>
@@ -177,7 +175,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="add">
-                                                    <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">
+                                                    <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="button" onclick="cart({{ $product->id }})">
                                                         <i class="fa fa-shopping-cart shopping-cart"></i> Add to cart
                                                     </button>
 
@@ -197,17 +195,22 @@
                                         <div class="social-sharing">
                                             <span>Share</span>
                                             <ul>
-                                                <li class="facebook icon-gray"><a href="" class="text-hide" title="Share" target="_blank">Share</a></li>
-                                                <li class="twitter icon-gray"><a href="" class="text-hide" title="Tweet" target="_blank">Tweet</a></li>
-                                                <li class="googleplus icon-gray"><a href="" class="text-hide" title="Google+" target="_blank">Google+</a></li>
-                                                <li class="pinterest icon-gray"><a href="" class="text-hide" title="Pinterest" target="_blank">Pinterest</a></li>
+                                                <li class="facebook icon-gray">
+                                                    <a  data-sharer="facebook" data-title="{{ $product->name }}" data-url="{{ $product->route }}" class="text-hide" title="Share" target="_blank">Share</a>
+                                                </li>
+                                               <li class="twitter icon-gray">
+                                                    <a  data-sharer="twitter" data-title="{{ $product->name }}" data-url="{{ $product->route }}" class="text-hide" title="Share" target="_blank">Twitter</a>
+                                                </li>
+                                                <li class="whatsapp icon-gray">
+                                                    <a  data-sharer="whatsapp" data-web data-title="{{ $product->name }}" data-url="{{ $product->route }}" class="text-hide" title="Share" target="_blank">whatsapp</a>
+                                                </li>
+                                                <li class="linkedin icon-gray">
+                                                    <a  data-sharer="linkedin" data-title="{{ $product->name }}" data-url="{{ $product->route }}" class="text-hide" title="Share" target="_blank">Linkedin</a>
+                                                </li>
                                             </ul>
                                         </div>
                                     </form>
                                 </div>
-                                <div id="fieldsizechart-show" class="buttons_bottom_block additional_button">Size Chart</div>
-                                <!-- #layer_cart -->
-
                             </div>
                         </div>
                     </div>
@@ -243,54 +246,22 @@
 
                         </div>
                     </div>
-
                 </section>
 
                 <!-- MODULE Field product cates -->
                 <div id="field_productcates" class="block horizontal_mode">
-                    <h4 class="title_block title_font"><span class="title_text">6 other product in the same category</span></h4>
+                    <h4 class="title_block title_font"><span class="title_text">{{ count($relatedproduct->products) }} other product in the same category</span></h4>
 
                     <div class="row">
-                        <div id="productCates" class="carousel-grid owl-carousel owl-theme owl-carousel-feature" style="opacity: 1; display: block;">
+                        <div id="productCates" class="carousel-grid" style="opacity: 1; display: block;">
 
                             <div class="owl-wrapper-outer">
-                                <div class="owl-wrapper" style="width: 2700px; left: 0px; display: block; transition: all 600ms ease 0s; transform: translate3d(0px, 0px, 0px);">
-                                    <div class="owl-item" style="width: 225px;">
-                                        <div class="item">
-                                            <div class="item-inner">
-                                                <div class="product-miniature js-product-miniature" data-id-product="30" data-id-product-attribute="0" itemscope="" itemtype="http://schema.org/Product">
-                                                    <div class="left-product">
-                                                        <a href="https://demo.fieldthemes.com/ps_medicine/home2/en/most-view/30-integer-cursus-auctor.html" class="thumbnail product-thumbnail">
-                                                            <span class="cover_image">
-                                                                <img src="https://demo.fieldthemes.com/ps_medicine/home2/95-home_default/integer-cursus-auctor.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/95-large_default/integer-cursus-auctor.jpg" alt="">
-                                                            </span>
-                                                                                                <span class="hover_image">
-                                                                <img src="https://demo.fieldthemes.com/ps_medicine/home2/174-home_default/integer-cursus-auctor.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/174-home_default/integer-cursus-auctor.jpg" alt=""> 
-                                                            </span>
-                                                        </a>
-                                                        <div class="conditions-box">
-
-                                                        </div>
-                                                        <div class="quick-view-product">
-                                                            <a href="javascript:void(0)" class="quick-view" data-link-action="quickview" title="Quick view">
-                                                                <i class="fa fa-eye"></i> Quick view
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="right-product">
-                                                        <div class="product-description">
-                                                            <div class="product_name"><a href="https://demo.fieldthemes.com/ps_medicine/home2/en/most-view/30-integer-cursus-auctor.html">Integer cursus auctor</a></div>
-                                                            <div class="product-price-and-shipping">
-                                                                <span class="price">$45.33</span>
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="owl-wrapper owl-carousel owl-theme owl-carousel-feature">   
+                                    @forelse($relatedproduct->products as $product)
+                                        @include('inc.singleproduct',['new'=>$product,'owl'=>2])
+                                    @empty
+                                        <p>Empty</p>
+                                    @endforelse
                                 </div>
                             </div>
                         </div>
@@ -298,29 +269,11 @@
                   
                 </div>
                 <!-- /MODULE Field product cates -->
-                <script>
-                    $('.owl-carousel-feature').owlCarousel({
-                        loop:true,
-                        margin:10,
-                        nav:true,
-                        responsive:{
-                            0:{
-                                items:1
-                            },
-                            600:{
-                                items:3
-                            },
-                            1000:{
-                                items:5
-                            }
-                        }
-                    })
-                </script>
             </div>
 
             {{-- sidebar --}}
             <div id="right-column" class="col-xs-12 col-sm-4 col-md-3">
-                <div id="fieldblockcategories" class="block horizontal_mode clearfix">
+                <div id="fieldblockcategories" class="block horizontal_mode clearfix" style="display: none;">
                     <div class="container">
                         <div class="text2-border">
                             <h2 class="title_font">
@@ -346,45 +299,59 @@
                 <!-- MODULE Featured Products Products -->
                 <div class="block special_block_right vertical_mode clearfix">
                     <h4 class="title_block title_font">
-                        <span class="title_text">best selles</span>
+                        <span class="title_text">New Products</span>
                     </h4>
 
                     <div class="special_products carousel-grid">
                         <!--Number Row-->
                         <div class="owl-wrapper-outer">
                             <div class="owl-wrapper">
-                                <div class="owl-item">
-                                    <div class="item">
-                                        <div class="item-inner">
-                                            <div class="product-miniature js-product-miniature" data-id-product="21" data-id-product-attribute="0" itemscope="" itemtype="http://schema.org/Product">
-                                                <div class="left-product">
-                                                    <a href="https://demo.fieldthemes.com/ps_medicine/home2/en/product-categories/21-nam-mollis-porta-facilisis.html" class="thumbnail product-thumbnail">
-                                                        <span class="cover_image">
-                                                        <img src="https://demo.fieldthemes.com/ps_medicine/home2/85-small_default/nam-mollis-porta-facilisis.jpg" data-full-size-image-url="https://demo.fieldthemes.com/ps_medicine/home2/85-large_default/nam-mollis-porta-facilisis.jpg" alt="">
-                                                    </span>
-                                                    </a>
-                                                </div>
-                                                <div class="right-product">
-                                                    <div class="product-description">
-                                                        <div class="product_name"><a href="https://demo.fieldthemes.com/ps_medicine/home2/en/product-categories/21-nam-mollis-porta-facilisis.html">Nam mollis porta facilisis.</a></div>
-                                                        <div class="product-price-and-shipping">
-
-                                                            <span class="regular-price">$58.56</span>
-
-                                                            <span class="price">$55.45</span>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="quick-view-product">
-                                                        <a href="javascript:void(0)" class="quick-view" data-link-action="quickview">
-                                                            <i class="fa fa-eye"></i> Quick view
+                                @forelse($newproduct as $new)
+                                    <div class="owl-item">
+                                        <div class="item">
+                                            <div class="item-inner">
+                                                <div class="product-miniature js-product-miniature" data-id-product="35" data-id-product-attribute="18" itemscope itemtype="http://schema.org/Product">
+                                                    <div class="left-product">
+                                                        <a href="{{ $new->route }}" class="thumbnail product-thumbnail">
+                                                            <span class="cover_image">
+                                                                @if($new->images && count($new->images)>0)
+                                                                    <img  style="height: 100px;width: 100px;" src="{{ asset('uploads/products/'.$new->images[0]->name) }}" alt="{{ $new->name }}" data-full-size-image-url="{{ asset('uploads/products/'.$new->images[0]->name) }}" alt="{{ $new->name }}">
+                                                                @else
+                                                                    <img  style="height: 100px;width: 100px;margin-top: 0px;" src="{{ asset('/assets/download.png') }}" alt="{{ $new->name }}" data-full-size-image-url="{{ asset('/assets/download.png') }}">
+                                                                @endif
+                                                            </span>
                                                         </a>
+                                                    </div>
+                                                    <div class="right-product">
+                                                        <div class="product-description">
+                                                            <div class="product_name"><a href="{{ $new->route }}">{{ $new->name }}</a></div>
+                                                            <div class="product-price-and-shipping">
+
+                                                                @if($new->specificPrice)
+                                                                    <span class="price">৳{{ $new->price-$new->specificPrice->reduction }}</span>
+                                                                @else
+                                                                    <span class="price">৳{{ $new->price }}</span>
+                                                                @endif
+
+                                                                @if($new->specificPrice)
+                                                                    <span class="regular-price">৳{{ $new->price }}</span>
+                                                                @endif
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="quick-view-product">
+                                                            <a href="javascript:void(0)" class="quick-view" data-link-action="quickview">
+                                                                <i class="fa fa-eye"></i> Quick view Quick view
+                                                            </a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                @empty
+                                    <p>Empty</p>
+                                @endforelse
                             </div>
                         </div>
                     </div>
@@ -392,5 +359,6 @@
             </div>
         </div>
     </div>
+     @include('inc.model')
 </section>
 @endsection

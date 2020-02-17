@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\CrudTrait;
-
 class Category extends Model
 {
     use CrudTrait;
@@ -59,6 +58,11 @@ class Category extends Model
     public function childs()
     {
         return $this->hasMany('App\Models\Category', 'parent_id');
+    }
+
+    public function products()
+    {
+        return $this->belongsToMany('App\Models\Product');
     }
 
     /*

@@ -1,8 +1,10 @@
 
 function cart(id) {
+    var quantity = $("#quantity_wanted").val()
     $.ajax({
         type: 'GET',
         url: base_url+'/addtocart/'+id,
+        data:{quantity:quantity}
     })
     .done(function(re) {
         $('#cartapppend').html(re)
@@ -49,11 +51,13 @@ jQuery(document).ready(function($) {
 
 var image='';
 function quickview(id) {
+   console.log('test');
 	$.ajax({
 		url: base_url+'/quickview/'+id,
 	})
 	.done(function(re) {
 		$('#quickview-modal-18-0').find('.modal-body').html(re)
+        window.Sharer.init();
 	})
 	.fail(function() {
 		console.log("error");
@@ -70,6 +74,30 @@ $('#quickview-modal-18-0').on('show.bs.modal', function (event) {
    quickview(id)
 })
 
+$('.owl-carousel-feature').owlCarousel({
+    loop:true,
+    margin:5,
+    nav:true,
+    items:3,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+        },
+        600:{
+            items:2,
+        },
+        1000:{
+            items:3,
+        },
+        1400:{
+            items:4,
+        },
+        2000:{
+            items:5,
+        }
+    }
+})
 
 $.fn.extend({
     treed: function (o) {

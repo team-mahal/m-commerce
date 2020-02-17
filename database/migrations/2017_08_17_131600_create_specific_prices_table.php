@@ -18,8 +18,8 @@ class CreateSpecificPricesTable extends Migration
             $table->increments('id');
             $table->decimal('reduction', 13, 2)->nullable()->default(0);
             $table->enum('discount_type', array('Amount', 'Percent'));
-            $table->dateTime('start_date');
-            $table->dateTime('expiration_date');
+            $table->dateTime('start_date')->nullable();
+            $table->dateTime('expiration_date')->nullable();
             $table->integer('product_id')->unsigned()->nullable();
 
             // Foreign keys

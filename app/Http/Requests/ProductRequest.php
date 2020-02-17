@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
 use App\Models\Attribute;
-
+use Illuminate\Support\Str;
 class ProductRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
 {
     /**
@@ -25,8 +25,11 @@ class ProductRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
      */
     public function rules()
     {
+        // $slug = $this->request->all()['slug']=="" ? Str::kebab($this->request->all()['name']) : $this->request->all()['slug'];
+        // $this->request->add(['slug' => $slug]);
         return [
             'name'              => 'required|max:255',
+            'slug'               => 'required|unique:products,slug'.($this->request->get('id') ? ','.$this->request->get('id') : ''),
             'description'       => 'required|min:3',
             'price'             => 'required|numeric|between:0,9999999999999.999999',
             'categories'        => 'required',

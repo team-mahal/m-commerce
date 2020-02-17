@@ -13,7 +13,7 @@
                 <div class="item-inner">
                     <div class="product-miniature js-product-miniature" data-id-product="35" data-id-product-attribute="18" itemscope itemtype="http://schema.org/Product">
                         <div class="left-product">
-                            <a href="{{ asset('productdetails/'.$new->id) }}" class="thumbnail product-thumbnail">
+                            <a href="{{ $new->route }}" class="thumbnail product-thumbnail">
                                 <span class="cover_image">
                                     @if($new->images && count($new->images)>0)
                                         <img  style="height: 100px;width: 100px;" src="{{ asset('uploads/products/'.$new->images[0]->name) }}" alt="{{ $new->name }}" data-full-size-image-url="{{ asset('uploads/products/'.$new->images[0]->name) }}" alt="{{ $new->name }}">
@@ -25,7 +25,7 @@
                         </div>
                         <div class="right-product">
                             <div class="product-description">
-                                <div class="product_name"><a href="{{ asset('productdetails/'.$new->id) }}">{{ $new->name }}</a></div>
+                                <div class="product_name"><a href="{{ $new->route }}">{{ $new->name }}</a></div>
                                 <div class="product-price-and-shipping">
 
                                     @if($new->specificPrice)

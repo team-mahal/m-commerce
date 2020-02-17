@@ -1,3 +1,6 @@
+.input-group-btn{
+    display: none;
+}
 .tree, .tree ul {
 
     margin:0;

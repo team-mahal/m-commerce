@@ -1,8 +1,16 @@
 <?php
 
+use App\Models\Product;
+foreach (Product::whereNotNull('slug')->where('slug','!=','')->get() as $key => $value) {
+	 Route::get('product/'.$value->slug, [
+        'uses' => 'HomeController@show',
+        'page' => $value->id
+    ])->name($value->slug);
+}
+
 Route::get('/', 'HomeController@index');
 
-Route::get('/productdetails/{id}', 'HomeController@productdetails');
+Route::get('/productdetails/{id}', 'HomeController@productdetails')->name('productdetails');
 Route::get('/allproduct', 'HomeController@allproduct');
 Route::get('/cart', 'HomeController@cart');
 Route::get('/remove/{id}', 'HomeController@remove');

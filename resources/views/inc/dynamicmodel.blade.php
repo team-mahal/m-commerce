@@ -100,11 +100,19 @@
         <div class="social-sharing">
             <span>Share</span>
             <ul>
-                <li class="facebook icon-gray"><a href="" class="text-hide" title="Share" target="_blank">Share</a></li>
-                <li class="twitter icon-gray"><a href="" class="text-hide" title="Tweet" target="_blank">Tweet</a></li>
-                <li class="googleplus icon-gray"><a href="" class="text-hide" title="Google+" target="_blank">Google+</a></li>
-                <li class="pinterest icon-gray"><a href="" class="text-hide" title="Pinterest" target="_blank">Pinterest</a></li>
-            </ul>
+            <li class="facebook icon-gray">
+                <a  data-sharer="facebook" data-title="{{ $product->name }}" data-url="{{ $product->route }}" class="text-hide" title="Share" target="_blank">Share</a>
+            </li>
+           <li class="twitter icon-gray">
+                <a  data-sharer="twitter" data-title="{{ $product->name }}" data-url="{{ $product->route }}" class="text-hide" title="Share" target="_blank">Twitter</a>
+            </li>
+            <li class="whatsapp icon-gray">
+                <a  data-sharer="whatsapp" data-web data-title="{{ $product->name }}" data-url="{{ $product->route }}" class="text-hide" title="Share" target="_blank">whatsapp</a>
+            </li>
+            <li class="linkedin icon-gray">
+                <a  data-sharer="linkedin" data-title="{{ $product->name }}" data-url="{{ $product->route }}" class="text-hide" title="Share" target="_blank">Linkedin</a>
+            </li>
+        </ul>
         </div>
 
     </div>

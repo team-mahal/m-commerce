@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Storage;
 
 class ProductCrudController extends CrudController
 {
+    
+   
+    
 
     public function setUp()
     {
@@ -44,6 +47,10 @@ class ProductCrudController extends CrudController
             [
                 'name'  => 'name',
                 'label' => trans('product.name'),
+            ],
+            [
+                'name'  => 'slug',
+                'label' => 'Slug',
             ],
             [
                 'type'      => "select_multiple",
@@ -172,6 +179,14 @@ class ProductCrudController extends CrudController
             [
                 'name'  => 'name',
                 'label' => trans('product.name'),
+                'type'  => 'text',
+
+                    // TAB
+                'tab'   => trans('product.general_tab'),
+            ],
+            [
+                'name'  => 'slug',
+                'label' => 'Slug',
                 'type'  => 'text',
 
                     // TAB
