@@ -18,6 +18,10 @@ Route::get('/quickview/{id}', 'HomeController@quickview');
 Route::post('/addtocart', 'HomeController@addtocart');
 Route::get('/addtocart/{id}', 'HomeController@addtocart');
 Route::get('/addtocart/', 'HomeController@addtocart');
+Route::get('/checkout', 'HomeController@checkout')->middleware('auth');
+Route::post('/address', 'HomeController@address')->middleware('auth');
+Route::get('address/delete/{id}', 'HomeController@addressdelate')->middleware('auth');
+Route::post('placeorder', 'HomeController@placeorder')->middleware('auth');
 
 	
 // blog

@@ -1,3 +1,9 @@
+.bg-white{
+    background: #fff;
+}
+.p-3{
+    padding: 15px;
+}
 .input-group-btn{
     display: none;
 }

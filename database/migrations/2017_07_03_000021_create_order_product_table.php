@@ -18,7 +18,7 @@ class CreateOrderProductTable extends Migration
             $table->integer('product_id')->unsigned();
             $table->integer('order_id')->unsigned();
             $table->string('name', 255)->nullable()->default(null);
-            $table->string('sku', 100);
+            $table->string('sku', 100)->nullable();
             $table->decimal('price', 13, 2)->nullable()->default(null);
             $table->decimal('price_with_tax', 13, 2)->nullable()->default(null);
             $table->integer('quantity');
