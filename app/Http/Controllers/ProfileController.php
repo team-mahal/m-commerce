@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 class ProfileController extends Controller
 {
     /**
@@ -23,7 +22,8 @@ class ProfileController extends Controller
      */
     public function myorders()
     {
-        return view('user.profile');
+        $orders = \Auth::user()->orders()->paginate(10);
+        return view('user.myorders')->with('orders',$orders);
     }
 
     /**

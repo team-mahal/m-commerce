@@ -168,6 +168,6 @@ class HomeController extends Controller
             \DB::insert('insert into order_product (product_id, order_id,name,price,quantity) values (?,?,?,?,?)', [$row->id,$order->id,$row->name,$row->price,$row->qty]);
         }
         \Cart::destroy();
-        return redirect('profile')->with('success','Order Place Successfully');
+        return redirect('myorders')->with('success','Order Place Successfully');
     }
 }

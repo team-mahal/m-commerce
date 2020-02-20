@@ -149,7 +149,6 @@
 			<div class="bg-black">
 				<div class="container">
 					<div class="links">
-				        <div>Checkout</div>
 				        @if(!Auth::check())
 				        	<div><a href="{{ url('login') }}">Log In</a></div>
 				        	<div><a href="{{ url('register') }}">Register</a></div>
