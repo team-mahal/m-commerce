@@ -2,6 +2,7 @@
 
 @section('content')
     {{-- @include('layouts.inc.slider'); --}}
+    <br><br>
         <section id="wrapper">
             <div class="container">
                 <div id="content-wrapper">

@@ -22,6 +22,8 @@ Route::get('/checkout', 'HomeController@checkout')->middleware('auth');
 Route::post('/address', 'HomeController@address')->middleware('auth');
 Route::get('address/delete/{id}', 'HomeController@addressdelate')->middleware('auth');
 Route::post('placeorder', 'HomeController@placeorder')->middleware('auth');
+Route::post('post/comment/{id}', 'BlogController@comment')->middleware('auth');
+Route::post('post/commentreplay/{id}', 'BlogController@commentReplay')->middleware('auth');
 
 	
 // blog
