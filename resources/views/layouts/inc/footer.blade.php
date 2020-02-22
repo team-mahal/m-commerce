@@ -94,7 +94,7 @@
                     <div class="payment">
                         <h3>PAYMENT METHODS</h3>
                         <ul>
-                            <li><img class="img-responsive" src="/ps_medicine/home2/modules/fieldstaticfooter/images/payment_footer.png" alt=""></li>
+                            <li><img class="img-responsive" src="" alt=""></li>
                         </ul>
                     </div>
                 </div>

@@ -22,6 +22,7 @@
 
     <script type="text/javascript" src="{{ asset('js/jquery-1.11.0.min.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js"></script>
+
     <script type="text/javascript">
         var LANG_RTL = 0;
         var langIso = 'en-us';

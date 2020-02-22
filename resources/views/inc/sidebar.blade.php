@@ -141,7 +141,7 @@
                                                                         <div class="media">
                                                                             <div class="media-content">
                                                                                 <a class="fancybox-media" href="/ps_medicine/home2/modules/fieldtestimonials/img/18-avt1.png">
-                                                                                    <img src="/ps_medicine/home2/modules/fieldtestimonials/img/18-avt1.png" alt="Image Testimonial" />
+                                                                                    <img src="" alt="Image Testimonial" />
                                                                                 </a>
                                                                             </div>
                                                                             <div class="content_test">
@@ -159,7 +159,7 @@
                                                                         <div class="media">
                                                                             <div class="media-content">
                                                                                 <a class="fancybox-media" href="/ps_medicine/home2/modules/fieldtestimonials/img/392-avt2.png">
-                                                                                    <img src="/ps_medicine/home2/modules/fieldtestimonials/img/392-avt2.png" alt="Image Testimonial" />
+                                                                                    <img src="" alt="Image Testimonial" />
                                                                                 </a>
                                                                             </div>
                                                                             <div class="content_test">
@@ -176,8 +176,8 @@
                                                                         </div>
                                                                         <div class="media">
                                                                             <div class="media-content">
-                                                                                <a class="fancybox-media" href="/ps_medicine/home2/modules/fieldtestimonials/img/582-avt3.png">
-                                                                                    <img src="/ps_medicine/home2/modules/fieldtestimonials/img/582-avt3.png" alt="Image Testimonial" />
+                                                                                <a class="fancybox-media" href="">
+                                                                                    <img src="" alt="Image Testimonial" />
                                                                                 </a>
                                                                             </div>
                                                                             <div class="content_test">

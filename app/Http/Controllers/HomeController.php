@@ -10,8 +10,17 @@ use App\Models\Address;
 use App\Models\Carrier;
 use App\Models\PaymentMethod;
 use App\Models\Order;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 class HomeController extends Controller
 {
+
+    public function search($query='')
+    {
+        $newarrivels=Product::where('name', 'like', '%' . $query . '%')->with('specificPrice')->with('images')->get();
+        return response($newarrivels);
+    }
+
     public function index()
     {   
         $newarrivels=Product::orderBy('id','desc')->with('specificPrice')->with('images')->take(12)->get();
@@ -143,7 +152,6 @@ class HomeController extends Controller
         ]);
 
         $corair= Carrier::find($request->corrier);
-
         $order= new Order();
 
         $lastInvoiceID = $order->where('user_id', '=', \Auth::user()->id)->orderBy('id', 'desc')->pluck('id')->first();
@@ -157,7 +165,7 @@ class HomeController extends Controller
         $order->currency_id=1;
         $order->invoice_no=$newInvoiceID;
         $order->invoice_date=date("Y-m-d");
-        $order->invoice_date=date("Y-m-d");
+        $order->total=\Cart::total(0,'','');
         $order->total_shipping=$corair->price;
         $order->total_tax=\Cart::tax();
         $order->save();
@@ -169,5 +177,31 @@ class HomeController extends Controller
         }
         \Cart::destroy();
         return redirect('myorders')->with('success','Order Place Successfully');
+    }
+
+    public function changePassword(Request $request){
+
+        if (!(Hash::check($request->get('current-password'), Auth::user()->password))) {
+            // The passwords matches
+            return redirect()->back()->with("error","Your current password does not matches with the password you provided. Please try again.");
+        }
+
+        if(strcmp($request->get('current-password'), $request->get('new-password')) == 0){
+            //Current password and new password are same
+            return redirect()->back()->with("error","New Password cannot be same as your current password. Please choose a different password.");
+        }
+
+        $validatedData = $request->validate([
+            'current-password' => 'required',
+            'new-password' => 'required|string|min:6|confirmed',
+        ]);
+
+        //Change Password
+        $user = Auth::user();
+        $user->password = bcrypt($request->get('new-password'));
+        $user->save();
+
+        return redirect()->back()->with("success","Password changed successfully !");
+
     }
 }

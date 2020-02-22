@@ -397,7 +397,7 @@
 
                                     <div class="normalized">
                                         <div class="right_block_img_menu">
-                                            <a href="#"> <img style="margin-top: -140px;" src="/ps_medicine/home2/modules/fieldmegamenu/images/img3.jpg" alt="" width="155" height="240"> </a>
+                                            <a href="#"> <img style="margin-top: -140px;" src="" alt="" width="155" height="240"> </a>
                                         </div>
                                     </div>
 
@@ -538,7 +538,7 @@
                                     <div class="normalized">
                                         <div class="custom-menu-bottom">
                                             <div class="menu-bottom col2">
-                                                <a href="#"><img src="/ps_medicine/home2/modules/fieldmegamenu/images/img2.jpg" alt="" width="100" height="111"></a>
+                                                <a href="#"><img src="" alt="" width="100" height="111"></a>
                                                 <div class="menu-bottom-dec">
                                                     <h3>Girl Collection 2017</h3>
                                                     <p>Lorem Ipsum is simply dummy text of the and</p>
@@ -644,7 +644,7 @@
                                     <div class="normalized">
                                         <div class="custom-menu-bottom">
                                             <div class="menu-bottom col1">
-                                                <a href="#"><img src="/ps_medicine/home2/modules/fieldmegamenu/images/img1.jpg" alt="" width="100" height="111"></a>
+                                                <a href="#"><img src="" alt="" width="100" height="111"></a>
                                                 <div class="menu-bottom-dec">
                                                     <h3>men Collection 2017</h3>
                                                     <p>Lorem Ipsum is simply dummy text of the and</p>
