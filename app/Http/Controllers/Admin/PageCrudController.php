@@ -5,22 +5,23 @@ namespace App\Http\Controllers\Admin;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 
 // VALIDATION: change the requests to match your own file names if you need form validation
-use App\Http\Requests\PostRequest as StoreRequest;
-use App\Http\Requests\PostRequest as UpdateRequest;
+use App\Http\Requests\PageRequest as StoreRequest;
+use App\Http\Requests\PageRequest as UpdateRequest;
 
-class PostCrudController extends CrudController
+class PageCrudController extends CrudController
 {
-
     public function setup()
     {
+
         /*
         |--------------------------------------------------------------------------
         | BASIC CRUD INFORMATION
         |--------------------------------------------------------------------------
         */
-        $this->crud->setModel('App\Models\Post');
-        $this->crud->setRoute(config('backpack.base.route_prefix') . '/posts');
-        $this->crud->setEntityNameStrings('post', 'posts');
+        $this->crud->setModel('App\Models\Page');
+        $this->crud->setRoute(config('backpack.base.route_prefix') . '/page');
+        $this->crud->setEntityNameStrings('page', 'pages');
+
         /*
         |--------------------------------------------------------------------------
         | BASIC CRUD INFORMATION
@@ -29,48 +30,10 @@ class PostCrudController extends CrudController
 
         $this->crud->setFromDb();
 
-        $this->crud->removeField(['image']);
-
-        $this->crud->addColumn([ // image
-            'label' => "Image",
-            'name' => "image",
-            'type' => 'image',
-        ]);
-
-        $this->crud->addColumn(
-            [
-                'name'      => 'blogcategory_id',
-                'type' => "select",
-                'entity'    => 'category',
-                'attribute' => "name",
-                'model'     => "App\Models\Blogcategory",
-            ],
-        );
-
-
-        $this->crud->addField([
-                'type'      => "select",
-                'label'     => 'Category',
-                'name'      => 'blogcategory_id',
-                'entity'    => 'Category',
-                'attribute' => "name",
-                'model'     => "App\Models\Blogcategory",
-        ]);
-
-        $this->crud->addField([   // CKEditor
-            'name' => 'description',
-            'label' => 'Description',
+         $this->crud->addField([   // CKEditor
+            'name' => 'content',
+            'label' => 'Content',
             'type' => 'ckeditor',
-        ]);
-
-        $this->crud->addField([ // image
-            'label' => "Image",
-            'name' => "image",
-            'type' => 'image',
-            'upload' => true,
-
-            'crop' => true, 
-            'prefix' => 'paymentmethods' 
         ]);
         // ------ CRUD FIELDS
         // $this->crud->addField($options, 'update/create/both');
@@ -98,7 +61,7 @@ class PostCrudController extends CrudController
 
         // ------ CRUD ACCESS
         // $this->crud->allowAccess(['list', 'create', 'update', 'reorder', 'delete']);
-        // $this->crud->denyAccess(['list', 'create', 'update', 'reorder', 'delete']);
+        $this->crud->denyAccess(['create','delete']);
 
         // ------ CRUD REORDER
         // $this->crud->enableReorder('label_name', MAX_TREE_LEVEL);

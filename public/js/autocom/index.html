@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bootstrap AutoComplete Demo</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="bootstrap.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="col-lg-9">
+			<input class="form-control basicAutoComplete" type="text" autocomplete="off">
+			
+		</div>
+		
+
+		<script src="jquery.min.js"></script>
+		<script src="bootstrap.min.js"></script>
+		<script src="bootstrap-autocomplete.js"></script>
+		<script>
+			jQuery(document).ready(function($) {
+				$('.basicAutoComplete').autoComplete({
+				resolver: 'custom',
+				minLength: 1,
+				  formatResult: function (item) {
+				      //console.log(item.icon);
+				      return {
+				          value: item.name,
+				          text:  item.name,
+				          html: [
+
+				            `<div class="media">
+				              <div class="media-body">
+				                <p>`+item.name+`</p>
+				                <p>`+item.price+`৳</p>
+				              </div>
+				            </div>`
+				        
+				          ] 
+				      };
+				  },
+				  events: {
+				      search: function (qry, callback) {
+				          // let's do a custom ajax call
+				          $.ajax(
+				              'http://127.0.0.1:8000/search',
+				              {
+				                data: { 
+				                  qry: qry,
+				                  cat_id : $('#top-search-category').val()
+				                },
+				                  dataType : 'json',
+				                  type: 'GET',
+				              }
+				          ).done(function (res) {
+				      callback(res.results);
+
+				      setTimeout(function(){ 
+				        console.log('sdsds');
+
+				        $('.bootstrap-autocomplete.dropdown-menu').append(
+				          `<li><a class=' sugg-link' href='`+res.suggLink+`' >View All (`+res.resultscount+`)</a></li>`
+				        );
+				      }, 300);
+
+				      $('.bootstrap-autocomplete.dropdown-menu li').click(function (){
+				        var ref = $(this);
+				        // setTimeout(function(){ 
+				        //   var link = ref.find('.media').data('link');
+				        //   window.location.href = link;
+				        // }, 300);
+				      });
+				          });
+				      }
+				  }
+				});
+
+			});
+		</script>
+	</body>
+</html>

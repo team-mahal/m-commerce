@@ -1,3 +1,12 @@
+.mt-5{
+    margin-top: 25px;
+}
+#header .dropdown-menu{
+    background: #fff!important;
+}
+.bootstrap-autocomplete .active a p{
+    color: #86BD3D!important;
+}
 .py-3{
     padding:15px 0px!important;
 }
@@ -43,11 +52,6 @@
     .panel-default > .panel-heading + .panel-collapse > .panel-body {
         border-top-color: #EEEEEE;
     }
-
-/* ----- v CAN BE DELETED v ----- */
-body {
-    background-color: #26a69a;
-}
 
 .demo {
     padding-top: 60px;
@@ -171,7 +175,9 @@ body {
     bottom:0
 
 }
-
+.hovereffect:hover .dropdown-menu{
+    display: block!important;
+}
 .indicator {
 
     margin-right:5px;
@@ -202,5 +208,10 @@ body {
 
     outline: 0;
 
+}
+@media screen and (max-width: 600px){
+    .button-search{
+        display: none!important;
+    }
 }
 

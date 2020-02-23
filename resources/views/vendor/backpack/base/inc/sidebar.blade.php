@@ -159,8 +159,11 @@
 								<a href="{{ url('admin/setting') }}"><i class="fa fa-cog"></i> <span>Settings</span></a>
 							</li>
 							<li>
-								<a href="{{ url('admin/elfinder') }}"><i class="fa fa-cog"></i> <span>File Manager</span></a>
+								<a href="{{ url('admin/page') }}"><i class="fa fa-cog"></i> <span>Pages</span></a>
 							</li>
+							{{-- <li>
+								<a href="{{ url('admin/elfinder') }}"><i class="fa fa-cog"></i> <span>File Manager</span></a>
+							</li> --}}
 						</ul>
 					</li>
 

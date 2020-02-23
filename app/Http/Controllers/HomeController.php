@@ -7,6 +7,7 @@ use App\Models\Post;
 use App\Models\Product;
 use App\Models\Category;
 use App\Models\Address;
+use App\Testimonial;
 use App\Models\Carrier;
 use App\Models\PaymentMethod;
 use App\Models\Order;
@@ -15,17 +16,42 @@ use Illuminate\Support\Facades\Auth;
 class HomeController extends Controller
 {
 
-    public function search($query='')
-    {
-        $newarrivels=Product::where('name', 'like', '%' . $query . '%')->with('specificPrice')->with('images')->get();
-        return response($newarrivels);
+    public function search(Request $request){
+        $data['results'] = Product::select('id','name','price')->orderBy('id');
+        $searchQuery = [];
+        if(isset($request->qry) && strlen($request->qry) ){
+            $data['results'] = $data['results']->where('name', 'LIKE', '%' . $request->qry . '%' );
+            $searchQuery['name'] = $request->qry;
+        }
+        if(isset($request->cat_id) && is_numeric($request->cat_id) && $request->cat_id > 0){
+            $data['results'] = $data['results']->where('category_id',  $request->cat_id );
+            $searchQuery['category'] = $request->cat_id;
+        }
+        $data['resultscount']=$data['results'];
+        $data['resultscount']= $data['resultscount']->count();
+        $data['results']= $data['results']->take(6)->get();
+
+          foreach($data['results'] as $key => $result){
+            $data['results'][$key]['link'] = $result->route;
+        }
+        $data['results']= $data['results']->toArray();
+        // foreach($data['results'] as $key => $res){
+        //     $data['results'][$key]['icon']= file_exists(public_path() .'/storage/uploads/products'.'/'.$res['icon'])?
+        //     asset('storage/uploads/products').'/'.$res['icon']:
+        //     asset('default.jpg');
+        // }
+        $data['suggLink']= route('allproduct',$searchQuery);
+      
+        //dd($data['results']);
+        return json_encode($data);
     }
+
 
     public function index()
     {   
         $newarrivels=Product::orderBy('id','desc')->with('specificPrice')->with('images')->take(12)->get();
         $mostview=Product::orderBy('id','desc')->with('specificPrice')->with('images')->skip(12)->take(12)->get();
-        return view('welcome')->with('posts',Post::orderBy('id','desc')->take(10)->get())->with('newarrivels',$newarrivels)->with('mostview',$mostview);
+        return view('welcome')->with('posts',Post::orderBy('id','desc')->take(10)->get())->with('newarrivels',$newarrivels)->with('mostview',$mostview)->with('testimonials',Testimonial::orderBy('id','desc')->take(12)->get());
     }
 
     public function cart()
@@ -93,6 +119,11 @@ class HomeController extends Controller
     {   
         $filter= $request->filter;
         $products=Product::with('specificPrice');
+
+        if(isset($request->name)){
+            $products=$products->where('name', 'LIKE', '%' . $request->name . '%' );
+        }
+
         if(isset($filter)){
             if ($filter=='product.date_add.desc') {
                 $products->orderBy('updated_at','desc');

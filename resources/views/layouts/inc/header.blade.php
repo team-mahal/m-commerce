@@ -2,7 +2,9 @@
 	<div class="header-top">
 		<div class="container">
 			<nav class="this-nav">
+
 				<div class="d-flex">
+
 					<div class="w-50">
 						<a href="/">
 							<img src="{{ asset('assets/omecen.png') }}" alt="" width="100px" style="padding: 10px 0px;">
@@ -12,15 +14,10 @@
 						<div id="search_block_top" style="float: none;">
 							<div class="">
 								<div class="field-search">
-									<form method="get" action="#" id="searchbox" style="line-height: 0px;">
-										<input type="hidden" name="controller" value="search" />
-										<input type="hidden" name="orderby" value="position" />
-										<input type="hidden" name="orderway" value="desc" />
-										<input class="search_query" type="text" id="search_query_top" name="search_query" value="" placeholder="Search..." />
-										<button type="submit" name="submit_search" class="btn button-search">
-											<span class="icon-search"></span>
-										</button>
-									</form>
+									<input class="search_query basicAutoComplete" type="text" id="search_query_top" name="search_query" value="" placeholder="Search..." />
+									<button type="submit" name="submit_search" class="btn button-search">
+										<span class="icon-search"></span>
+									</button>
 								</div>
 							</div>
 						</div>
@@ -119,7 +116,7 @@
 					        	<div><a href="{{ url('login') }}">Log In</a></div>
 					        	<div><a href="{{ url('register') }}">Register</a></div>
 					        @else
-					        	<div class="dropdown">
+					        	<div class="dropdown hovereffect">
 								  <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								    {{ Auth::user()->name }}
 								  </a>
@@ -127,6 +124,7 @@
 								  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 								    <a class="dropdown-item" href="{{ url('profile') }}">Profile</a>
 								    <a class="dropdown-item" href="{{ url('myorders') }}">Orders</a>
+								    <a class="dropdown-item" href="{{ url('testimonial') }}">Testimonial</a>
 							    	<a class="dropdown-item" href="{{ route('logout') }}"
 									   onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
 									    Logout

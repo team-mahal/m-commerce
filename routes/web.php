@@ -8,10 +8,19 @@ foreach (Product::whereNotNull('slug')->where('slug','!=','')->get() as $key => 
     ])->name($value->slug);
 }
 
+// Pages
+Route::get('/termofuse', 'OtherPageController@termofuse');
+Route::get('/paymentmethod', 'OtherPageController@paymentmethod');
+Route::get('/shopingguide', 'OtherPageController@shopingguide');
+Route::get('/locationsweship', 'OtherPageController@locationsweship');
+Route::get('/estimateddeliverytime', 'OtherPageController@estimateddeliverytime');
+
+
 Route::get('/', 'HomeController@index');
+Route::resource('testimonial', 'TestimonialController')->middleware('auth');
 
 Route::get('/productdetails/{id}', 'HomeController@productdetails')->name('productdetails');
-Route::get('/allproduct', 'HomeController@allproduct');
+Route::get('/allproduct', 'HomeController@allproduct')->name('allproduct');
 Route::get('/cart', 'HomeController@cart');
 Route::post('/changePassword','HomeController@changePassword')->name('changePassword');
 Route::get('/remove/{id}', 'HomeController@remove');
@@ -19,8 +28,7 @@ Route::get('/quickview/{id}', 'HomeController@quickview');
 Route::post('/addtocart', 'HomeController@addtocart');
 Route::get('/addtocart/{id}', 'HomeController@addtocart');
 Route::get('/addtocart/', 'HomeController@addtocart');
-Route::get('/search/{query}', 'HomeController@search');
-Route::get('/search/', 'HomeController@search');
+Route::get('/search/', 'HomeController@search')->name('search');
 Route::get('/checkout', 'HomeController@checkout')->middleware('auth');
 Route::post('/address', 'HomeController@address')->middleware('auth');
 Route::get('address/delete/{id}', 'HomeController@addressdelate')->middleware('auth');
@@ -75,6 +83,7 @@ Route::group(['middleware' => ['admin','isadmin'],
 	CRUD::resource('purchase', 'PurchaseCrudController');
 	CRUD::resource('stock', 'StockCrudController');
 	CRUD::resource('blogcategory', 'BlogcategoryCrudController');
+	CRUD::resource('page', 'PageCrudController');
 
 	// listing
 	Route::get('purchaslisting','OtherController@purchaselisting');

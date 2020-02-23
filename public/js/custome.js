@@ -1,3 +1,88 @@
+jQuery(document).ready(function($) {
+    $('.basicAutoComplete').autoComplete({
+    resolver: 'custom',
+    minLength: 1,
+      formatResult: function (item) {
+          return {
+              value: item.name,
+              text:  item.name,
+              html: [
+
+                `<div class="media" data-link='`+item.link+`'>
+                  <div class="media-body">
+                    <p style="padding:20px 20px;">`+item.name+`</p>
+                    <p style="padding:10px 20px;">`+item.price+`৳</p>
+                  </div>
+                </div>`
+            
+              ] 
+          };
+      },
+      events: {
+          search: function (qry, callback) {
+              // let's do a custom ajax call
+              $.ajax(
+                  window.base_url+'/search',
+                  {
+                    data: { 
+                      qry: qry,
+                      cat_id : $('#top-search-category').val()
+                    },
+                      dataType : 'json',
+                      type: 'GET',
+                  }
+              ).done(function (res) {
+          callback(res.results);
+
+          setTimeout(function(){ 
+            console.log('sdsds');
+
+            $('.bootstrap-autocomplete.dropdown-menu').append(
+              `<li style="text-align: center;padding: 24px;"><a style="color:#86BD3D;" class=' sugg-link' href='`+res.suggLink+`' >View All (`+res.resultscount+`)</a></li>`
+            );
+          }, 300);
+
+          $('.bootstrap-autocomplete.dropdown-menu li').click(function (){
+            var ref = $(this);
+            setTimeout(function(){ 
+              var link = ref.find('.media').data('link');
+              window.location.href = link;
+            }, 300);
+          });
+              });
+          }
+      }
+    });
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function toggleIcon(e) {
     $(e.target)

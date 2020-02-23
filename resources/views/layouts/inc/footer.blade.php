@@ -38,37 +38,20 @@
                         </div>
                     </div>
                     <ul id="footer_sub_menu_col_2" class="collapse">
-                        <li><a href="#" title="">Term of Use</a></li>
-                        <li><a href="#" title="">Payment Methods</a></li>
-                        <li><a href="#" title="">Shipping Guide</a></li>
-                        <li><a href="#" title="">Locations We Ship To</a></li>
-                        <li><a href="#" title="">Estimated Delivery Time</a></li>
+                        <li><a href="{{ url('termofuse') }}" title="">Term of Use</a></li>
+                        <li><a href="{{ url('paymentmethod') }}" title="">Payment Methods</a></li>
+                        <li><a href="{{ url('shopingguide') }}" title="">Shipping Guide</a></li>
+                        <li><a href="{{ url('locationsweship') }}" title="">Locations We Ship To</a></li>
+                        <li><a href="{{ url('estimateddeliverytime') }}" title="">Estimated Delivery Time</a></li>
                     </ul>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-3 links product">
-                    <h3>PRODUCT TAGS</h3>
-                    <div class="title" data-target="#footer_sub_menu_col_3" data-toggle="collapse">
-                        <div class="navbar-toggler collapse-icons hidden-md-up">
-                            <div class="fa fa-plus add"></div>
-                            <div class="fa fa-minus remove"></div>
-                        </div>
+                    <div class="payment">
+                        <h3>PAYMENT METHODS</h3>
+                        <ul>
+                            <li><img class="img-responsive" src="" alt=""></li>
+                        </ul>
                     </div>
-                    <ul id="footer_sub_menu_col_3" class="collapse producttags" style="float: left;">
-                        <li><a href="#" title="">Women</a></li>
-                        <li><a href="#" title="">Man</a></li>
-                        <li><a href="#" title="">Fashion &amp; Beauty</a></li>
-                        <li><a href="#" title="">Mobile</a></li>
-                        <li><a href="#" title="">Tablet</a></li>
-                        <li><a href="#" title="">Electronic</a></li>
-                        <li><a href="#" title="">Shopping</a></li>
-                        <li><a href="#" title="">Furniture</a></li>
-                        <li><a href="#" title="">Laptop</a></li>
-                        <li><a href="#" title="">Smart phone</a></li>
-                        <li><a href="#" title="">Gifts</a></li>
-                        <li><a href="#" title="">Electronic</a></li>
-                        <li><a href="#" title="">Fashion &amp; Beauty</a></li>
-                        <li><a href="#" title="">Shopping</a></li>
-                    </ul>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-3 links about_ft">
                     <div class="opening">
@@ -91,12 +74,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="payment">
-                        <h3>PAYMENT METHODS</h3>
-                        <ul>
-                            <li><img class="img-responsive" src="" alt=""></li>
-                        </ul>
-                    </div>
+                   
                 </div>
 
             </div>

@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}" type="text/css" media="all">
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}" type="text/css" media="all">
 
-    <script type="text/javascript" src="{{ asset('js/jquery-1.11.0.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/autocom/jquery.min.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js"></script>
 
     <script type="text/javascript">
@@ -256,7 +256,9 @@
         var base_url = "{{ URL::to('/') }}";
     </script>
     <script type="text/javascript" src="{{ asset('js/bottom-4deda2.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/custome.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/owl.carousel.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/autocom/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/autocom/bootstrap-autocomplete.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/custome.js') }}"></script>
 </body>
 </html>
