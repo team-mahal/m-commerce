@@ -135,7 +135,7 @@
                                     @forelse($testimonials as $key => $testimonial)
                                     <div class="main-block">
                                         <div class="content_test_top">
-                                            <p class="des_testimonial">{{ str_limit($testimonial->content, $limit = 200, $end = '...') }}</p>
+                                            <p class="des_testimonial">{{ substr($testimonial->content, 0, 200) }}</p>
                                         </div>
                                         <div class="media">
                                             <div class="content_test">
