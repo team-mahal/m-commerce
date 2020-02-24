@@ -78,9 +78,7 @@ class HomeController extends Controller
                 $img=$product->images[0]->name;
             }
 
-            \Cart::add(
-              ['id' => $product->id, 'name' => $product->name, 'qty' => $qty,'taxRate'=>0, 'price' => $product->price,'options'=>['image'=>$img]],
-            );
+            \Cart::add(['id' => $product->id, 'name' => $product->name, 'qty' => $qty,'taxRate'=>0, 'price' => $product->price,'options'=>['image'=>$img]]);
             return view('inc.cart');
         }else{
             return view('inc.cart');
