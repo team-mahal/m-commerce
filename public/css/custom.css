@@ -1,5 +1,11 @@
+.active ~ .cart_top_ajax{
+    display: block!important;
+}
 .mt-5{
     margin-top: 25px;
+}
+.mh{
+    min-height: 400px;
 }
 #header .dropdown-menu{
     background: #fff!important;

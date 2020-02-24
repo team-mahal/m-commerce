@@ -48,8 +48,12 @@ class PaymentMethod extends Model
     */
     public function GetLogoAttribute($value)
     {
-        $destination_path = "uploads/paymentmethods/".$value;
-        return $destination_path;
+        if($value){
+            $destination_path = "uploads/paymentmethods/".$value;
+            return $destination_path;
+        }else{
+            return NULL;
+        }
     }
     /*
     |--------------------------------------------------------------------------

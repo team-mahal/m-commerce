@@ -19,14 +19,26 @@
                     </div>
                     <ul id="footer_sub_menu_col_1" class="collapse">
                         <li>
-                            <div class="fa fa-map-marker"></div>
-                            <a href="#"><span>1234 Heaven Stress, Beverly Hill<br>OldYork- United State of Lorem</span></a></li>
+                            <?php $address=\App\Models\Setting::find(3) ?>
+                            @if($address)
+                                <div class="fa fa-map-marker"></div>
+                               {!! $address->value !!}
+                            @endif
+                        </li>
                         <li>
-                            <div class="fa fa-phone"></div>
-                            <span>(800) 0123 4567 890<br>(800) 0987 654 321</span></li>
+                            <?php $address=\App\Models\Setting::find(2) ?>
+                            @if($address)
+                               <div class="fa fa-phone"></div>
+                                <a href="">{!! $address->value !!}</a>
+                            @endif
+                        </li>
                         <li>
-                            <div class="fa fa-envelope"></div>
-                            <a href="#">support1@demo.com<br>support2@demo.com</a></li>
+                            <?php $address=\App\Models\Setting::find(1) ?>
+                            @if($address)
+                                <div class="fa fa-envelope"></div>
+                                {!! $address->value !!}
+                            @endif
+                        </li>
                     </ul>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-3 links bullet">
@@ -48,8 +60,12 @@
                 <div class="col-xs-12 col-sm-6 col-md-3 links product">
                     <div class="payment">
                         <h3>PAYMENT METHODS</h3>
-                        <ul>
-                            <li><img class="img-responsive" src="" alt=""></li>
+                        <ul id="footer_sub_menu_col_4" class="collapse">
+                            @forelse(\App\Models\PaymentMethod::all() as $key => $value)
+                                <li>{{ $value->name }}</li>
+                            @empty
+                                <li>Empty</li>
+                            @endforelse
                         </ul>
                     </div>
                 </div>
@@ -63,15 +79,11 @@
                             </div>
                         </div>
                         <ul id="footer_sub_menu_col_4" class="collapse">
-                            <li>
-                                <p>Monday - Friday........9:00 - 22:00</p>
-                            </li>
-                            <li>
-                                <p>Saturday........10:00 - 24:00</p>
-                            </li>
-                            <li>
-                                <p>Sunday........12:00 - 24:00</p>
-                            </li>
+                            @forelse(\App\Models\Carrier::all() as $key => $value)
+                                <li>{{ $value->name }}</li>
+                            @empty
+                                <li>Empty</li>
+                            @endforelse
                         </ul>
                     </div>
                    

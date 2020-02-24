@@ -214,6 +214,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="tabs">
                         <ul class="nav nav-tabs">
                             <li class="nav-item">
@@ -273,29 +274,7 @@
 
             {{-- sidebar --}}
             <div id="right-column" class="col-xs-12 col-sm-4 col-md-3">
-                <div id="fieldblockcategories" class="block horizontal_mode clearfix" style="display: none;">
-                    <div class="container">
-                        <div class="text2-border">
-                            <h2 class="title_font">
-                        <a class="title_text">
-                        Product Categories
-                        </a>
-                    </h2>
-                        </div>
-                        <div class="box_categories">
-                            <div class="row">
-                                <div id="field_content">
-                                    <div class="item-inner">
-                                        <a class="name_block" href="https://demo.fieldthemes.com/ps_medicine/home2/en/78-accessories" title="Accessories">
-                                            Accessories
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                @include('inc.side_bar_categories')
                 <!-- MODULE Featured Products Products -->
                 <div class="block special_block_right vertical_mode clearfix">
                     <h4 class="title_block title_font">
@@ -307,48 +286,7 @@
                         <div class="owl-wrapper-outer">
                             <div class="owl-wrapper">
                                 @forelse($newproduct as $new)
-                                    <div class="owl-item">
-                                        <div class="item">
-                                            <div class="item-inner">
-                                                <div class="product-miniature js-product-miniature" data-id-product="35" data-id-product-attribute="18" itemscope itemtype="http://schema.org/Product">
-                                                    <div class="left-product">
-                                                        <a href="{{ $new->route }}" class="thumbnail product-thumbnail">
-                                                            <span class="cover_image">
-                                                                @if($new->images && count($new->images)>0)
-                                                                    <img  style="height: 100px;width: 100px;" src="{{ asset('uploads/products/'.$new->images[0]->name) }}" alt="{{ $new->name }}" data-full-size-image-url="{{ asset('uploads/products/'.$new->images[0]->name) }}" alt="{{ $new->name }}">
-                                                                @else
-                                                                    <img  style="height: 100px;width: 100px;margin-top: 0px;" src="{{ asset('/assets/download.png') }}" alt="{{ $new->name }}" data-full-size-image-url="{{ asset('/assets/download.png') }}">
-                                                                @endif
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                    <div class="right-product">
-                                                        <div class="product-description">
-                                                            <div class="product_name"><a href="{{ $new->route }}">{{ $new->name }}</a></div>
-                                                            <div class="product-price-and-shipping">
-
-                                                                @if($new->specificPrice)
-                                                                    <span class="price">৳{{ $new->price-$new->specificPrice->reduction }}</span>
-                                                                @else
-                                                                    <span class="price">৳{{ $new->price }}</span>
-                                                                @endif
-
-                                                                @if($new->specificPrice)
-                                                                    <span class="regular-price">৳{{ $new->price }}</span>
-                                                                @endif
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="quick-view-product">
-                                                            <a href="javascript:void(0)" class="quick-view" data-link-action="quickview">
-                                                                <i class="fa fa-eye"></i> Quick view Quick view
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @include('inc.single_sidebar_product',['new'=>$new])
                                 @empty
                                     <p>Empty</p>
                                 @endforelse

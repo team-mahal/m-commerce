@@ -21,6 +21,7 @@ Route::resource('testimonial', 'TestimonialController')->middleware('auth');
 
 Route::get('/productdetails/{id}', 'HomeController@productdetails')->name('productdetails');
 Route::get('/allproduct', 'HomeController@allproduct')->name('allproduct');
+Route::get('/category/{id}', 'HomeController@allproduct');
 Route::get('/cart', 'HomeController@cart');
 Route::post('/changePassword','HomeController@changePassword')->name('changePassword');
 Route::get('/remove/{id}', 'HomeController@remove');

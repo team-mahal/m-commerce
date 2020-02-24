@@ -59,5 +59,10 @@ class DatabaseSeeder extends Seeder
 
         // Orders
         $this->call(OrdersTableSeeder::class);
+
+        // Setting
+        $this->call(SettingsTableSeeder::class);
+
+
     }
 }

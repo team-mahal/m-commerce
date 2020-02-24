@@ -30,7 +30,17 @@ class PageCrudController extends CrudController
 
         $this->crud->setFromDb();
 
-         $this->crud->addField([   // CKEditor
+
+        $this->crud->addField([   // CKEditor
+            'name' => 'name',
+            'label' => 'name',
+            'type' => 'text',
+             'attributes' => [
+               'disabled'=>'disabled',
+             ], // change the HTML attributes of your input
+        ]);
+
+        $this->crud->addField([   // CKEditor
             'name' => 'content',
             'label' => 'Content',
             'type' => 'ckeditor',

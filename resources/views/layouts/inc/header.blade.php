@@ -34,8 +34,24 @@
 								<!-- /Block search module TOP -->
 								<div id="cart_block_top" class="sticky_top">
 									<div class="blockcart cart-preview inactive">
-										<div id="cartapppend">
-											
+										<div>
+											<div class="click-cart">
+												<span class="unline_cart">
+												<span id="counttotalitem" class="cart-products-count">{{ \Cart::content()->count() }}</span>
+												<span class="cart-item-top">Items -</span>
+												<span id="counttotalprice" class="cart-total-top">৳ {{ \Cart::subtotal() }}</span>
+												</span>
+												<span class="shopping-cart">
+												<span class="fa fa-shopping-cart">
+												</span>
+												<span class="cart-products-count">0</span>
+												</span>
+											</div>
+											<div class="cart_top_ajax">
+												<div id="cartapppend">
+													
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
