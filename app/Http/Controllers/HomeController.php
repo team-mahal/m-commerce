@@ -99,7 +99,17 @@ class HomeController extends Controller
             if($product->images && count($product->images)>0){
                 $img=$product->images[0]->name;
             }
-            \Cart::add(['id' => $product->id, 'name' => $product->name, 'qty' => $qty,'taxRate'=>0, 'price' => $product->price,'options'=>['image'=>$img]]);
+
+            $qty1=0;
+
+            foreach (\Cart::content() as $key => $value) {
+               if ($value->id==$id) {
+                   $qty1=$value->qty;
+               }
+            }
+            if($qty1>0){
+                \Cart::add(['id' => $product->id, 'name' => $product->name, 'qty' => $qty,'taxRate'=>0, 'price' => $product->price,'options'=>['image'=>$img]]);
+            }
             return view('inc.dynamicbigcar');
         }else{
             return view('inc.dynamicbigcar');
