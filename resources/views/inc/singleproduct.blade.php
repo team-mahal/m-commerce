@@ -19,7 +19,6 @@
                     <span class="item-countdown-time" data-time="2020-12-31 00:00:00"></span>
                 </span>
                 <div class="quick-view-product">
-
                     <a href="javascript:void(0)"  data-id="{{ $new->id }}" class="quick-view" title="Quick view">
                         <i class="fa fa-eye"></i> Quick view
                     </a>

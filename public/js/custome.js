@@ -167,21 +167,39 @@ function cart(id) {
 }
 
 function remove(id) {
-		$.ajax({
-				type: 'GET',
-				url: base_url+'/remove/'+id,
-		})
-		.done(function(re) {
-			$('#cartapppend').html(re)
-			$('#counttotalprice').html($('#pricetotal').html());
-			$('#counttotalitem').html($('#itemtotal').val());
-		})
-		.fail(function() {
-				console.log("error");
-		})
-		.always(function() {
-				console.log("complete");
-		});
+	$.ajax({
+			type: 'GET',
+			url: base_url+'/remove/'+id,
+	})
+	.done(function(re) {
+		$('#cartapppend').html(re)
+		$('#counttotalprice').html($('#pricetotal').html());
+		$('#counttotalitem').html($('#itemtotal').val());
+	})
+	.fail(function() {
+		console.log("error");
+	})
+	.always(function() {
+			console.log("complete");
+	});
+	removebigcart(0);
+}
+
+function removebigcart(id) {
+	$.ajax({
+		type: 'GET',
+		url: base_url+'/removebigcart/'+id,
+	})
+	.done(function(re) {
+		$('.bigcartapppend').html(re)
+	})
+	.fail(function() {
+			console.log("error");
+	})
+	.always(function() {
+			console.log("complete");
+	});
+	// remove(0)
 }
 
 jQuery(document).ready(function($) {

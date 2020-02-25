@@ -9,7 +9,7 @@
             </div>
             <hr>
 
-            <div class="cart-overview js-cart" data-refresh-url="https://demo.fieldthemes.com/ps_medicine/home2/en/cart?ajax=1&amp;action=refresh">
+            <div class="cart-overview js-cart">
                 <ul class="cart-items">
                     @foreach(Cart::content() as $row)
                         <li class="cart-item">
@@ -70,7 +70,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-2 col-xs-2 text-xs-right">
-                                            <div class="cart-line-product-actions ">
+                                            <div class="cart-line-product-actions" onclick="removebigcart('{{ $row->rowId }}')" style="cursor:pointer;">
                                                 <a class="remove-from-cart" rel="nofollow">
                                                     <i class="material-icons pull-xs-left">delete</i>
                                                 </a>

@@ -6,7 +6,7 @@
 
         <div id="content-wrapper">
 
-            <section id="main">
+            <section id="main" class="bigcartapppend">
                @include('inc.dynamicbigcar')
             </section>
 

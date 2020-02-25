@@ -89,8 +89,18 @@ class HomeController extends Controller
 
     public function remove($id='')
     {
-        \Cart::remove($id);
+        if($id!=0){
+            \Cart::remove($id);
+        }
         return view('inc.cart');
+    }
+
+    public function removebigcart($id='')
+    {
+        if($id!=0){
+            \Cart::remove($id);
+        }
+        return view('inc.dynamicbigcar');
     }
 
     public function productdetails($id)

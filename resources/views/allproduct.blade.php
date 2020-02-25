@@ -99,20 +99,20 @@
                                                     <div class="item-inner">
                                                         <div class="product-miniature js-product-miniature" data-id-product="24" data-id-product-attribute="0" itemscope="" itemtype="http://schema.org/Product">
                                                             <div class="left-product" style="text-align: center;">
-                                                                <a href="" class="thumbnail product-thumbnail" style="max-height: 250px;">
+                                                                <a href="" class="thumbnail product-thumbnail" style="min-height: 250px;max-height: 250px;">
                                                                     @if($product->images && count($product->images)>0)
                                                                         <span class="cover_image">
-                                                                            <img src="{{ asset('uploads/products/'.$product->images[0]->name) }}" data-full-size-image-url="{{ asset('uploads/products/'.$product->images[0]->name) }}" alt="{{ $product->name }}" >
+                                                                            <img style="min-height: 250px;max-height: 250px;object-fit: cover;" src="{{ asset('uploads/products/'.$product->images[0]->name) }}" data-full-size-image-url="{{ asset('uploads/products/'.$product->images[0]->name) }}" alt="{{ $product->name }}" >
                                                                         </span>
                                                                         <span class="hover_image">
-                                                                            <img src="{{ asset('uploads/products/'.$product->images[0]->name) }}" data-full-size-image-url="{{ asset('uploads/products/'.$product->images[0]->name) }}"> 
+                                                                            <img style="min-height: 250px;max-height: 250px;object-fit: cover;" src="{{ asset('uploads/products/'.$product->images[0]->name) }}" data-full-size-image-url="{{ asset('uploads/products/'.$product->images[0]->name) }}"> 
                                                                         </span>
                                                                     @else
                                                                         <span class="hover_image">
-                                                                            <img src="{{ asset('/assets/download.png') }}" alt="{{ $product->name }}">
+                                                                            <img style="min-height: 250px;max-height: 250px;object-fit: cover;" src="{{ asset('/assets/download.png') }}" alt="{{ $product->name }}">
                                                                         </span>
                                                                         <span class="cover_image">
-                                                                            <img src="{{ asset('/assets/download.png') }}" alt="{{ $product->name }}">
+                                                                            <img style="min-height: 250px;max-height: 250px;object-fit: cover;" src="{{ asset('/assets/download.png') }}" alt="{{ $product->name }}">
                                                                         </span>
                                                                     @endif
                                                                 </a>
@@ -120,7 +120,7 @@
 
                                                                 </div>
                                                                 <div class="quick-view-product">
-                                                                    <a href="javascript:void(0)" data-id="{{ $product->id }}" class="quick-view" title="Quick view" data-toggle="modal" data-target="#quickview-modal-18-0">
+                                                                    <a href="javascript:void(0)"  data-id="{{ $product->id }}" class="quick-view" title="Quick view">
                                                                         <i class="fa fa-eye"></i> Quick view
                                                                     </a>
                                                                 </div>
