@@ -1,86 +1,6 @@
 <div class="col-xs-12 col-md-3">
-    <div id="fieldblockcategories" class="block horizontal_mode clearfix">
-        <div class="container">
-            <div class="text2-border">
-                <h2 class="title_font">
-                    <a class="title_text">
-                    Product Categories
-                    </a>
-                </h2>
-            </div>
-            <div class="box_categories">
-                <div class="row">
-                    <div id="field_content">
-
-                        <div class="item-inner">
-
-                            <a class="name_block" href="https://demo.fieldthemes.com/ps_medicine/home2/en/78-accessories" title="Accessories">
-                                  Accessories
-                           </a>
-
-                        </div>
-
-                        <div class="item-inner">
-
-                            <a class="name_block" href="https://demo.fieldthemes.com/ps_medicine/home2/en/79-hats-and-gloves" title="Hats and Gloves">
-                                  Hats and Gloves
-                           </a>
-
-                        </div>
-
-                        <div class="item-inner">
-
-                            <a class="name_block" href="https://demo.fieldthemes.com/ps_medicine/home2/en/80-lifestyle" title="Lifestyle">
-                                  Lifestyle
-                           </a>
-
-                        </div>
-
-                        <div class="item-inner">
-
-                            <a class="name_block" href="https://demo.fieldthemes.com/ps_medicine/home2/en/81-bras" title="Bras">
-                                  Bras
-                           </a>
-
-                        </div>
-
-                        <div class="item-inner">
-
-                            <a class="name_block" href="https://demo.fieldthemes.com/ps_medicine/home2/en/82-evening" title="Evening">
-                                  Evening
-                            </a>
-
-                        </div>
-
-                        <div class="item-inner">
-
-                            <a class="name_block" href="https://demo.fieldthemes.com/ps_medicine/home2/en/83-long-sleeved" title="Long Sleeved">
-                                  Long Sleeved
-                           </a>
-
-                        </div>
-
-                        <div class="item-inner">
-
-                            <a class="name_block" href="https://demo.fieldthemes.com/ps_medicine/home2/en/84-shrot-sleeved" title="Shrot Sleeved">
-                                Shrot Sleeved
-                            </a>
-
-                        </div>
-
-                        <div class="item-inner">
-
-                            <a class="name_block" href="https://demo.fieldthemes.com/ps_medicine/home2/en/85-tanks-and-camis" title="Tanks and Camis">
-                                  Tanks and Camis
-                           </a>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>              
+    
+    @include('inc.side_bar_categories')
 
     <div class="block block_testimonials">
         <div class="overlay_testimonials">
@@ -131,19 +51,18 @@
 
                             <div id="slide-panel">
                                 <div id="slide">
-
                                     @forelse($testimonials as $key => $testimonial)
-                                    <div class="main-block">
-                                        <div class="content_test_top">
-                                            <p class="des_testimonial">{{ substr($testimonial->content, 0, 200) }}</p>
-                                        </div>
-                                        <div class="media">
-                                            <div class="content_test">
-                                                <p class="des_namepost">{{ $testimonial->user->name }}</p>
-                                                <p class="des_company">{{ $testimonial->created_at->diffForHumans() }}</p>
+                                        <div class="main-block">
+                                            <div class="content_test_top">
+                                                <p class="des_testimonial">{{ substr($testimonial->content, 0, 200) }}</p>
+                                            </div>
+                                            <div class="media">
+                                                <div class="content_test">
+                                                    <p class="des_namepost">{{ $testimonial->user->name }}</p>
+                                                    <p class="des_company">{{ $testimonial->created_at->diffForHumans() }}</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
                                     @empty
                                         <p>Empty</p>
                                     @endforelse
@@ -155,6 +74,7 @@
             </div>
         </div>
     </div>
+    @include('inc.block_testimonials')
 
     <div class="shipping">
         <ul>

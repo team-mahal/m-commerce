@@ -50,9 +50,10 @@ class HomeController extends Controller
     public function index()
     {   
         $newarrivels=Product::orderBy('id','desc')->with('specificPrice')->with('images')->take(12)->get();
-        $randomproduct=Product::inRandomOrder()->limit(12)->get();
+        $hotproduct=Product::inRandomOrder()->with('specificPrice')->with('images')->take(12)->get();
         $mostview=Product::orderBy('id','desc')->with('specificPrice')->with('images')->skip(12)->take(12)->get();
-        return view('welcome')->with('posts',Post::orderBy('id','desc')->take(10)->get())->with('newarrivels',$newarrivels)->with('mostview',$mostview)->with('testimonials',Testimonial::orderBy('id','desc')->take(12)->get())->with('randomproduct',$randomproduct);
+        $lastcategory = Category::orderBy('id','desc')->where('parent_id',NUll)->take(10)->get();
+        return view('welcome')->with('posts',Post::orderBy('id','desc')->take(10)->get())->with('newarrivels',$newarrivels)->with('mostview',$mostview)->with('testimonials',Testimonial::orderBy('id','desc')->take(12)->get())->with('hotproduct',$hotproduct)->with('lastcategory',$lastcategory);
     }
 
     public function cart()
@@ -99,7 +100,8 @@ class HomeController extends Controller
         $id=$relatedproduct->categories[0]->id;
         $relatedproduct= Category::with('products')->find($id);
         $newproduct= Product::orderBy('id','desc')->with('specificPrice')->with('images')->take(5)->get();
-        return view('productdetails')->with('product',$product)->with('relatedproduct',$relatedproduct)->with('newproduct',$newproduct);
+        $lastcategory = Category::orderBy('id','desc')->where('parent_id',NUll)->take(10)->get();
+        return view('productdetails')->with('product',$product)->with('relatedproduct',$relatedproduct)->with('newproduct',$newproduct)->with('lastcategory',$lastcategory);
     }
 
 
@@ -111,13 +113,21 @@ class HomeController extends Controller
         $id=$relatedproduct->categories[0]->id;
         $relatedproduct= Category::with('products')->find($id);
         $newproduct= Product::orderBy('id','desc')->with('specificPrice')->with('images')->take(5)->get();
-        return view('productdetails')->with('product',$product)->with('relatedproduct',$relatedproduct)->with('newproduct',$newproduct);
+        $lastcategory = Category::orderBy('id','desc')->where('parent_id',NUll)->take(10)->get();
+        return view('productdetails')->with('product',$product)->with('relatedproduct',$relatedproduct)->with('newproduct',$newproduct)->with('lastcategory',$lastcategory);
     }
 
-    public function allproduct(Request $request)
+    public function allproduct(Request $request,$id='')
     {   
         $filter= $request->filter;
+        $id=$request->cat_id ? $request->cat_id : $id;
         $products=Product::with('specificPrice');
+
+        if(!$id==''){
+            $products= $products->select('*')
+            ->join('category_product','products.id','=','category_product.product_id')
+            ->where('category_id',$id);
+        }
 
         if(isset($request->name)){
             $products=$products->where('name', 'LIKE', '%' . $request->name . '%' );
@@ -143,7 +153,9 @@ class HomeController extends Controller
                 $products->orderBy('price','asc');
             }
         }
-    	return view('allproduct')->with('products',$products->paginate(12));
+        $newproduct= Product::orderBy('id','desc')->with('specificPrice')->with('images')->take(5)->get();
+        $lastcategory = Category::orderBy('id','desc')->where('parent_id',NUll)->take(10)->get();
+    	return view('allproduct')->with('products',$products->paginate(12))->with('newproduct',$newproduct)->with('lastcategory',$lastcategory);
     }
 
     public function checkout()

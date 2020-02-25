@@ -32,7 +32,7 @@
                                                     </li>
                                                     <li class="isotope-item item grid-sizer"></li>
                                                 @endforeach
-                                                @foreach($randomproduct as $new)
+                                                @foreach($hotproduct as $new)
                                                     <li class="col-xs-12 col-sm-6 col-md-3 isotope-item item hot-products">
                                                         @include('inc.singleproduct',['new'=>$new])
                                                     </li>

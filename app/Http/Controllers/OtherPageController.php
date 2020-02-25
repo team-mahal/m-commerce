@@ -4,30 +4,31 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Page;
+use App\Models\PaymentMethod;
 class OtherPageController extends Controller
 {
     public function termofuse()
     {
-    	return view('pages.termofuse')->with('termofuse',Page::find(1));
+    	return view('pages.termofuse')->with('data',Page::find(1));
     }
 
     public function paymentmethod()
     {
-    	return view('pages.paymentmethod')->with('termofuse',Page::find(1));
+    	return view('pages.paymentmethod')->with('data',PaymentMethod::all());
     }
 
    	public function shopingguide()
     {
-    	return view('pages.shopingguide')->with('termofuse',Page::find(1));
+    	return view('pages.shopingguide')->with('data',Page::find(4));
     }
 
     public function locationsweship()
     {
-    	return view('pages.locationsweship')->with('locationsweship',Page::find(1));
+    	return view('pages.locationsweship')->with('data',Page::find(3));
     }
 
     public function estimateddeliverytime()
     {
-    	return view('pages.estimateddeliverytime')->with('termofuse',Page::find(1));
+    	return view('pages.estimateddeliverytime')->with('data',Page::find(2));
     }
 }
