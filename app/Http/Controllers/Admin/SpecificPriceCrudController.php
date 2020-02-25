@@ -42,8 +42,7 @@ class SpecificPriceCrudController extends CrudController
                 'label'         => trans('specificprice.product'),
                 'attribute'     => 'name',
                 'model'         => 'App\Models\Product',
-                'type'          => "model_function",
-                'function_name' => 'getProductName', 
+                'type'          => "text",
             ],
             [
                 'name'  => 'start_date',
@@ -61,20 +60,17 @@ class SpecificPriceCrudController extends CrudController
             [
                'name'           => "reduction",
                'label'          => trans('specificprice.reduction'),
-               'type'           => "model_function",
-               'function_name'  => 'getReduction', 
+               'type'           => "text",
             ],
             [
                'name'           => "old_price",
                'label'          => trans('specificprice.old_price'),
-               'type'           => "model_function",
-               'function_name'  => 'getOldPrice', 
+               'type'           => "text",
             ],
             [
                'name'           => "reduced_price",
                'label'          => trans('specificprice.reduced_price'),
-               'type'           => "model_function",
-               'function_name'  => 'getReducedPrice', 
+               'type'           => "text",
             ]
             
         ]);

@@ -90,72 +90,78 @@
                             <div id="js-product-list">
                                 <div class="products horizontal_mode">
                                     <div id="box-product-grid">
+                                        
+                                        @foreach($products->chunk(3) as $chunk)
                                         <div class="row">
-                                        @foreach($products as $product)
-                                            <div class="item col-xs-12 col-sm-6 col-md-4">
-                                                <div class="item-inner">
-                                                    <div class="product-miniature js-product-miniature" data-id-product="24" data-id-product-attribute="0" itemscope="" itemtype="http://schema.org/Product">
-                                                        <div class="left-product" style="text-align: center;">
-                                                            <a href="" class="thumbnail product-thumbnail" style="max-height: 250px;">
-                                                                @if($product->images && count($product->images)>0)
-                                                                    <span class="cover_image">
-                                                                        <img src="{{ asset('uploads/products/'.$product->images[0]->name) }}" data-full-size-image-url="{{ asset('uploads/products/'.$product->images[0]->name) }}" alt="{{ $product->name }}" >
-                                                                    </span>
-                                                                    <span class="hover_image">
-                                                                        <img src="{{ asset('uploads/products/'.$product->images[0]->name) }}" data-full-size-image-url="{{ asset('uploads/products/'.$product->images[0]->name) }}"> 
-                                                                    </span>
-                                                                @else
-                                                                    <span class="hover_image">
-                                                                        <img src="{{ asset('/assets/download.png') }}" alt="{{ $product->name }}">
-                                                                    </span>
-                                                                    <span class="cover_image">
-                                                                        <img src="{{ asset('/assets/download.png') }}" alt="{{ $product->name }}">
-                                                                    </span>
-                                                                @endif
-                                                            </a>
-                                                            <div class="conditions-box">
-
-                                                            </div>
-                                                            <div class="quick-view-product">
-                                                                <a href="javascript:void(0)" data-id="{{ $product->id }}" class="quick-view" title="Quick view" data-toggle="modal" data-target="#quickview-modal-18-0">
-                                                                    <i class="fa fa-eye"></i> Quick view
-                                                                </a>
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="right-product">
-                                                            <div class="product-description">
-                                                                <div class="product_name">
-                                                                    <a href="">{{ $product->name }}</a></div>
-                                                                <div class="product-price-and-shipping">
-                                                                    @if($product->specificPrice)
-                                                                        <span class="price">৳{{ $product->price-$product->specificPrice->reduction }}</span>
+                                            @foreach($chunk as $product)
+                                                
+                                                <div class="item col-xs-12 col-sm-6 col-md-4">
+                                                    <div class="item-inner">
+                                                        <div class="product-miniature js-product-miniature" data-id-product="24" data-id-product-attribute="0" itemscope="" itemtype="http://schema.org/Product">
+                                                            <div class="left-product" style="text-align: center;">
+                                                                <a href="" class="thumbnail product-thumbnail" style="max-height: 250px;">
+                                                                    @if($product->images && count($product->images)>0)
+                                                                        <span class="cover_image">
+                                                                            <img src="{{ asset('uploads/products/'.$product->images[0]->name) }}" data-full-size-image-url="{{ asset('uploads/products/'.$product->images[0]->name) }}" alt="{{ $product->name }}" >
+                                                                        </span>
+                                                                        <span class="hover_image">
+                                                                            <img src="{{ asset('uploads/products/'.$product->images[0]->name) }}" data-full-size-image-url="{{ asset('uploads/products/'.$product->images[0]->name) }}"> 
+                                                                        </span>
                                                                     @else
-                                                                        <span class="price">৳{{ $product->price }}</span>
+                                                                        <span class="hover_image">
+                                                                            <img src="{{ asset('/assets/download.png') }}" alt="{{ $product->name }}">
+                                                                        </span>
+                                                                        <span class="cover_image">
+                                                                            <img src="{{ asset('/assets/download.png') }}" alt="{{ $product->name }}">
+                                                                        </span>
                                                                     @endif
+                                                                </a>
+                                                                <div class="conditions-box">
 
-                                                                    @if($product->specificPrice)
-                                                                        <span class="regular-price">৳{{ $product->price }}</span>
-                                                                    @endif
+                                                                </div>
+                                                                <div class="quick-view-product">
+                                                                    <a href="javascript:void(0)" data-id="{{ $product->id }}" class="quick-view" title="Quick view" data-toggle="modal" data-target="#quickview-modal-18-0">
+                                                                        <i class="fa fa-eye"></i> Quick view
+                                                                    </a>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="right-product">
+                                                                <div class="product-description">
+                                                                    <div class="product_name">
+                                                                        <a href="">{{ $product->name }}</a></div>
+                                                                    <div class="product-price-and-shipping">
+                                                                        @if($product->specificPrice)
+                                                                            <span class="price">৳{{ $product->price-$product->specificPrice->reduction }}</span>
+                                                                        @else
+                                                                            <span class="price">৳{{ $product->price }}</span>
+                                                                        @endif
+
+                                                                        @if($product->specificPrice)
+                                                                            <span class="regular-price">৳{{ $product->price }}</span>
+                                                                        @endif
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="addtocart">
-                                                            <form action="" method="post">
-                                                                <input type="hidden" name="token" value="d25bc0f4d821fe67c876730ee3cf24a9">
-                                                                <input type="hidden" name="id_product" value="24">
-                                                                <button class="add-to-cart" data-button-action="add-to-cart" type="button" onclick="cart('{{ $product->id }}')">
-                                                                    <span title="Add to cart"><i class="fa fa-shopping-cart"></i>
-                                                                        ADD TO CART
-                                                                    </span>
-                                                                </button>
-                                                            </form>
+                                                            <div class="addtocart">
+                                                                <form action="" method="post">
+                                                                    <input type="hidden" name="token" value="d25bc0f4d821fe67c876730ee3cf24a9">
+                                                                    <input type="hidden" name="id_product" value="24">
+                                                                    <button class="add-to-cart" data-button-action="add-to-cart" type="button" onclick="cart('{{ $product->id }}')">
+                                                                        <span title="Add to cart"><i class="fa fa-shopping-cart"></i>
+                                                                            ADD TO CART
+                                                                        </span>
+                                                                    </button>
+                                                                </form>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
+                                                
+                                            @endforeach
                                             </div>
                                         @endforeach
-                                        </div>
+                                        
                                     </div>
 
                                 </div>
