@@ -50,8 +50,9 @@ class HomeController extends Controller
     public function index()
     {   
         $newarrivels=Product::orderBy('id','desc')->with('specificPrice')->with('images')->take(12)->get();
+        $randomproduct=Product::inRandomOrder()->limit(12)->get();
         $mostview=Product::orderBy('id','desc')->with('specificPrice')->with('images')->skip(12)->take(12)->get();
-        return view('welcome')->with('posts',Post::orderBy('id','desc')->take(10)->get())->with('newarrivels',$newarrivels)->with('mostview',$mostview)->with('testimonials',Testimonial::orderBy('id','desc')->take(12)->get());
+        return view('welcome')->with('posts',Post::orderBy('id','desc')->take(10)->get())->with('newarrivels',$newarrivels)->with('mostview',$mostview)->with('testimonials',Testimonial::orderBy('id','desc')->take(12)->get())->with('randomproduct',$randomproduct);
     }
 
     public function cart()

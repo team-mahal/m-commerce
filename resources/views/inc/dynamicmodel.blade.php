@@ -9,9 +9,7 @@
                 @else
                     <img src="{{ asset('/assets/download.png') }}" alt="{{ $product->name }}">
                 @endif
-                <div class="layer hidden-sm-down" data-toggle="modal" data-target="#product-modal">
-                    <i class="material-icons zoom-in"></i>
-                </div>
+              
             </div>
 
            <div class="js-qv-mask mask">
@@ -23,7 +21,6 @@
                             </div>
                         @endforeach
                     </div>
-
                 </div>
             </div>
 

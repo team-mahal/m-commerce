@@ -252,12 +252,13 @@
      
         @include('layouts.inc.footer')
     </main>
+    <div id="modelbackdoe" class="modal-backdrop" style="opacity: .5;display: none;"></div>
     <script>
         var base_url = "{{ URL::to('/') }}";
     </script>
     <script type="text/javascript" src="{{ asset('js/bottom-4deda2.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/owl.carousel.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/autocom/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/owl.carousel.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/autocom/bootstrap-autocomplete.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/custome.js') }}"></script>
 </body>
