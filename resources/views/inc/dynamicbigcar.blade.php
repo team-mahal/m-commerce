@@ -28,7 +28,7 @@
                                 <!--  product left body: description -->
                                 <div class="product-line-grid-body col-md-4 col-xs-8">
                                     <div class="product-line-info">
-                                        <a class="label" href="https://demo.fieldthemes.com/ps_medicine/home2/en/product-categories/17-quisque-at-orci-gravid-.html">
+                                        <a class="label" href="">
                                            {{ $row->name }}
                                         </a>
                                     </div>
@@ -49,12 +49,12 @@
                                             <div class="row">
                                                 <div class="col-md-6 col-xs-6 qty">
                                                     <div class="input-group bootstrap-touchspin">
-                                                        <input class="js-cart-line-product-quantity form-control" data-product-id="17" type="text" value="{{ $row->qty }}" name="product-quantity-spin" min="1" style="display: block;">
+                                                        <input class="form-control" onchange="updateqty(this.value,{{ $row->id }})" type="text" value="{{ $row->qty }}" name="product-quantity-spin" min="1" style="display: block;">
                                                         <span class="input-group-btn-vertical">
-                                                            <button class="btn btn-touchspin js-touchspin js-increase-product-quantity bootstrap-touchspin-up" type="button">
+                                                            <button onclick="updateqty(1,{{ $row->id }})" class="btn btn-touchspin" type="button">
                                                                 <i class="material-icons touchspin-up"></i>
                                                             </button>
-                                                            <button class="btn btn-touchspin js-touchspin js-decrease-product-quantity bootstrap-touchspin-down" type="button">
+                                                            <button onclick="updateqty(-1,{{ $row->id }})" class="btn btn-touchspin" type="button">
                                                                 <i class="material-icons touchspin-down"></i>
                                                             </button>
                                                         </span>

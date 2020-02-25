@@ -28,6 +28,7 @@ Route::get('/remove/{id}', 'HomeController@remove');
 Route::get('/removebigcart/{id}', 'HomeController@removebigcart');
 Route::get('/quickview/{id}', 'HomeController@quickview');
 Route::post('/addtocart', 'HomeController@addtocart');
+Route::get('/addtocart1/{id}', 'HomeController@addtocart1');
 Route::get('/addtocart/{id}', 'HomeController@addtocart');
 Route::get('/addtocart/', 'HomeController@addtocart');
 Route::get('/search/', 'HomeController@search')->name('search');

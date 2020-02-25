@@ -87,20 +87,43 @@ class HomeController extends Controller
         }
     }
 
-    public function remove($id='')
-    {
-        if($id!=0){
-            \Cart::remove($id);
+    public function addtocart1(Request $request,$id='')
+    {   
+        $qty=$request->quantity;
+        if(!$qty){
+            $qty=1;
         }
-        return view('inc.cart');
+        if(!$id==''){
+            $product= Product::with('specificPrice')->with('images')->find($id);
+            $img='';
+            if($product->images && count($product->images)>0){
+                $img=$product->images[0]->name;
+            }
+            \Cart::add(['id' => $product->id, 'name' => $product->name, 'qty' => $qty,'taxRate'=>0, 'price' => $product->price,'options'=>['image'=>$img]]);
+            return view('inc.dynamicbigcar');
+        }else{
+            return view('inc.dynamicbigcar');
+        }
     }
 
-    public function removebigcart($id='')
+    public function remove($id)
     {
-        if($id!=0){
+        if($id==1){
+            return view('inc.cart');
+        }else{
             \Cart::remove($id);
+            return view('inc.cart');
         }
-        return view('inc.dynamicbigcar');
+    }
+
+    public function removebigcart($id)
+    {
+        if($id==1){
+            return view('inc.dynamicbigcar');
+        }else{
+            \Cart::remove($id);
+            return view('inc.dynamicbigcar');
+        }
     }
 
     public function productdetails($id)
