@@ -1,12 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-    {{-- @include('layouts.inc.slider'); --}}
-
+    @include('layouts.inc.slider');
+    
     <br><br>
     <section id="wrapper">
         <div class="container">
             <div id="content-wrapper">
+
                 <section id="main">
                     <section id="content" class="page-home">
                         <div class="row">

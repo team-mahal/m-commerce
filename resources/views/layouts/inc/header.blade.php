@@ -1,4 +1,40 @@
 <header id="header">
+	<div style="background: black;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="bg-black">
+						<div class="links">
+					        @if(!Auth::check())
+					        	<div><a href="{{ url('login') }}">Log In</a></div>
+					        	<div><a href="{{ url('register') }}">Register</a></div>
+					        @else
+					        	<div class="dropdown hovereffect">
+								  <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								    {{ Auth::user()->name }}
+								  </a>
+
+								  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+								    <a class="dropdown-item" href="{{ url('profile') }}">Profile</a>
+								    <a class="dropdown-item" href="{{ url('myorders') }}">Orders</a>
+								    <a class="dropdown-item" href="{{ url('testimonial') }}">Testimonial</a>
+							    	<a class="dropdown-item" href="{{ route('logout') }}"
+									   onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+									    Logout
+									</a>
+
+									<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: one;">
+									    {{ csrf_field() }}
+									</form>
+								  </div>
+								</div>
+					        @endif
+					    </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="header-top">
 		<div class="container">
 			<nav class="this-nav">
@@ -117,42 +153,6 @@
 			</div>
 	
 			@include('layouts.inc.mobilemenu')
-		</div>
-	</div>
-	<div style="background: black;">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="bg-black">
-						<div class="links">
-					        @if(!Auth::check())
-					        	<div><a href="{{ url('login') }}">Log In</a></div>
-					        	<div><a href="{{ url('register') }}">Register</a></div>
-					        @else
-					        	<div class="dropdown hovereffect">
-								  <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								    {{ Auth::user()->name }}
-								  </a>
-
-								  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-								    <a class="dropdown-item" href="{{ url('profile') }}">Profile</a>
-								    <a class="dropdown-item" href="{{ url('myorders') }}">Orders</a>
-								    <a class="dropdown-item" href="{{ url('testimonial') }}">Testimonial</a>
-							    	<a class="dropdown-item" href="{{ route('logout') }}"
-									   onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-									    Logout
-									</a>
-
-									<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: one;">
-									    {{ csrf_field() }}
-									</form>
-								  </div>
-								</div>
-					        @endif
-					    </div>
-					</div>
-				</div>
-			</div>
 		</div>
 	</div>
 </header>
