@@ -47,6 +47,13 @@ class PostCrudController extends CrudController
             ],
         );
 
+         $this->crud->addColumn(
+            [
+                'name'      => 'description',
+                'label' => "description", // Table column heading
+                'limit' => 120, // character limit; default is 50;
+            ],
+        );
 
         $this->crud->addField([
                 'type'      => "select",

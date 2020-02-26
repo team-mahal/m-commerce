@@ -11,7 +11,7 @@
                                 <div class="inline-block_relative">
                                     <div class="image_holder_wrap">
                                         <a href="{{ url('post/'.$post->id) }}">
-                                            <img alt="Proin gravida nibh velit auctor bibendum" class="feat_img_small" src="{{ asset($post->image)  }}">
+                                            <img alt="Proin gravida nibh velit auctor bibendum" class="feat_img_small" src="{{ asset($post->image)  }}" width="100%">
                                         </a>
                                         <p class="block_post_date">
                                             <span class="date_added">{{ $post->created_at->format('d') }} {{ $post->created_at->format('M') }}</span>

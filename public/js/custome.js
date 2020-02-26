@@ -304,6 +304,33 @@ $('.owl-carousel-feature').owlCarousel({
 	}
 })
 
+$('.sdsblog-box-content').owlCarousel({
+	loop:true,
+	margin:5,
+	nav:false,
+	rewind: true,
+	autoplay:true,
+	items:3,
+	responsiveClass:true,
+	responsive:{
+		0:{
+				items:1,
+		},
+		600:{
+				items:2,
+		},
+		1000:{
+				items:3,
+		},
+		1400:{
+				items:4,
+		},
+		2000:{
+				items:5,
+		}
+	}
+})
+
 $.fn.extend({
 	treed: function (o) {
 
