@@ -68,49 +68,46 @@
 											</a>
 										</div>
 									</li>
-									<li class="root root-3 ">
-										 <div class="root-item no-description">
-											<a href="/ps_medicine/home2/en/52-shop">
-												<div class="title title_font"><span class="title-text">shop</span><span class="icon-has-sub fa fa-angle-down"></span></div>
-											</a>
-										 </div>
-										 <ul class="menu-items col-md-6 col-xs-12">
-											@foreach(['',''] as $k)
+									@forelse($categories as $category)
+										<li class="root root-3 ">
+											 <div class="root-item no-description">
+												<a href="{{ url('category/'.$category->id) }}">
+													<div class="title title_font">
+														<span class="title-text">{{ $category->name }}</span>
+														<span class="icon-has-sub fa fa-angle-down"></span>
+													</div>
+												</a>
+											 </div>
+											 @if(count($category->children)>0)
+											 <ul class="menu-items col-md-6 col-xs-12">
+												@foreach($category->children as $children)
 													<li class="menu-item menu-item-121 depth-1 category menucol-1-3  ">
 														 <div class="title title_font">
-																<a href="https://demo.fieldthemes.com/ps_medicine/home2/en/76-dresses">                                                    Dresses
-																</a> 
-														 </div>
-														 <ul class="submenu submenu-depth-2">
-																<li class="menu-item menu-item-122 depth-2 category   ">
+															<a href="{{ url('category/'.$children->id) }}">
+																{{ $children->name }}
+															</a> 
+														 </div> 
+														@if(count($children->children)>0)
+															 <ul class="submenu submenu-depth-2">
+															 	@foreach($children->children as $child)
+																	<li class="menu-item menu-item-122 depth-2 category   ">
 																	 <div class="title">
-																			<a href="https://demo.fieldthemes.com/ps_medicine/home2/en/78-accessories">                                                    Accessories
-																			</a> 
+																		<a href="{{ url('category/'.$child->id) }}">
+																			{{ $child->name }}
+																		</a> 
 																	 </div>
-																</li>
-																<li class="menu-item menu-item-123 depth-2 category   ">
-																	 <div class="title">
-																			<a href="https://demo.fieldthemes.com/ps_medicine/home2/en/79-hats-and-gloves">                                                    Hats and Gloves
-																			</a> 
-																	 </div>
-																</li>
-																<li class="menu-item menu-item-124 depth-2 category   ">
-																	 <div class="title">
-																			<a href="https://demo.fieldthemes.com/ps_medicine/home2/en/80-lifestyle">                                                    Lifestyle
-																			</a> 
-																	 </div>
-																</li>
-																<li class="menu-item menu-item-125 depth-2 category   ">
-																	 <div class="title">
-																			<a href="https://demo.fieldthemes.com/ps_medicine/home2/en/81-bras">                                                    Bras
-																			</a> 
-																	 </div>
-																</li>
-														 </ul>
+																	</li>
+																@endforeach
+															 </ul>
+														@endif
 													</li>
-											@endforeach
-										 </ul>
-									</li>
+				                                @endforeach
+											 </ul>
+											 @endif
+										</li>
+									@empty
+			                         -
+			                        @endforelse
 								</ul>
 							</nav>
 

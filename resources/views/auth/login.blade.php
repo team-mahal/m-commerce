@@ -62,7 +62,7 @@
                                 </div>
                                 
                                 <div class="forgot-password">
-                                    <a href="https://demo.fieldthemes.com/ps_medicine/home2/en/password-recovery" rel="nofollow">
+                                    <a href="/password/reset" rel="nofollow">
                                         Forgot your password?
                                     </a>
                                 </div>

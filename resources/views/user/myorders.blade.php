@@ -56,7 +56,7 @@
 						                    	<p>No Product Found</p>
 						                    @endforelse
 											<tr>
-												<td colspan="4" style="text-align: right;">Order Status : <a href="" class="badge badge-success">{{ $order->status->name }}</a></td>
+												<td colspan="4" style="text-align: right;">Order Status : <a href="" class="badge badge-primary">{{ $order->status->name }}</a></td>
 												<td>Total:৳{{ $order->total }}.00</td>
 											</tr>
 					                  	</table>

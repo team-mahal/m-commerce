@@ -3,6 +3,7 @@
 @section('content')
 <div class="container">
     <section id="main">
+        <br><br>
         <header class="page-header">
             <h1>
               Create an account
