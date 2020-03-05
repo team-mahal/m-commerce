@@ -90,6 +90,7 @@ Route::group(['middleware' => ['admin','isadmin'],
 
 	// listing
 	Route::get('purchaslisting','OtherController@purchaselisting');
+	Route::get('deletepurchase/{purchase}','OtherController@deletepurchase');
 	Route::get('recepts','OtherController@recepts');
 	Route::get('/allproductbelogntopurchase/{id}','OtherController@allproductbelogntopurchase');
 	Route::get('/product/search/{query}','OtherController@products');

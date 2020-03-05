@@ -119,6 +119,7 @@
     <script src="{{ asset('vendor/adminlte') }}/plugins/slimScroll/jquery.slimscroll.min.js"></script>
     <script src="{{ asset('vendor/adminlte') }}/plugins/fastclick/fastclick.js"></script>
     <script src="{{ asset('vendor/adminlte') }}/dist/js/app.min.js"></script>
+    <script src="{{ asset('vendor/adminlte') }}/plugins/chartjs/Chart.min.js"></script>
 
     <!-- page script -->
     <script type="text/javascript">

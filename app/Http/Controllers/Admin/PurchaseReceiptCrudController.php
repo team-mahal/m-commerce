@@ -7,7 +7,7 @@ use Backpack\CRUD\app\Http\Controllers\CrudController;
 // VALIDATION: change the requests to match your own file names if you need form validation
 use App\Http\Requests\PurchaseReceiptRequest as StoreRequest;
 use App\Http\Requests\PurchaseReceiptRequest as UpdateRequest;
-
+use App\Transaction;
 class PurchaseReceiptCrudController extends CrudController
 {
     public function setup()
@@ -142,6 +142,22 @@ class PurchaseReceiptCrudController extends CrudController
 
     public function store(StoreRequest $request)
     {
+        $transaction = new Transaction();
+        $transaction->purpose='purchase';
+        $transaction->ledger_id=$request->supplier_id;
+        $transaction->purpose='1';
+        $transaction->date=$request->date;
+        $transaction->amount=$request->amount;
+        $transaction->save();
+
+        $transaction = new Transaction();
+        $transaction->purpose='purchase_payment';
+        $transaction->ledger_id=$request->supplier_id;
+        $transaction->purpose='1';
+        $transaction->date=$request->date;
+        $transaction->amount=$request->paid;
+        $transaction->save();
+
         // your additional operations before save here
         $redirect_location = parent::storeCrud($request);
         // your additional operations after save here

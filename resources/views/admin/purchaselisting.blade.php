@@ -207,7 +207,7 @@
 								    class="fa fa-fw fa-remove css_for_cursor"
 								    style="color: red; "
 								    :id="p.product_id"
-								    :purchase_id="p.purchase_id"
+								    :purchase_id="p.id"
 								    name="remove"
 								    title="Remove"
 								  ></i>
@@ -292,6 +292,8 @@
   <script src="{{ asset('vue/vue.min.js') }}"></script>
   <script src="https://unpkg.com/vue-select@3.0.0"></script>
   <script src="https://unpkg.com/vue-multiselect@2.1.0"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.js" integrity="sha256-JirYRqbf+qzfqVtEE4GETyHlAbiCpC005yBTa4rj6xg=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.css" integrity="sha256-zuyRv+YsWwh1XR5tsrZ7VCfGqUmmPmqBjIvJgQWoSDo=" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://unpkg.com/vue-multiselect@2.1.0/dist/vue-multiselect.min.css">
   <link rel="stylesheet" href="https://unpkg.com/vue-select@3.0.0/dist/vue-select.css">
   <script src="{{ asset('vue/purchaselisting.js') }}"></script>

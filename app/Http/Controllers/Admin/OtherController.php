@@ -46,4 +46,13 @@ class OtherController extends Controller
     	$stock->update();
     	return response(Purchase::with('product')->where('purchase_receipt_id',$request->purchase_receipt_id)->get());
     }
+
+    public function deletepurchase(Purchase $purchase)
+    {
+        // $product=Product::find($purchase->product_id);
+        // $product->stock=$Product->stock-$purchase->quantity;
+        // $product->update();
+        // $purchase->delete();
+        return $purchase->purchase_receipt_id;
+    }
 }

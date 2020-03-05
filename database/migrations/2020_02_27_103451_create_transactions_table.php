@@ -18,6 +18,7 @@ class CreateTransactionsTable extends Migration
             $table->string('purpose');
             $table->integer('ledger_id');
             $table->integer('ledger_type');
+            $table->date('date');
             $table->float('amount');
             $table->timestamps();
         });

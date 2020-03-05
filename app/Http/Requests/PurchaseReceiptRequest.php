@@ -28,6 +28,7 @@ class PurchaseReceiptRequest extends \Backpack\CRUD\app\Http\Requests\CrudReques
             'supplier_id' => 'required',
             'amount' => 'required',
             'paid' => 'required',
+            'date' => 'required',
         ];
     }
 

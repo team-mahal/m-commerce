@@ -92,10 +92,11 @@ const vm = new Vue({
 	    	this.purchase_info=[];
 	    	var self = this;
 	    	if(this.selected1){
-	    		var purchase_receipt_id=this.selected1.receipt_id;
+	    		var purchase_receipt_id=this.selected1.id;
 	    	}
+	    	console.log(purchase_receipt_id);
 	    	$.ajax({
-	    		url: base_url+'purchaselisting/allproductbelogntopurchase/'+purchase_receipt_id,
+	    		url: 'purchaselisting/allproductbelogntopurchase/'+purchase_receipt_id,
 	    	})
 	    	.done(function(re) {
 	    		self.totalqty=0;
@@ -109,8 +110,8 @@ const vm = new Vue({
 	    			self.tunit_buy_price= parseInt(self.tunit_buy_price) + parseInt(element.purchase_quantity*element.unit_buy_price);
 	    		});
 	    	})
-	    	.fail(function() {
-	    		console.log("error");
+	    	.fail(function(error) {
+	    		console.log(error);
 	    	})
 	    }
   	},
@@ -176,89 +177,41 @@ const vm = new Vue({
 
 
 jQuery(document).ready(function($) {
-	$('#delete_purchase_invoice').on('click', function()
-	{
-      var purchase_receipt_id   = $('#pur_rec_id').val();
-      if(purchase_receipt_id != '')
-	  {
-        swal({
-            title               : 'Are you sure?',
-            text                : "You won't be able to revert this!",
-            type                : 'warning',
-            showCancelButton    : true,
-            confirmButtonColor  : '#db8b0b',
-            cancelButtonColor   : '#419641',
-            cancelButtonText    : 'No',
-            confirmButtonText   : 'Yes'
-          }).then(function () {
-              $.ajax({
-                url       : base_url+"purchase/removeProductFromPurchase",
-                type      : 'POST',
-                cash      : false,
-                data      : {purchase_receipt_id: purchase_receipt_id, pro_id: product_id},
-                success: function(result)
-                {
-                  tr.closest('tr').remove();
-					var total_final = 0.00;
-					$('.total_purchase_price_final').each(function(){
-						total_final += parseFloat($(this).text()); 
-					});
-					$('#total_purchase_price_new_final').html(total_final);
-                  swal(
-                    'Deleted!',
-                    'Product has been deleted.',
-                    'success'
-                  );
-				  
-                }
-              });
-          })
-      }
-    });
-
    	$('#purchase_products').on('click', "[name='remove']", function(){
-      var product_id            = $(this).attr('id');
       var purchase_id            = $(this).attr('purchase_id');
-      var purchase_receipt_id   = $('#pur_rec_id').val();
-      var tr                    = $(this);
-      if(product_id != '' && purchase_receipt_id != '')
+      if(purchase_id != '')
 	  {
-        swal({
-            title               : 'Are you sure?',
-            text                : "You won't be able to revert this!",
-            type                : 'warning',
-            showCancelButton    : true,
-            confirmButtonColor  : '#db8b0b',
-            cancelButtonColor   : '#419641',
-            cancelButtonText    : 'No',
-            confirmButtonText   : 'Yes'
-          }).then(function () {
-			  
-              $.ajax({
-                url       : base_url+"purchase/removeProductFromPurchase",
-                type      : 'POST',
-                cash      : false,
-                data      : {purchase_receipt_id: purchase_receipt_id, pro_id: product_id,purchase_id:purchase_id},
-                success: function(result)
-                {	
-                	var result = parseInt(result);
-                	vm.updatepurchase_info();
-                  	if(result==1){
-	                  	swal(
-		                    'Deleted!',
-		                    'Product has been deleted.',
-		                    'success'
-	                  	);
-	                }else{
-	                	swal({
-				            title               : 'You Can Not Delete The Items',
-				            text                : "You Have Already Sale Product From This Items",
-				            type                : 'warning',
-				        })
-	                }
-                }
-              });
-          })
+		  	swal({
+			  title: "Are you sure?",
+			  text: "You will not be able to recover this imaginary file!",
+			  type: "warning",
+			  showCancelButton: true,
+			  confirmButtonClass: "btn-danger",
+			  confirmButtonText: "Yes, delete it!",
+			  cancelButtonText: "No, cancel plx!",
+			  closeOnConfirm: false,
+			  closeOnCancel: false
+			},
+			function(isConfirm) {
+				if (isConfirm) {
+					$.ajax({
+						url: '/admin/deletepurchase/'+purchase_id,
+						type: 'GET',
+					})
+					.done(function(re) {
+						// vm.updatepurchase_info();
+						swal("Deleted!", "Your imaginary file has been deleted.", "success");
+					})
+					.fail(function() {
+						console.log("error");
+					})
+					.always(function() {
+						console.log("complete");
+					});
+				} else {
+				    swal("Cancelled", "Your imaginary file is safe :)", "error");
+				}
+			});
       }
     });
 
@@ -356,90 +309,3 @@ jQuery(document).ready(function($) {
         /*swal*/
     });
 });
-
-
-
-
-
-
-
-// old js will delete soon
-$(function () {
-	$('#pro_serial_input_for_edit').on('click', "[name='edit_warran']", function(ev)
-	{
-		ev.preventDefault();
-		var ip_id            		= $(this).attr('id');
-		var product_type_name       = $('#product_type'+ip_id).val();	
-			var submiturl = base_url+'purchase/update_product_warranty';
-			var methods = 'POST';
-			var output = '';
-			var input_box='';
-			var k=1;
-			$.ajax(
-			{
-				url: submiturl,
-				type: methods,
-				dataType: 'JSON',
-				data: {'ip_id':ip_id,'product_type_name':product_type_name},  	
-				success:function(result)
-				{
-					swal(
-						'Updated!',
-						'Product has been updated.',
-						'success'
-					  );
-					$('#product_type'+ip_id).val(result.sl_no);
-				}
-			});
-    });
-
-	$('#pro_serial_input_for_edit').on('click', "[name='remove_warran']", function(){
-      var ip_id            = $(this).attr('id');
-      var purchase_receipt_id   = $('#pur_rec_id').val();
-      var tr                    = $(this);
-	  var product_id     = parseInt($('#pro_hide').val());
-	  var pro_hide_buy     = parseInt($('#pro_hide_buy').val());
-	  //alert(ip_id);
-	  //alert(purchase_receipt_id);
-	 // alert(product_id);
-      if(ip_id != '' && purchase_receipt_id != '' && product_id != '')
-	  {
-        swal({
-            title               : 'Are you sure?',
-            text                : "You won't be able to revert this!",
-            type                : 'warning',
-            showCancelButton    : true,
-            confirmButtonColor  : '#db8b0b',
-            cancelButtonColor   : '#419641',
-            cancelButtonText    : 'No',
-            confirmButtonText   : 'Yes'
-          }).then(function () 
-		  {
-			  
-              $.ajax({
-                url       : base_url+"purchase/removeProductFromPurchase_warranty",
-                type      : 'POST',
-                cash      : false,
-                data      : {purchase_receipt_id: purchase_receipt_id, ip_id: ip_id, product_id: product_id, pro_hide_buy: pro_hide_buy},
-                success: function(result)
-                {
-					//alert(result);
-					tr.closest('tr').remove();
-					var total_final = 0.00;
-					$('.total_purchase_price_final').each(function(){
-						total_final += parseFloat($(this).text()); 
-					});
-					$('#total_purchase_price_new_final').html(total_final);
-                  swal(
-                    'Deleted!',
-                    'Product has been deleted.',
-                    'success'
-                  );
-				  
-                }
-              });
-          })
-      }
-
-    });
-  });
