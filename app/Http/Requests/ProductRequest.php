@@ -26,6 +26,7 @@ class ProductRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
     public function rules()
     {
         // $slug = $this->request->all()['slug']=="" ? Str::kebab($this->request->all()['name']) : $this->request->all()['slug'];
+        // dd($this->request);
         // $this->request->add(['slug' => 'aaaaa']);
         return [
             'name'              => 'required|max:255',
