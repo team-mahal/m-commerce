@@ -26,7 +26,7 @@ class ProductRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
     public function rules()
     {
         // $slug = $this->request->all()['slug']=="" ? Str::kebab($this->request->all()['name']) : $this->request->all()['slug'];
-        // $this->request->add(['slug' => $slug]);
+        // $this->request->add(['slug' => 'aaaaa']);
         return [
             'name'              => 'required|max:255',
             'slug'               => 'required|unique:products,slug'.($this->request->get('id') ? ','.$this->request->get('id') : ''),
@@ -57,7 +57,6 @@ class ProductRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
                 $attributes['attributes.'.$key] = strtolower(trans('attribute.attribute'))." \"".Attribute::find($key)->name."\"";
             }
         }
-
         return $attributes;
     }
 
