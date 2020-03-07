@@ -137,10 +137,10 @@ jQuery(document).ready(function($) {
 
 
 function toggleIcon(e) {
-		$(e.target)
-				.prev('.panel-heading')
-				.find(".more-less")
-				.toggleClass('glyphicon-plus glyphicon-minus');
+	$(e.target)
+	.prev('.panel-heading')
+	.find(".more-less")
+	.toggleClass('glyphicon-plus glyphicon-minus');
 }
 $('.panel-group').on('hidden.bs.collapse', toggleIcon);
 $('.panel-group').on('shown.bs.collapse', toggleIcon);
@@ -329,6 +329,16 @@ $('.sdsblog-box-content').owlCarousel({
 				items:5,
 		}
 	}
+})
+
+$('.hotproduct').owlCarousel({
+	loop:true,
+	margin:5,
+	nav:true,
+	rewind: true,
+	autoplay:true,
+	items:1,
+	responsiveClass:true,
 })
 
 $.fn.extend({

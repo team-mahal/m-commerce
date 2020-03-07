@@ -17,6 +17,7 @@ class CreateProductsTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->integer('group_id')->unsigned();
+            $table->boolean('ishotproduct');
             $table->integer('attribute_set_id')->unsigned()->default('0');
             $table->string('name', 190)->nullable()->default(null);
             $table->string('slug', 190)->unique()->nullable()->default(null);

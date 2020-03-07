@@ -87,6 +87,8 @@ Route::group(['middleware' => ['admin','isadmin'],
 	CRUD::resource('stock', 'StockCrudController');
 	CRUD::resource('blogcategory', 'BlogcategoryCrudController');
 	CRUD::resource('page', 'PageCrudController');
+	CRUD::resource('ads', 'AdsCrudController');
+	CRUD::resource('brand', 'BrandCrudController');
 
 	// listing
 	Route::get('purchaslisting','OtherController@purchaselisting');

@@ -11,6 +11,8 @@ use App\Testimonial;
 use App\Models\Carrier;
 use App\Models\PaymentMethod;
 use App\Models\Order;
+use App\Models\Ads;
+use App\Models\Brand;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 class HomeController extends Controller
@@ -49,11 +51,15 @@ class HomeController extends Controller
 
     public function index()
     {   
-        $newarrivels=Product::orderBy('id','desc')->with('specificPrice')->with('images')->take(12)->get();
+        $newarrivels=Product::latest()->with('specificPrice')->with('images')->take(12)->get();
         $hotproduct=Product::inRandomOrder()->with('specificPrice')->with('images')->take(12)->get();
-        $mostview=Product::orderBy('id','desc')->with('specificPrice')->with('images')->skip(12)->take(12)->get();
-        $lastcategory = Category::orderBy('id','desc')->where('parent_id',NUll)->take(10)->get();
-        return view('welcome')->with('posts',Post::orderBy('id','desc')->take(10)->get())->with('newarrivels',$newarrivels)->with('mostview',$mostview)->with('testimonials',Testimonial::orderBy('id','desc')->take(12)->get())->with('hotproduct',$hotproduct)->with('lastcategory',$lastcategory);
+        $mostview=Product::latest()->with('specificPrice')->with('images')->skip(12)->take(12)->get();
+        $lastcategory = Category::latest()->where('parent_id',NUll)->take(50)->get();
+        $lastcategory = Category::latest()->where('parent_id',NUll)->take(50)->get();
+        $hotproduct = Product::where('ishotproduct',1)->take(50)->get();
+        $brands = Brand::get();
+        $ads = Ads::get();
+        return view('welcome')->with('posts',Post::latest()->take(10)->get())->with('newarrivels',$newarrivels)->with('mostview',$mostview)->with('testimonials',Testimonial::latest()->take(12)->get())->with('hotproduct',$hotproduct)->with('lastcategory',$lastcategory)->with('brands',$brands)->with('ads',$ads)->with('hotproduct',$hotproduct);
     }
 
     public function cart()
@@ -142,8 +148,8 @@ class HomeController extends Controller
         $relatedproduct= Product::with('categories')->find($id);
         $id=$relatedproduct->categories[0]->id;
         $relatedproduct= Category::with('products')->find($id);
-        $newproduct= Product::orderBy('id','desc')->with('specificPrice')->with('images')->take(5)->get();
-        $lastcategory = Category::orderBy('id','desc')->where('parent_id',NUll)->take(10)->get();
+        $newproduct= Product::latest()->with('specificPrice')->with('images')->take(5)->get();
+        $lastcategory = Category::latest()->where('parent_id',NUll)->take(50)->get();
         return view('productdetails')->with('product',$product)->with('relatedproduct',$relatedproduct)->with('newproduct',$newproduct)->with('lastcategory',$lastcategory);
     }
 
@@ -155,8 +161,8 @@ class HomeController extends Controller
         $relatedproduct= Product::with('categories')->find($id);
         $id=$relatedproduct->categories[0]->id;
         $relatedproduct= Category::with('products')->find($id);
-        $newproduct= Product::orderBy('id','desc')->with('specificPrice')->with('images')->take(5)->get();
-        $lastcategory = Category::orderBy('id','desc')->where('parent_id',NUll)->take(10)->get();
+        $newproduct= Product::latest()->with('specificPrice')->with('images')->take(5)->get();
+        $lastcategory = Category::latest()->where('parent_id',NUll)->take(50)->get();
         return view('productdetails')->with('product',$product)->with('relatedproduct',$relatedproduct)->with('newproduct',$newproduct)->with('lastcategory',$lastcategory);
     }
 
@@ -196,8 +202,8 @@ class HomeController extends Controller
                 $products->orderBy('price','asc');
             }
         }
-        $newproduct= Product::orderBy('id','desc')->with('specificPrice')->with('images')->take(5)->get();
-        $lastcategory = Category::orderBy('id','desc')->where('parent_id',NUll)->take(10)->get();
+        $newproduct= Product::latest()->with('specificPrice')->with('images')->take(5)->get();
+        $lastcategory = Category::latest()->where('parent_id',NUll)->take(50)->get();
     	return view('allproduct')->with('products',$products->paginate(12))->with('newproduct',$newproduct)->with('lastcategory',$lastcategory);
     }
 

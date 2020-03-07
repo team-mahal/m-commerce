@@ -12,6 +12,7 @@
                     <section id="content" class="page-home">
                         <div class="row">
                             <div class="col-xs-12 col-md-9">
+                            @include('inc.adscard')
                                 <div id="fieldtabproductsisotope" class="horizontal_mode">
                                     <ul class="fieldtabproductsisotope-filters">
                                         <li class="fieldtabproductsisotope-filter title_font">
@@ -44,18 +45,33 @@
                                     </div>
                                  
                                 </div>
-
-                                @include('inc.mostviewproduct')
-
                             </div>
+
 
                         @include('inc.model')
                         
                         @include('inc.sidebar')
 
                         </div>
+                            
+                       <div class="row">
+                            <div class="banner_top">
+                                <div class="col-xs-12 col-md-12">
+                                    <div class="image-link" style="width: 100%" >
+                                        <a href="#">
+                                            <img src="{{ $ads[2]->image }}" style="width: 100%" alt="">
+                                        </a>
+                                        <div class="overplay"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        @include('inc.mostviewproduct')
                         
                         @include('inc.blogpost')
+
+                        @include('inc.brands')
 
                     </section>
                 </section>

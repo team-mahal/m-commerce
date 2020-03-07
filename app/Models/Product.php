@@ -22,6 +22,7 @@ class Product extends Model
     protected $fillable = [
     	'group_id',
     	'attribute_set_id',
+        'ishotproduct',
         'name',
     	'slug',
     	'description',

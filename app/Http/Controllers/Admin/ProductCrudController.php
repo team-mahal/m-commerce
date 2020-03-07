@@ -185,6 +185,14 @@ class ProductCrudController extends CrudController
                 'tab'   => trans('product.general_tab'),
             ],
             [
+                'name' => 'ishotproduct',
+                'label' => 'is hot product?',
+                'type' => 'boolean',
+                'tab'   => trans('product.general_tab'),
+                // optionally override the Yes/No texts
+                // 'options' => [0 => 'Active', 1 => 'Inactive']
+            ],
+            [
                 'name'  => 'slug',
                 'label' => 'Slug',
                 'type'  => 'text',
@@ -510,6 +518,8 @@ class ProductCrudController extends CrudController
 
     public function update(UpdateRequest $request, Attribute $attribute, Product $product)
     {
+
+     
         // Get current product data
         $product = $product->findOrFail($this->crud->request->id);
 

@@ -59,6 +59,10 @@
 								<li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/specific-prices') }}"><i class="fa fa-money"></i> <span>{{ trans('specificprice.specific_prices') }}</span></a></li>
 							@endcan
 
+							<li><a href="{{ url(config('backpack.base.route_prefix', 'brand').'/brand') }}"><i class="fa fa-money"></i> <span>Brands</span></a></li>
+
+							<li><a href="{{ url(config('backpack.base.route_prefix', 'ads').'/ads') }}"><i class="fa fa-money"></i> <span>Ads</span></a></li>
+
 							@can('list_notification_templates')
 								<li>
 									<a href="{{ url(config('backpack.base.route_prefix', 'admin').'/notification-templates') }}"><i class="fa fa-cog"></i>
