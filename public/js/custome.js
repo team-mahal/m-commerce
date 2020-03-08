@@ -282,7 +282,7 @@ function hidethismodel() {
 $('.owl-carousel-feature').owlCarousel({
 	loop:true,
 	margin:5,
-	nav:true,
+	nav:false,
 	items:3,
 	responsiveClass:true,
 	responsive:{
@@ -334,7 +334,7 @@ $('.sdsblog-box-content').owlCarousel({
 $('.hotproduct').owlCarousel({
 	loop:true,
 	margin:5,
-	nav:true,
+	nav:false,
 	rewind: true,
 	autoplay:true,
 	items:1,

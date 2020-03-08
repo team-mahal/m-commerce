@@ -6,7 +6,7 @@
     </h4>
 
     <div class="row">
-        <div id="new_products" class="carousel-grid owl-carousel">
+        <div id="new_products" class="sdsblog-box-content grid carousel-grid owl-carousel">
             <!--Number Row-->
         @foreach($mostview as $new)
             @include('inc.single_list_view_product_cart',['new'=>$new])

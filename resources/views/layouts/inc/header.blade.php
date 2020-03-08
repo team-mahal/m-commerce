@@ -60,11 +60,13 @@
 					</div>
 				</div>
 			</nav>
-		
+		</div>
+		<div style="background-color: #86bd3d;">
 			<!-- MEGAMENU -->
-			<div id="header_menu" class="visible-lg visible-md">
-				<div class="container">
-					<div class="row">
+			<div class="container">
+				<div id="header_menu" class="visible-lg visible-md">
+					<div class="container">
+						<div class="row">
 						<div class="col-md-12">
 							<div id="sticky_top" style="min-width: auto!important;right: 0px;">
 								<!-- /Block search module TOP -->
@@ -99,17 +101,20 @@
 											<a href="/">
 												<div class="title title_font" style="padding: 0px;">
 													<span class="fa menu-home"></span>
-													<span class="title-text">HOME</span>
+													<span class="">HOME</span>
 												</div>
 											</a>
 										</div>
 									</li>
-									@forelse($categories as $category)
+									@forelse($categories as $key => $category)
+									<?php
+										if($key==6)break;
+									?>
 										<li class="root root-3 ">
 											 <div class="root-item no-description">
 												<a href="{{ url('category/'.$category->id) }}">
 													<div class="title title_font">
-														<span class="title-text">{{ $category->name }}</span>
+														<span class="">{{ $category->name }}</span>
 														<span class="icon-has-sub fa fa-angle-down"></span>
 													</div>
 												</a>
@@ -149,10 +154,11 @@
 
 						</div>
 					</div>
+					</div>
 				</div>
 			</div>
+		</div>
 	
 			@include('layouts.inc.mobilemenu')
-		</div>
 	</div>
 </header>

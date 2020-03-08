@@ -2,9 +2,8 @@
 
 @section('content')
 <section id="wrapper">
-    <h2>.</h2>
     <div class="container">
-
+    <h2></h2>
         <div class="row">
             
             <div id="left-column" class="col-xs-12 col-sm-4 col-md-3">
