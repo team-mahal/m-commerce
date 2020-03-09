@@ -31,4 +31,14 @@ class OtherPageController extends Controller
     {
     	return view('pages.estimateddeliverytime')->with('data',Page::find(2));
     }
+
+    public function generic()
+    {
+        return view('allgeneric')->with('data',Page::find(2));
+    }
+
+    public function brand()
+    {
+        return view('allbrand')->with('data',Page::find(2));
+    }
 }

@@ -31,6 +31,10 @@
 											</div>
 									</div>
 							</div>
+							{{-- {{ $ads }} --}}
+							<div id="best-sellers_block_right">
+                                <img src="{{ asset($ads[5]->image) }}" style="width: 100%" alt="">
+							</div>
 						</div>
 
 						<div id="content-wrapper" class="left-column col-xs-12 col-sm-8 col-md-9">

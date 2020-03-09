@@ -25,6 +25,9 @@ class CreateProductsTable extends Migration
             $table->string('meta_title')->nullable();
             $table->text('meta_desc')->nullable();
             $table->integer('tax_id')->unsigned();
+            $table->integer('brand_id')->unsigned();
+            $table->integer('generic_id')->unsigned();
+            $table->text('instruction');
             $table->decimal('bprice', 13, 2)->nullable()->default(null);
             $table->decimal('price', 13, 2)->nullable()->default(null);
             $table->string('sku', 100);

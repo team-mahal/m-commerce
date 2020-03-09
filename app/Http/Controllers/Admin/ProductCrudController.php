@@ -61,6 +61,22 @@ class ProductCrudController extends CrudController
                 'model'     => "App\Models\Category",
             ],
             [
+                'type'      => "select",
+                'label'     => "Brand",
+                'name'      => 'brand_id',
+                'entity'    => 'brand',
+                'attribute' => "name",
+                'model'     => "App\Models\Brand",
+            ],
+            [
+                'type'      => "select",
+                'label'     => "Generic",
+                'name'      => 'generic_id',
+                'entity'    => 'generic',
+                'attribute' => "name",
+                'model'     => "App\Models\Generic",
+            ],
+            [
                 'name'  => 'sku',
                 'label' => trans('product.sku'),
             ],
@@ -220,6 +236,30 @@ class ProductCrudController extends CrudController
                 'pivot'     => true,
 
                     // TAB
+                'tab'   => trans('product.general_tab'),
+            ],
+            [
+                'type'      => "select",
+                'label'     => "Brand",
+                'name'      => 'brand_id',
+                'entity'    => 'brand',
+                'attribute' => "name",
+                'model'     => "App\Models\Brand",
+                'tab'   => trans('product.general_tab'),
+            ],
+            [
+                'type'      => "select",
+                'label'     => "Generic",
+                'name'      => 'generic_id',
+                'entity'    => 'generic',
+                'attribute' => "name",
+                'model'     => "App\Models\Generic",
+                'tab'   => trans('product.general_tab'),
+            ],
+            [
+                'type'      => "ckeditor",
+                'label'     => "instruction",
+                'name'      => 'instruction',
                 'tab'   => trans('product.general_tab'),
             ],
             [

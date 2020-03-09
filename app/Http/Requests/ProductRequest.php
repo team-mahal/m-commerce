@@ -30,8 +30,10 @@ class ProductRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
         // $this->request->add(['slug' => 'aaaaa']);
         return [
             'name'              => 'required|max:255',
-            'slug'               => 'required|unique:products,slug'.($this->request->get('id') ? ','.$this->request->get('id') : ''),
+            'slug'              => 'required|unique:products,slug'.($this->request->get('id') ? ','.$this->request->get('id') : ''),
             'description'       => 'required|min:3',
+            'brand_id'          => 'required',
+            'generic_id'          => 'required',
             'price'             => 'required|numeric|between:0,9999999999999.999999',
             'categories'        => 'required',
             'sku'               => 'required|unique:products,sku'.($this->request->get('id') ? ','.$this->request->get('id') : ''),

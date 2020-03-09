@@ -23,6 +23,9 @@ class Product extends Model
     	'group_id',
     	'attribute_set_id',
         'ishotproduct',
+        'brand_id',
+        'generic_id',
+        'ishotproduct',
         'name',
     	'slug',
     	'description',
@@ -110,6 +113,16 @@ class Product extends Model
     public function specificPrice()
     {
         return $this->hasOne('App\Models\SpecificPrice');
+    }
+
+    public function brand()
+    {
+        return $this->belongsTo('App\Models\Brand');
+    }
+
+    public function generic()
+    {
+        return $this->belongsTo('App\Models\Generic');
     }
 
 

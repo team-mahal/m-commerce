@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Blogcategory;
 use App\Models\Post;
 use App\Models\Product;
+use App\Models\Ads;
 use App\Models\Category;
 use App\Comment;
 class BlogController extends Controller
@@ -19,7 +20,7 @@ class BlogController extends Controller
     {   
         $mostview=Product::orderBy('id','desc')->with('specificPrice')->with('images')->skip(12)->take(12)->get();
         $lastcategory = Category::latest()->where('parent_id',NUll)->take(50)->get();
-    	return view('blogs.index')->with('blogscategoryes',Blogcategory::all())->with('post',Post::find($id))->with('mostview',$mostview)->with('lastcategory',$lastcategory);
+    	return view('blogs.index')->with('blogscategoryes',Blogcategory::all())->with('post',Post::find($id))->with('mostview',$mostview)->with('lastcategory',$lastcategory)->with('ads',Ads::all());
     }
 
     public function comment(Request $request,$id)

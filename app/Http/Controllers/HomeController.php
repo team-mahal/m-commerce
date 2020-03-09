@@ -69,7 +69,7 @@ class HomeController extends Controller
 
     public function quickview($id='')
     {
-        $product= Product::with('specificPrice')->with('images')->find($id);
+        $product= Product::with('brand')->with('generic')->with('categories')->with('specificPrice')->with('images')->find($id);
         return view('inc.dynamicmodel')->with('product',$product);
     }
 
@@ -144,7 +144,7 @@ class HomeController extends Controller
 
     public function productdetails($id)
     {
-        $product= Product::with('specificPrice')->with('images')->find($id);
+        $product=Product::with('brand')->with('generic')->with('categories')->with('specificPrice')->with('images')->find($id);
         $relatedproduct= Product::with('categories')->find($id);
         $id=$relatedproduct->categories[0]->id;
         $relatedproduct= Category::with('products')->find($id);

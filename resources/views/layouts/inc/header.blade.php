@@ -47,6 +47,19 @@
 							<img src="{{ asset('assets/omecen.png') }}" alt="" width="100px" style="padding: 10px 0px;">
 						</a>
 					</div>
+					
+					<div class="" style="text-align: right;">
+						<div id="search_block_top" style="float: none;">
+							<div class="">
+								<div class="field-search">
+									<input class="search_query basicAutoComplete" type="text" id="search_query_top" name="search_query" value="" placeholder="Search..." />
+									<button type="submit" name="submit_search" class="btn button-search">
+										<span class="icon-search"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
 					<div class="center-content">
 						<div class="row">
 							<div class="col-md-12">
@@ -82,18 +95,6 @@
 							</div>
 						</div>
 					</div>
-					<div class="" style="text-align: right;">
-						<div id="search_block_top" style="float: none;">
-							<div class="">
-								<div class="field-search">
-									<input class="search_query basicAutoComplete" type="text" id="search_query_top" name="search_query" value="" placeholder="Search..." />
-									<button type="submit" name="submit_search" class="btn button-search">
-										<span class="icon-search"></span>
-									</button>
-								</div>
-							</div>
-						</div>
-					</div>
 				</div>
 			</nav>
 		</div>
@@ -109,10 +110,7 @@
 									<li class="root root-1" style="margin-left: 0px;">
 										<div class="root-item no-description">
 											<a href="/">
-												<div class="title title_font" style="padding: 0px;">
-													<span class="fa menu-home"></span>
-													<span class="">HOME</span>
-												</div>
+												<span class=""><svg aria-hidden="true" style="color: #fff;height: 20px;width: 20px;" focusable="false" data-prefix="far" data-icon="home" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-home fa-w-18 fa-5x"><path fill="currentColor" d="M570.24 247.41L512 199.52V104a8 8 0 0 0-8-8h-32a8 8 0 0 0-7.95 7.88v56.22L323.87 45a56.06 56.06 0 0 0-71.74 0L5.76 247.41a16 16 0 0 0-2 22.54L14 282.25a16 16 0 0 0 22.53 2L64 261.69V448a32.09 32.09 0 0 0 32 32h128a32.09 32.09 0 0 0 32-32V344h64v104a32.09 32.09 0 0 0 32 32h128a32.07 32.07 0 0 0 32-31.76V261.67l27.53 22.62a16 16 0 0 0 22.53-2L572.29 270a16 16 0 0 0-2.05-22.59zM463.85 432H368V328a32.09 32.09 0 0 0-32-32h-96a32.09 32.09 0 0 0-32 32v104h-96V222.27L288 77.65l176 144.56z" class=""></path></svg></span>
 											</a>
 										</div>
 									</li>
@@ -159,6 +157,27 @@
 									@empty
 			                         -
 			                        @endforelse
+			                        <li class="root root-3" style="margin-left: 0px;">
+										<div class="root-item no-description">
+											<div class="dropdown hovereffect" style="margin-top: -3px;">
+												<a class="dropdown-toggle" style="font-size: 14px;color: #fff;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												    Product
+												</a>
+
+											  	<ul class="menu-items col-md-6 col-xs-12">
+											 	
+													<li class="menu-item menu-item-121 depth-1 category menucol-1-3  ">
+													 <div class="title">
+														<a href="">
+															asas
+														</a> 
+													 </div>
+													</li>
+												
+											 	</ul>
+											</div>
+										</div>
+									</li>
 								</ul>
 							</nav>
 

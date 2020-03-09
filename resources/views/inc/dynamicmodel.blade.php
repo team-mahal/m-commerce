@@ -93,6 +93,32 @@
 
             </form>
         </div>
+            
+        <div>
+            {{ $product->specific_price }}
+        </div>
+
+        @if(isset($product->categories[0]))
+            <div>
+                Categories : <a href="{{ $product->categories[0]->name }}">{{ $product->categories[0]->name }}</a>
+            </div>
+        @endif
+
+        @if(isset($product->brand))    
+            <div>
+                Brand : {{ $product->brand->name }}
+            </div>
+        @endif
+
+        @if(isset($product->generic))    
+            <div>
+                Generic {{ $product->generic->name }}
+            </div>
+        @endif
+            
+        <div id="product-description-short">
+            <p class="description">{!! $product->instruction !!}</p>
+        </div>
 
         <div class="social-sharing">
             <span>Share</span>

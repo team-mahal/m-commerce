@@ -97,7 +97,7 @@
             <div class="row">
                 <div class="footer-address fieldFullWidth" style="left: 50%; position: relative; width: 1903px; margin-left: -951.5px;">
                     <div class="container">
-                        <p>Copyright © 2017 <a href="">techics.com</a>. All Rights Reserved.</p>
+                        <p> Design & Developed By <a href="https://www.techics.com" target="_blank">Tech ICS</a>.</p>
                     </div>
                 </div>
 

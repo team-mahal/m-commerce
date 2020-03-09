@@ -10,6 +10,8 @@ foreach (Product::whereNotNull('slug')->where('slug','!=','')->get() as $key => 
 
 // Pages
 Route::get('/termofuse', 'OtherPageController@termofuse');
+Route::get('/brand', 'OtherPageController@brand');
+Route::get('/generic', 'OtherPageController@generic');
 Route::get('/paymentmethod', 'OtherPageController@paymentmethod');
 Route::get('/shopingguide', 'OtherPageController@shopingguide');
 Route::get('/locationsweship', 'OtherPageController@locationsweship');
