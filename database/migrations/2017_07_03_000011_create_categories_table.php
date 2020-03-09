@@ -23,6 +23,7 @@ class CreateCategoriesTable extends Migration
             $table->text('meta_desc')->nullable();
             $table->integer('lft')->default('0');
             $table->integer('rgt')->default('0');
+            $table->integer('forfooter')->default('0');
             $table->integer('depth')->default('0');
             $table->unique(["slug"], 'unique_categories');
             $table->timestamps();

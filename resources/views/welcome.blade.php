@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('layouts.inc.slider');
+    @include('layouts.inc.slider')
     
     <br><br>
     <section id="wrapper">

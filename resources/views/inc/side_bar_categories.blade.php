@@ -1,4 +1,4 @@
-<div id="fieldblockcategories" class="block horizontal_mode clearfix">
+<div id="fieldblockcategories" style="height: 200px;overflow-y: scroll;" class="block horizontal_mode clearfix">
 	<div class="container">
 		<div class="text2-border">
 				<h2 class="title_font">

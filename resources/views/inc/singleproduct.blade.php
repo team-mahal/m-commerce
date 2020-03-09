@@ -5,9 +5,9 @@
                 <a href="{{ $new->route }}" class="thumbnail product-thumbnail">
                     <span class="cover_image">
                         @if($new->images && count($new->images)>0)
-                            <img src="{{ asset('uploads/products/'.$new->images[0]->name) }}" alt="{{ $new->name }}">
+                            <img style="height: 200px!important;" src="{{ asset('uploads/products/'.$new->images[0]->name) }}" alt="{{ $new->name }}">
                         @else
-                            <img src="{{ asset('/assets/download.png') }}" alt="{{ $new->name }}">
+                            <img style="height: 200px!important;" src="{{ asset('/assets/download.png') }}" alt="{{ $new->name }}">
                         @endif
                     </span>
                 </a>

@@ -22,6 +22,7 @@ class Category extends Model
     	'name',
     	'slug',
     	'lft',
+        'forfooter',
     	'rgt',
     	'depth'
 	];

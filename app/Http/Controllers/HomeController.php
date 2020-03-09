@@ -51,9 +51,9 @@ class HomeController extends Controller
 
     public function index()
     {   
-        $newarrivels=Product::latest()->with('specificPrice')->with('images')->take(12)->get();
-        $hotproduct=Product::inRandomOrder()->with('specificPrice')->with('images')->take(12)->get();
-        $mostview=Product::latest()->with('specificPrice')->with('images')->skip(12)->take(12)->get();
+        $newarrivels=Product::latest()->with('specificPrice')->with('images')->take(8)->get();
+        $hotproduct=Product::inRandomOrder()->with('specificPrice')->with('images')->take(8)->get();
+        $mostview=Product::latest()->with('specificPrice')->with('images')->skip(8)->take(8)->get();
         $lastcategory = Category::latest()->where('parent_id',NUll)->take(50)->get();
         $lastcategory = Category::latest()->where('parent_id',NUll)->take(50)->get();
         $hotproduct = Product::where('ishotproduct',1)->take(50)->get();

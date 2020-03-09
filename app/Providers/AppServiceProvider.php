@@ -18,7 +18,11 @@ class AppServiceProvider extends ServiceProvider
     {
         view()->composer('*', function(View $view) {
             $categories = Category::with('children')->whereParentId(0)->orWhere('parent_id',null)->get();
+            $footercategories = Category::orWhere('forfooter',1)->take(9)->get();
+            $footercategoriesright = Category::orWhere('forfooter',1)->skip(9)->take(9)->get();
             $view->with('categories', $categories);
+            $view->with('footercategories', $footercategories);
+            $view->with('footercategoriesright', $footercategoriesright);
         });
     }
 

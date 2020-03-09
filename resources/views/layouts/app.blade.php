@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}" type="text/css" media="all">
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}" type="text/css" media="all">
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}" type="text/css" media="all">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.10/css/perfect-scrollbar.css">
     <script type="text/javascript" src="{{ asset('js/autocom/jquery.min.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js"></script>
 
@@ -246,6 +246,22 @@
 
 <body id="index" class="lang-en country-us currency-usd layout-full-width page-index tax-display-disabled fullwidth" style="overflow-x: hidden;">
     {{-- @include('layouts.inc.theamsetting'); --}}
+    <div id="sticky_top" style="min-width: auto!important;right: 0px;">
+    <!-- /Block search module TOP -->
+    <div id="cart_block_top" class="sticky_top">
+            <div>
+                <div class="click-cart" style="background-color:#fff;padding: 0px 15px;">
+                    <div class="cart-item-top" style="height: 25px;"> <span id="counttotalitem" class="cart-products-count">{{ \Cart::content()->count() }}</span> Items -</div>
+                    <span id="counttotalprice" class="cart-total-top">৳ {{ \Cart::subtotal() }}</span>
+                </div>
+                <div class="cart_top_ajax">
+                    <div id="cartapppend">
+                        
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
     @include('layouts.inc.header')
     <main>
         @yield('content')
@@ -254,12 +270,13 @@
     </main>
     <div id="modelbackdoe" class="modal-backdrop" style="opacity: .5;display: none;"></div>
     <script>
-        var base_url = "{{ URL::to('/') }}";
+        var base_url = "{{ URL::to('/') }}"
     </script>
     <script type="text/javascript" src="{{ asset('js/bottom-4deda2.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/autocom/bootstrap.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/owl.carousel.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/autocom/bootstrap-autocomplete.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.10/js/perfect-scrollbar.jquery.js"></script>
     <script type="text/javascript" src="{{ asset('js/custome.js') }}"></script>
 </body>
 </html>

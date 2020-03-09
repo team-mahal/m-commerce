@@ -42,7 +42,7 @@
                     </ul>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-3 links bullet">
-                    <h3>PAYMENT &amp; SHIPPING</h3>
+                    <h3>Pages</h3>
                     <div class="title" data-target="#footer_sub_menu_col_2" data-toggle="collapse">
                         <div class="navbar-toggler collapse-icons hidden-md-up">
                             <div class="fa fa-plus add"></div>
@@ -59,10 +59,10 @@
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-3 links product">
                     <div class="payment">
-                        <h3>PAYMENT METHODS</h3>
+                        <h3>Category</h3>
                         <ul id="footer_sub_menu_col_4" class="collapse">
-                            @forelse(\App\Models\PaymentMethod::all() as $key => $value)
-                                <li>{{ $value->name }}</li>
+                            @forelse($footercategories as $key => $value)
+                                <li><a href="{{ url('category/'.$value->id) }}">{{ $value->name }}</a></li>
                             @empty
                                 <li>Empty</li>
                             @endforelse
@@ -71,7 +71,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-3 links about_ft">
                     <div class="opening">
-                        <h3>OPENING TIME</h3>
+                        <h3>Category</h3>
                         <div class="title" data-target="#footer_sub_menu_col_4" data-toggle="collapse">
                             <div class="navbar-toggler collapse-icons hidden-md-up">
                                 <div class="fa fa-plus add"></div>
@@ -79,8 +79,8 @@
                             </div>
                         </div>
                         <ul id="footer_sub_menu_col_4" class="collapse">
-                            @forelse(\App\Models\Carrier::all() as $key => $value)
-                                <li>{{ $value->name }}</li>
+                            @forelse($footercategoriesright as $key => $value)
+                                <li><a href="{{ url('category/'.$value->id) }}">{{ $value->name }}</a></li>
                             @empty
                                 <li>Empty</li>
                             @endforelse

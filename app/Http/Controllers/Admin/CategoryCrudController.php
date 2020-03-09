@@ -142,6 +142,11 @@ class CategoryCrudController extends CrudController
                 'name'  => 'slug',
                 'label' => trans('category.slug'),
                 'type'  => 'text',
+            ],
+            [
+                'name'  => 'forfooter',
+                'label' => 'forfooter',
+                'type'  => 'checkbox',
             ]
         ]);
     }

@@ -13,7 +13,7 @@
                             <a href="#">
                                 <img class="img-slider" src="https://demo.fieldthemes.com/ps_medicine/home2/modules/fieldslideshow/images/slider-111.jpg" alt="" data-u="image">
                             </a>
-                            <div class="box-slider">
+                            <div class="box-slider" style="left: 59%">
                                 <div class="large-slide-title title_font" data-u="caption" data-t="T-*IB" data-t2="ZML|TR" data-d="-300">
                                     LAST CHANCE TO BUY
 

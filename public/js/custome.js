@@ -1,4 +1,7 @@
 jQuery(document).ready(function($) {
+
+		$('#fieldblockcategories').perfectScrollbar();
+
 		$('.basicAutoComplete').autoComplete({
 		resolver: 'custom',
 		minLength: 1,
@@ -293,7 +296,7 @@ $('.owl-carousel-feature').owlCarousel({
 				items:2,
 		},
 		1000:{
-				items:3,
+				items:4,
 		},
 		1400:{
 				items:4,
@@ -320,7 +323,7 @@ $('.sdsblog-box-content').owlCarousel({
 				items:2,
 		},
 		1000:{
-				items:3,
+				items:4,
 		},
 		1400:{
 				items:4,
