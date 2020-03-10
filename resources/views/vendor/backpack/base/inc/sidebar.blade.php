@@ -167,6 +167,9 @@
 							<li>
 								<a href="{{ url('admin/page') }}"><i class="fa fa-cog"></i> <span>Pages</span></a>
 							</li>
+							<li>
+								<a href="{{ url('admin/contact') }}"><i class="fa fa-cog"></i> <span>Contact</span></a>
+							</li>
 							{{-- <li>
 								<a href="{{ url('admin/elfinder') }}"><i class="fa fa-cog"></i> <span>File Manager</span></a>
 							</li> --}}

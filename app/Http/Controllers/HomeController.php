@@ -169,6 +169,8 @@ class HomeController extends Controller
     public function allproduct(Request $request,$id='')
     {   
         $filter= $request->filter;
+        $brand= $request->brand;
+        $generic= $request->generic;
         $id=$request->cat_id ? $request->cat_id : $id;
         $products=Product::with('specificPrice');
 
@@ -176,6 +178,14 @@ class HomeController extends Controller
             $products= $products->select('*')
             ->join('category_product','products.id','=','category_product.product_id')
             ->where('category_id',$id);
+        }
+
+        if($brand!=''){
+            $products->where('brand_id',$brand);
+        }
+
+        if($generic!=''){
+            $products->where('generic_id',$generic);
         }
 
         if(isset($request->name)){

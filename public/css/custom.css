@@ -1,3 +1,32 @@
+
+.current-tab{
+    color: black!important;
+}
+.d-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.m-3{
+    margin: 15px;
+}
+.my-3{
+    margin:30px 0px;
+}
+.min-height{
+    min-height: 400px;
+}
+.tab li{
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    background-color: #86BD3D;
+    margin: 10px;
+    text-align: center;
+}
+.tab li a{
+    color: #fff;
+}
 #sticky_top{
     min-width: unset;
     position: fixed;

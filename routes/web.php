@@ -12,6 +12,8 @@ foreach (Product::whereNotNull('slug')->where('slug','!=','')->get() as $key => 
 Route::get('/termofuse', 'OtherPageController@termofuse');
 Route::get('/brand', 'OtherPageController@brand');
 Route::get('/generic', 'OtherPageController@generic');
+Route::get('/contacus', 'OtherPageController@contacus');
+Route::post('/contacus', 'OtherPageController@sendcontactmessage');
 Route::get('/paymentmethod', 'OtherPageController@paymentmethod');
 Route::get('/shopingguide', 'OtherPageController@shopingguide');
 Route::get('/locationsweship', 'OtherPageController@locationsweship');
@@ -92,6 +94,7 @@ Route::group(['middleware' => ['admin','isadmin'],
 	CRUD::resource('ads', 'AdsCrudController');
 	CRUD::resource('brand', 'BrandCrudController');
 	CRUD::resource('generic', 'GenericCrudController');
+	CRUD::resource('contact', 'ContactCrudController');
 
 	// listing
 	Route::get('purchaslisting','OtherController@purchaselisting');

@@ -157,26 +157,36 @@
 									@empty
 			                         -
 			                        @endforelse
-			                        <li class="root root-3" style="margin-left: 0px;">
-										<div class="root-item no-description">
-											<div class="dropdown hovereffect" style="margin-top: -3px;">
-												<a class="dropdown-toggle" style="font-size: 14px;color: #fff;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-												    Product
-												</a>
-
-											  	<ul class="menu-items col-md-6 col-xs-12">
-											 	
-													<li class="menu-item menu-item-121 depth-1 category menucol-1-3  ">
-													 <div class="title">
-														<a href="">
-															asas
-														</a> 
-													 </div>
-													</li>
-												
-											 	</ul>
-											</div>
-										</div>
+			                       	<li class="root root-3">
+									    <div class="root-item no-description">
+								            <div class="title title_font">
+								                <span class="">Pages</span>
+								                <span class="icon-has-sub fa fa-angle-down"></span>
+								            </div>
+									    </div>
+									    <ul class="menu-items col-md-3 col-xs-3">
+									        <li style="display: block;width: 100%;padding: 10px;">
+									            <div class="title title_font">
+									                <a href="{{ url('brand') }}">
+														By Brand Name
+													</a>
+									            </div>
+									        </li>
+									        <li style="display: block;width: 100%;padding: 10px;">
+									            <div class="title title_font">
+									                <a href="{{ url('generic') }}">
+														By Generic Name
+													</a>
+									            </div>
+									        </li>
+									        <li style="display: block;width: 100%;padding: 10px;">
+									            <div class="title title_font">
+									                <a href="{{ url('contacus') }}">
+														Contact Us
+													</a>
+									            </div>
+									        </li>
+									    </ul>
 									</li>
 								</ul>
 							</nav>

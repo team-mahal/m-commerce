@@ -9,7 +9,7 @@
                    <div class="product-tab">
                         <ul class="tab d-flex">
                             @foreach($alphabet as $al)
-                                <li class="d-flex"><a class="{{ $char == $al ? 'current-tab' : '' }}" href="/brand?char={{ $al }}"> {{ $al }} </a></li>
+                                <li class="d-flex"><a class="{{ $char == $al ? 'current-tab' : '' }}" href="/generic?char={{ $al }}"> {{ $al }} </a></li>
                             @endforeach
                         </ul>
                     </div>
@@ -17,7 +17,7 @@
                         @forelse($brand as $b)
                             <div class="card m-3">
                                 <div class="item">
-                                    <a class="img-wrapper" href="{{ url('allproduct?brand='.$b->id) }}" title="brand1">
+                                    <a class="img-wrapper" href="{{ url('allproduct?generic='.$b->id) }}" title="brand1">
                                         <img class="img-responsive" src="{{ $b->image }}" alt="brand1" style="width: 200px;height: 100px">
                                     </a>
                                 </div>

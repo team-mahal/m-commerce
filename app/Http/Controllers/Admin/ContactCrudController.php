@@ -5,10 +5,10 @@ namespace App\Http\Controllers\Admin;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 
 // VALIDATION: change the requests to match your own file names if you need form validation
-use App\Http\Requests\BrandRequest as StoreRequest;
-use App\Http\Requests\BrandRequest as UpdateRequest;
+use App\Http\Requests\ContactRequest as StoreRequest;
+use App\Http\Requests\ContactRequest as UpdateRequest;
 
-class BrandCrudController extends CrudController
+class ContactCrudController extends CrudController
 {
     public function setup()
     {
@@ -18,9 +18,9 @@ class BrandCrudController extends CrudController
         | BASIC CRUD INFORMATION
         |--------------------------------------------------------------------------
         */
-        $this->crud->setModel('App\Models\Brand');
-        $this->crud->setRoute(config('backpack.base.route_prefix') . '/brand');
-        $this->crud->setEntityNameStrings('brand', 'brands');
+        $this->crud->setModel('App\Models\Contact');
+        $this->crud->setRoute(config('backpack.base.route_prefix') . '/contact');
+        $this->crud->setEntityNameStrings('contact', 'contacts');
 
         /*
         |--------------------------------------------------------------------------
@@ -31,21 +31,7 @@ class BrandCrudController extends CrudController
         $this->crud->setFromDb();
 
         // ------ CRUD FIELDS
-        $this->crud->addField([ // image
-            'label' => "Image",
-            'name' => "image",
-            'type' => 'image',
-            'upload' => true,
-            'crop' => true,
-            'aspect_ratio' =>2,
-        ]);
-
-        $this->crud->addColumn([ // image
-            'label' => "Image",
-            'name' => "image",
-            'type' => 'image',
-        ]);
-
+        // $this->crud->addField($options, 'update/create/both');
         // $this->crud->addFields($array_of_arrays, 'update/create/both');
         // $this->crud->removeField('name', 'update/create/both');
         // $this->crud->removeFields($array_of_names, 'update/create/both');
