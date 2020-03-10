@@ -19,10 +19,10 @@ class HomeController extends Controller
 {
 
     public function search(Request $request){
-        $data['results'] = Product::select('id','name','price')->orderBy('id');
+        $data['results'] = Product::orderBy('id');
         $searchQuery = [];
         if(isset($request->qry) && strlen($request->qry) ){
-            $data['results'] = $data['results']->where('name', 'LIKE', '%' . $request->qry . '%' );
+            $data['results'] = $data['results']->with('brand')->with('company')->with('categories')->where('name', 'LIKE', '%' . $request->qry . '%' );
             $searchQuery['name'] = $request->qry;
         }
         if(isset($request->cat_id) && is_numeric($request->cat_id) && $request->cat_id > 0){

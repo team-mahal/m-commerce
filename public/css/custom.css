@@ -1,4 +1,9 @@
-
+.media{
+    border-bottom: 1px solid #86BD3D;
+}
+.text-link{
+    color: #86BD3D!important;
+}
 .current-tab{
     color: black!important;
 }
@@ -29,6 +34,7 @@
 }
 #sticky_top{
     min-width: unset;
+    line-height: 27px!important;
     position: fixed;
     top: 50%!important;
     right: 0%!important;

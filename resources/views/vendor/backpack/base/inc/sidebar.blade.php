@@ -63,6 +63,10 @@
 
 							<li><a href="{{ url(config('backpack.base.route_prefix', 'generic').'/generic') }}"><i class="fa fa-money"></i> <span>Generic</span></a></li>
 
+							<li><a href="{{ url(config('backpack.base.route_prefix', 'company').'/company') }}"><i class="fa fa-money"></i> <span>Company</span></a></li>
+
+							<li><a href="{{ url(config('backpack.base.route_prefix', 'type').'/type') }}"><i class="fa fa-money"></i> <span>Type</span></a></li>
+
 							<li><a href="{{ url(config('backpack.base.route_prefix', 'ads').'/ads') }}"><i class="fa fa-money"></i> <span>Ads</span></a></li>
 
 							@can('list_notification_templates')

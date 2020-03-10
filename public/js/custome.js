@@ -6,6 +6,7 @@ jQuery(document).ready(function($) {
 		resolver: 'custom',
 		minLength: 1,
 			formatResult: function (item) {
+				console.log(item);
 					return {
 							value: item.name,
 							text:  item.name,
@@ -13,8 +14,8 @@ jQuery(document).ready(function($) {
 
 								`<div class="media" data-link='`+item.link+`'>
 									<div class="media-body">
-										<p style="padding:20px 20px;">`+item.name+`</p>
-										<p style="padding:10px 20px;">`+item.price+`৳</p>
+										<p style="padding:20px 0px 0px 20px;">`+item.name+`  (৳ `+item.price+`)</p>
+										<p style="padding:10px 20px;">Category -<a href="" class="text-link">`+item.categories[0].name+`</a>Type -<a href="" class="text-link">`+ item.brand.name.substring(0,6) +`</a></p>
 									</div>
 								</div>`
 						
@@ -38,8 +39,6 @@ jQuery(document).ready(function($) {
 					callback(res.results);
 
 					setTimeout(function(){ 
-						console.log('sdsds');
-
 						$('.bootstrap-autocomplete.dropdown-menu').append(
 							`<li style="text-align: center;padding: 24px;"><a style="color:#86BD3D;" class=' sugg-link' href='`+res.suggLink+`' >View All (`+res.resultscount+`)</a></li>`
 						);
@@ -85,6 +84,7 @@ jQuery(document).ready(function($) {
 		resolver: 'custom',
 		minLength: 1,
 			formatResult: function (item) {
+					console.log(item);
 					return {
 							value: item.name,
 							text:  item.name,
@@ -92,7 +92,7 @@ jQuery(document).ready(function($) {
 
 								`<div class="media" data-link='`+item.link+`'>
 									<div class="media-body">
-										<p style="padding:20px 20px;">`+item.name+`</p>
+										<p style="padding:20px 20px;">`+item.name+`(<span>`+ item +`</span>)</p>
 										<p style="padding:10px 20px;">`+item.price+`৳</p>
 									</div>
 								</div>`
@@ -114,11 +114,10 @@ jQuery(document).ready(function($) {
 											type: 'GET',
 									}
 							).done(function (res) {
+								console.log(res);
 					callback(res.results);
 
 					setTimeout(function(){ 
-						console.log('sdsds');
-
 						$('.bootstrap-autocomplete.dropdown-menu').append(
 							`<li style="text-align: center;padding: 24px;"><a style="color:#86BD3D;" class=' sugg-link' href='`+res.suggLink+`' >View All (`+res.resultscount+`)</a></li>`
 						);
@@ -131,8 +130,8 @@ jQuery(document).ready(function($) {
 							window.location.href = link;
 						}, 300);
 					});
-							});
-					}
+					});
+				}
 			}
 		});
 

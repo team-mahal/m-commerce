@@ -25,6 +25,8 @@ class Product extends Model
         'ishotproduct',
         'brand_id',
         'generic_id',
+        'type_id',
+        'company_id',
         'ishotproduct',
         'name',
     	'slug',
@@ -118,6 +120,16 @@ class Product extends Model
     public function brand()
     {
         return $this->belongsTo('App\Models\Brand');
+    }
+
+    public function type()
+    {
+        return $this->belongsTo('App\Models\Type');
+    }
+
+    public function company()
+    {
+        return $this->belongsTo('App\Models\Company');
     }
 
     public function generic()

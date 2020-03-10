@@ -5,7 +5,9 @@
 				<div class="col-md-12">
 					<div class="bg-black">
 						<div class="links">
-							<div><a href="{{ url('login') }}">Wish List</a></div>
+							<div>
+								<a href="{{ url('login') }}">Wish List</a>
+							</div>
 					        @if(!Auth::check())
 					        	<div><a href="{{ url('login') }}">Log In</a></div>
 					        	<div><a href="{{ url('register') }}">Register</a></div>

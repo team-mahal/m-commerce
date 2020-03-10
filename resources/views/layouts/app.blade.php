@@ -247,11 +247,16 @@
 <body id="index" class="lang-en country-us currency-usd layout-full-width page-index tax-display-disabled fullwidth" style="overflow-x: hidden;">
     {{-- @include('layouts.inc.theamsetting'); --}}
     <div id="sticky_top" style="min-width: auto!important;right: 0px;">
-    <!-- /Block search module TOP -->
-    <div id="cart_block_top" class="sticky_top">
-            <div>
-                <div class="click-cart" style="background-color:#fff;padding: 0px 15px;">
-                    <div class="cart-item-top" style="height: 25px;"> <span id="counttotalitem" class="cart-products-count">{{ \Cart::content()->count() }}</span> Items -</div>
+        <!-- /Block search module TOP -->
+        <div id="cart_block_top" class="sticky_top">
+            <div class="text-center">
+                <div class="click-cart" style="background-color:#fff;padding: 0px 15px;border: 2px solid #86BD3D;">
+                    <div class="cart-item-top" style="height: 25px;"> <span id="counttotalitem" class="cart-products-count">{{ \Cart::content()->count() }}</span> Items </div>
+                    <div>
+                        <div class="cart-bag text-center">
+                            <i style="color: #86BD3D" class="fa fa-shopping-bag fa-2x"></i>
+                        </div>
+                    </div>
                     <span id="counttotalprice" class="cart-total-top">৳ {{ \Cart::subtotal() }}</span>
                 </div>
                 <div class="cart_top_ajax">
@@ -260,8 +265,9 @@
                     </div>
                 </div>
             </div>
+        </div>
     </div>
-</div>
+    
     @include('layouts.inc.header')
     <main>
         @yield('content')

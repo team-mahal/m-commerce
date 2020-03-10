@@ -69,6 +69,7 @@ return array(
     'CreateTaxesTable' => $baseDir . '/database/migrations/2017_07_03_000006_create_taxes_table.php',
     'CreateTestimonialsTable' => $baseDir . '/database/migrations/2020_02_23_043332_create_testimonials_table.php',
     'CreateTransactionsTable' => $baseDir . '/database/migrations/2020_02_27_103451_create_transactions_table.php',
+    'CreateTypesTable' => $baseDir . '/database/migrations/2020_03_10_115117_create_types_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2017_07_03_000000_create_users_table.php',
     'CurrenciesTableSeeder' => $baseDir . '/database/seeds/CurrenciesTableSeeder.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',

@@ -26,6 +26,8 @@ class CreateProductsTable extends Migration
             $table->text('meta_desc')->nullable();
             $table->integer('tax_id')->unsigned();
             $table->integer('brand_id')->unsigned();
+            $table->integer('type_id')->unsigned();
+            $table->integer('company_id')->unsigned();
             $table->integer('generic_id')->unsigned();
             $table->text('instruction');
             $table->decimal('bprice', 13, 2)->nullable()->default(null);

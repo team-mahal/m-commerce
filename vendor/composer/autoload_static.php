@@ -467,6 +467,7 @@ class ComposerStaticInit3cc7c1a0a9991513111206d6b9645ea2
         'CreateTaxesTable' => __DIR__ . '/../..' . '/database/migrations/2017_07_03_000006_create_taxes_table.php',
         'CreateTestimonialsTable' => __DIR__ . '/../..' . '/database/migrations/2020_02_23_043332_create_testimonials_table.php',
         'CreateTransactionsTable' => __DIR__ . '/../..' . '/database/migrations/2020_02_27_103451_create_transactions_table.php',
+        'CreateTypesTable' => __DIR__ . '/../..' . '/database/migrations/2020_03_10_115117_create_types_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2017_07_03_000000_create_users_table.php',
         'CurrenciesTableSeeder' => __DIR__ . '/../..' . '/database/seeds/CurrenciesTableSeeder.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
