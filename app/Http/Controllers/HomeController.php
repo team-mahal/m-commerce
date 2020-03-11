@@ -274,13 +274,14 @@ class HomeController extends Controller
         $order->invoice_date=date("Y-m-d");
         $order->total=\Cart::total(0,'','');
         $order->total_shipping=$corair->price;
+        $order->total_shipping=$corair->price;
         $order->total_tax=\Cart::tax();
         $order->save();
         foreach (\Cart::content() as $key => $row) {
             $product= Product::find($row->id);
             $product->stock = $product->stock-$row->qty;
             $product->update();
-            \DB::insert('insert into order_product (product_id, order_id,name,price,quantity) values (?,?,?,?,?)', [$row->id,$order->id,$row->name,$row->price,$row->qty]);
+            \DB::insert('insert into order_product (product_id,order_id,name,price,price_with_tax,quantity) values (?,?,?,?,?,?)', [$row->id,$order->id,$row->name,$row->price,$row->price,$row->qty]);
         }
         \Cart::destroy();
         return redirect('myorders')->with('success','Order Place Successfully');
