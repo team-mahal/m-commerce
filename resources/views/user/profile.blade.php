@@ -5,7 +5,11 @@
 	<br><br>
 	<br><br>
 	<div class="card p-3">
-		<form class="form-horizontal py-3 my-5" method="post">
+		<div class="text-center">
+			<img src="{{ asset('uploads/profile/'.Auth::user()->profile) }}" alt="sdf" style="width: 100px;border-radius: 50%;border: 2px solid #86BD3D;">
+		</div>
+		<form class="form-horizontal py-3 my-5" action="{{ url('updateprofile/'.Auth::user()->id) }}" method="post" enctype="multipart/form-data">
+	                {{ csrf_field() }}
 			<div class="row">
 				<!-- Text input-->
 				<div class="col-md-12">
@@ -38,6 +42,13 @@
 					    <label class="radio-inline">
 					      <input type="radio" name="optradio"> Female
 					    </label>
+					</div>
+				</div>
+
+				<div class="col-md-12">
+					<div class="form-group">
+					  <label class="control-label" for="textinput">Profile</label>  
+					  <input id="textinput" name="profile" type="file" class="form-control input-md">
 					</div>
 				</div>
 

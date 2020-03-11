@@ -333,6 +333,33 @@ $('.sdsblog-box-content').owlCarousel({
 	}
 })
 
+$('.sdsblog-box-content1').owlCarousel({
+	loop:true,
+	margin:5,
+	nav:false,
+	rewind: true,
+	autoplay:true,
+	items:3,
+	responsiveClass:true,
+	responsive:{
+		0:{
+				items:1,
+		},
+		600:{
+				items:2,
+		},
+		1000:{
+				items:4,
+		},
+		1400:{
+				items:5,
+		},
+		2000:{
+				items:6,
+		}
+	}
+})
+
 $('.hotproduct').owlCarousel({
 	loop:true,
 	margin:5,

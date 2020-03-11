@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 class ProfileController extends Controller
 {
     /**
@@ -68,7 +69,19 @@ class ProfileController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user=User::find($id);
+
+        if ($request->hasFile('profile')) {
+            $image = $request->file('profile');
+            $name = time().'.'.$image->getClientOriginalExtension();
+            $destinationPath = public_path('/uploads/profile/');
+            $image->move($destinationPath, $name);
+            $user->profile=$name;
+        }
+                
+        $user->name=$request->name;
+        $user->save();
+        return redirect('/profile');
     }
 
     /**

@@ -3,7 +3,7 @@
         <div id="fieldbrandslider" class="block horizontal_mode">
             <h4 class="title_block title_font"><a class="title_text" href="#">Top Brands</a></h4>
             <div class="row">
-                <div id="fieldbrandslider-manufacturers" class="sdsblog-box-content grid carousel-grid owl-carousel">
+                <div id="fieldbrandslider-manufacturers" class="sdsblog-box-content1 grid carousel-grid owl-carousel">
                     @forelse($brands as $key=>$value)
                         <div class="item">
                             <a class="img-wrapper" href="" title="brand1">

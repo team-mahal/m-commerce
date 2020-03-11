@@ -13,15 +13,6 @@
 	resize: vertical;
 }
 
-#wrapper input[type=submit] {
-	background-color: #4CAF50;
-	color: white;
-	padding: 12px 20px;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
-}
-
 #wrapper input[type=submit]:hover {
 	background-color: #45a049;
 }
@@ -50,7 +41,7 @@
 							     </div>
 							@endif
 
-							<input type="submit" value="Submit">
+							<input type="submit" value="Submit" class="btn btn-primary">
 						</form>
 					</div>
 				</div>

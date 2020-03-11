@@ -52,7 +52,8 @@ Route::get('/blogs', 'BlogController@index');
 Route::get('/post/{id}', 'BlogController@post');
 
 // User
-Route::get('profile',"ProfileController@index");
+Route::get('profile',"ProfileController@index")->middleware('auth');
+Route::post('updateprofile/{id}', 'ProfileController@update')->middleware('auth');
 Route::get('myorders',"ProfileController@myorders");
 
 // concentric-olive-wheavb1hbty7lmjqf80jn0wz.herokudns.com

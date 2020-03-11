@@ -259,7 +259,9 @@
                     </div>
                     <span id="counttotalprice" class="cart-total-top">৳ {{ \Cart::subtotal() }}</span>
                 </div>
-                <div class="cart_top_ajax">
+                <div class="cart_top_ajax" style="    top: -328%;
+    max-height: 515px;
+    overflow-y: scroll;">
                     <div id="cartapppend">
                         
                     </div>
