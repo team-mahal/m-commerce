@@ -142,6 +142,12 @@ class HomeController extends Controller
         }
     }
 
+    public function removewishlive($id='')
+    {
+        \Cart::instance('wishlist')->remove($id);
+        return redirect()->back();
+    }
+
     public function productdetails($id)
     {
         $product=Product::with('brand')->with('generic')->with('categories')->with('specificPrice')->with('images')->find($id);
@@ -304,5 +310,30 @@ class HomeController extends Controller
 
         return redirect()->back()->with("success","Password changed successfully !");
 
+    }
+
+    public function wishlist($id)
+    {      
+        $product= Product::with('specificPrice')->with('images')->find($id);
+        $img='';
+        if($product->images && count($product->images)>0){
+            $img=$product->images[0]->name;
+        }
+
+        $qty=1;
+
+        // foreach (\Cart::instance('wishlist')->content() as $key => $value) {
+        //    if ($value->id==$id) {
+        //        $qty=$value->qty;
+        //    }
+        // }
+
+        \Cart::instance('wishlist')->add(['id' => $product->id, 'name' => $product->name, 'qty' => $qty,'taxRate'=>0, 'price' => $product->price,'options'=>['image'=>$img]]);
+        return redirect()->back();
+    }
+
+    public function allwishlist()
+    {
+        return view('allwishlist')->with('wishlist',\Cart::instance('wishlist')->content());
     }
 }

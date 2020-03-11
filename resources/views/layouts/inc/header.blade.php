@@ -6,7 +6,12 @@
 					<div class="bg-black">
 						<div class="links">
 							<div>
-								<a href="{{ url('login') }}">Wish List</a>
+								<a href="{{ url('wishlist') }}">
+									<span class="badge">
+										{{ Cart::instance('wishlist')->content()->count() }}
+									</span>
+						        	Wish List
+					        	</a>
 							</div>
 					        @if(!Auth::check())
 					        	<div><a href="{{ url('login') }}">Log In</a></div>
@@ -67,7 +72,14 @@
 							<div class="col-md-12">
 								<div class="bg-white">
 									<div class="links">
-								        <div><a href="{{ url('login') }}">Wish List</a></div>
+								        <div>
+								        	<a href="{{ url('wishlist') }}">
+												<span class="badge">
+													{{ Cart::instance('wishlist')->content()->count() }}
+												</span>
+									        	Wish List
+								        	</a>
+								    	</div>
 								        @if(!Auth::check())
 								        	<div><a href="{{ url('login') }}">Log In</a></div>
 								        	<div><a href="{{ url('register') }}">Register</a></div>
