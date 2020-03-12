@@ -259,9 +259,11 @@
                     </div>
                     <span id="counttotalprice" class="cart-total-top">৳ {{ \Cart::subtotal() }}</span>
                 </div>
-                <div class="cart_top_ajax" style="    top: -328%;
-    max-height: 515px;
-    overflow-y: scroll;">
+
+                <div class="cart_top_ajax" style="top: -328%;max-height: 515px;overflow-y: scroll;">
+                   {{--  <p id="cort-none" style="text-align: right;position: absolute;text-align: right;right: 0px;top: 0px;">
+                        <i onclick="cortnone()" style="font-size: 20px;font-size: 25px;margin: 7px 10px 0px 0px;color: red;" class="fa fa-times-circle"></i>
+                    </p>    --}}
                     <div id="cartapppend">
                         
                     </div>

@@ -57,7 +57,11 @@
 						                    @endforelse
 											<tr>
 												<td colspan="4" style="text-align: right;">Order Status : <a href="" class="badge badge-primary">{{ $order->status->name }}</a></td>
-												<td>Total:৳{{ $order->total }}.00</td>
+												<td>Shipping Cost: {{ $order->carrier->price.' '.$order->currency->name }}</td>
+											</tr>
+											<tr>
+												<td colspan="4"></td>
+												<td>Total : {{ $order->total().' '.$order->currency->name }}</td>
 											</tr>
 					                  	</table>
 					                </div>

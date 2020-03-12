@@ -9,6 +9,7 @@
 	    <li><a href="{{ url(config('backpack.base.route_prefix'), 'dashboard') }}">{{ trans('backpack::crud.admin') }}</a></li>
 	    <li><a href="{{ url($crud->route) }}" class="text-capitalize">{{ $crud->entity_name_plural }}</a></li>
 	    <li class="active">{{ trans('backpack::crud.preview') }}</li>
+
 	  </ol>
 	</section>
 @endsection
@@ -20,7 +21,7 @@
 
 	<div class="row">
 		<div class="col-md-12 well">
-			<h2>{{ trans('order.order') }} #{{ $order->id }} - {{ $order->user->name }}</h2>
+			<h2>{{ trans('order.order') }} #{{ $order->id }} - {{ $order->user->name }}<a class="btn btn-success" target="_blank" href="/admin/invoice/print/{{ $order->id }}">Print</a></h2>
 		</div>
 	</div>
 

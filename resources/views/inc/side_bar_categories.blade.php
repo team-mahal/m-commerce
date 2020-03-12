@@ -1,13 +1,9 @@
-<div id="fieldblockcategories" style="height: 200px;overflow-y: scroll;" class="block horizontal_mode clearfix">
-	<div class="container">
-		<div class="text2-border">
-				<h2 class="title_font">
-						<a class="title_text">
-						Product Categories
-						</a>
-				</h2>
-		</div>
-		<div class="box_categories">
+<div id="onecate_products_block" class="block clearfix" style="margin-top: 0px;">
+    <div class="container">
+        <h4 class="title_block title_font">
+            <span class="title_text">PRODUCT CATEGORIES</span>
+        </h4>
+		<div class="box_categories" id="fieldblockcategories" style="height: 200px;overflow-y: scroll;">
 			<div class="row">
 				<div id="field_content">
 					@forelse($lastcategory as $category)

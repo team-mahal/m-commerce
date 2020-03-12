@@ -109,6 +109,7 @@ Route::group(['middleware' => ['admin','isadmin'],
 	Route::get('/allproductbelogntopurchase/{id}','OtherController@allproductbelogntopurchase');
 	Route::get('/product/search/{query}','OtherController@products');
 	Route::get('/product/search/','OtherController@products');
+	Route::get('/invoice/print/{id}','OrderCrudController@print');
 	Route::post('/purchaselisting/createlisting ','OtherController@createlisting');
 
 	// Clone Products

@@ -1,3 +1,9 @@
+.btn-light{
+    color: #fff!important;
+}
+.text-white{
+    color: #fff!important;
+}
 .badge{
     display: inline-block;
     min-width: 10px;

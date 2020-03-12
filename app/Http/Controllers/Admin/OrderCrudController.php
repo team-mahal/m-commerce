@@ -135,6 +135,17 @@ class OrderCrudController extends CrudController
         return view('admin.order.view', compact('crud', 'order', 'orderStatuses'));
     }
 
+    public function print($id)
+    {
+        $this->crud->hasAccessOrFail('show');
+
+        $order = $this->crud->getEntry($id);
+        $orderStatuses = OrderStatus::get();
+        $crud = $this->crud;
+
+        return view('admin.order.print', compact('crud', 'order', 'orderStatuses'));
+    }
+
     public function updateStatus(Request $request, OrderStatusHistory $orderStatusHistory)
     {
         // Create history entry

@@ -1,68 +1,66 @@
 jQuery(document).ready(function($) {
+	
+	$('#fieldblockcategories').perfectScrollbar();
 
-		$('#fieldblockcategories').perfectScrollbar();
+	$('.basicAutoComplete').autoComplete({
+	resolver: 'custom',
+	minLength: 1,
+		formatResult: function (item) {
+			console.log(item);
+				return {
+						value: item.name,
+						text:  item.name,
+						html: [
 
-		$('.basicAutoComplete').autoComplete({
-		resolver: 'custom',
-		minLength: 1,
-			formatResult: function (item) {
-				console.log(item);
-					return {
-							value: item.name,
-							text:  item.name,
-							html: [
+							`<div class="media" data-link='`+item.link+`'>
+								<div class="media-body">
+									<p style="padding:20px 0px 0px 20px;">`+item.name+`  (৳ `+item.price+`)</p>
+									<p style="padding:10px 20px;">Category -<a href="" class="text-link">`+item.categories[0].name+`</a>Type -<a href="" class="text-link">`+ item.brand.name.substring(0,6) +`</a></p>
+								</div>
+							</div>`
+					
+						] 
+				};
+		},
+		events: {
+				search: function (qry, callback) {
+						// let's do a custom ajax call
+						$.ajax(
+								window.base_url+'/search',
+								{
+									data: { 
+										qry: qry,
+										cat_id : $('#top-search-category').val()
+									},
+										dataType : 'json',
+										type: 'GET',
+								}
+						).done(function (res) {
+				callback(res.results);
 
-								`<div class="media" data-link='`+item.link+`'>
-									<div class="media-body">
-										<p style="padding:20px 0px 0px 20px;">`+item.name+`  (৳ `+item.price+`)</p>
-										<p style="padding:10px 20px;">Category -<a href="" class="text-link">`+item.categories[0].name+`</a>Type -<a href="" class="text-link">`+ item.brand.name.substring(0,6) +`</a></p>
-									</div>
-								</div>`
-						
-							] 
-					};
-			},
-			events: {
-					search: function (qry, callback) {
-							// let's do a custom ajax call
-							$.ajax(
-									window.base_url+'/search',
-									{
-										data: { 
-											qry: qry,
-											cat_id : $('#top-search-category').val()
-										},
-											dataType : 'json',
-											type: 'GET',
-									}
-							).done(function (res) {
-					callback(res.results);
+				setTimeout(function(){ 
+					$('.bootstrap-autocomplete.dropdown-menu').append(
+						`<li style="text-align: center;padding: 24px;"><a style="color:#86BD3D;" class=' sugg-link' href='`+res.suggLink+`' >View All (`+res.resultscount+`)</a></li>`
+					);
+				}, 300);
 
+				$('.bootstrap-autocomplete.dropdown-menu li').click(function (){
+					var ref = $(this);
 					setTimeout(function(){ 
-						$('.bootstrap-autocomplete.dropdown-menu').append(
-							`<li style="text-align: center;padding: 24px;"><a style="color:#86BD3D;" class=' sugg-link' href='`+res.suggLink+`' >View All (`+res.resultscount+`)</a></li>`
-						);
+						var link = ref.find('.media').data('link');
+						window.location.href = link;
 					}, 300);
-
-					$('.bootstrap-autocomplete.dropdown-menu li').click(function (){
-						var ref = $(this);
-						setTimeout(function(){ 
-							var link = ref.find('.media').data('link');
-							window.location.href = link;
-						}, 300);
-					});
-							});
-					}
-			}
-		});
-		$("#dropdown-hander").click(function(event) {
-			var abv= $(this).find('.dropdown-menu').toggleClass('d-block');
-		});
-		$('.click-cart').click(function(event) {
-
-				$('.cart_top_ajax').toggleClass('d-block');
-
-		});
+				});
+						});
+				}
+		}
+	});
+	$("#dropdown-hander").click(function(event) {
+		var abv= $(this).find('.dropdown-menu').toggleClass('d-block');
+	});
+	$('.click-cart').click(function(event) {
+		$('.cart_top_ajax').toggleClass('d-block');
+	});
 });
 
 $(document).ready(function() {
@@ -73,7 +71,7 @@ $(document).ready(function() {
 	    if (!container.is(e.target) && container.has(e.target).length === 0) 
 	    {
 	       	// $(".cart_top_ajax").slideUp();
-	       	// $(".cart_top_ajax").removeClass('d-block');
+	       	$(".cart_top_ajax").removeClass('d-block');
 	    }
 	});
 });
@@ -149,23 +147,24 @@ $('.panel-group').on('shown.bs.collapse', toggleIcon);
 
 
 function cart(id) {
-		var quantity = $("#quantity_wanted").val()
-		$.ajax({
-			type: 'GET',
-			url: base_url+'/addtocart/'+id,
-			data:{quantity:quantity}
-		})
-		.done(function(re) {
-			$('#cartapppend').html(re)
-			$('#counttotalprice').html($('#pricetotal').html());
-			$('#counttotalitem').html($('#itemtotal').val());
-		})
-		.fail(function() {
-				console.log("error");
-		})
-		.always(function() {
-				console.log("complete");
-		});
+	var quantity = $("#quantity_wanted").val()
+	$.ajax({
+		type: 'GET',
+		url: base_url+'/addtocart/'+id,
+		data:{quantity:quantity}
+	})
+	.done(function(re) {
+		$('#cartapppend').html(re)
+		$('#counttotalprice').html($('#pricetotal').html());
+		$('#counttotalitem').html($('#itemtotal').val());
+		$('.cart_top_ajax').addClass('d-block');
+	})
+	.fail(function() {
+		console.log("error");
+	})
+	.always(function() {
+		console.log("complete");
+	});
 }
 
 function remove(id) {
@@ -230,7 +229,6 @@ function updateqty(qty,id) {
 	console.log(qty);
 }
 
-
 jQuery(document).ready(function($) {
 		$.ajax({
 				url: base_url+'/addtocart/',
@@ -245,7 +243,6 @@ jQuery(document).ready(function($) {
 				console.log("complete");
 		});
 });
-
 
 var image='';
 function quickview(id) {
@@ -263,7 +260,6 @@ function quickview(id) {
 	.always(function() {
 		console.log("complete");
 	});
-	
 }
 
 $('.quick-view').on('click', function (event) {

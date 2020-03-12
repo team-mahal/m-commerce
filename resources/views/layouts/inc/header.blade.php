@@ -73,7 +73,7 @@
 								<div class="bg-white">
 									<div class="links">
 								        <div>
-								        	<a href="{{ url('wishlist') }}">
+								        	<a href="{{ url('wishlist') }}" class="btn btn-light">
 												<span class="badge">
 													{{ Cart::instance('wishlist')->content()->count() }}
 												</span>
@@ -81,11 +81,11 @@
 								        	</a>
 								    	</div>
 								        @if(!Auth::check())
-								        	<div><a href="{{ url('login') }}">Log In</a></div>
-								        	<div><a href="{{ url('register') }}">Register</a></div>
+								        	<div><a href="{{ url('login') }}"  class="btn btn-light">Log In</a></div>
+								        	<div><a href="{{ url('register') }}"  class="btn btn-light">Register</a></div>
 								        @else
 								        	<div class="dropdown hovereffect">
-											  <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											  <a class="dropdown-toggle btn btn-light" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 											    {{ Auth::user()->name }}
 											  </a>
 
@@ -127,6 +127,30 @@
 												<span class=""><svg aria-hidden="true" style="color: #fff;height: 20px;width: 20px;" focusable="false" data-prefix="far" data-icon="home" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-home fa-w-18 fa-5x"><path fill="currentColor" d="M570.24 247.41L512 199.52V104a8 8 0 0 0-8-8h-32a8 8 0 0 0-7.95 7.88v56.22L323.87 45a56.06 56.06 0 0 0-71.74 0L5.76 247.41a16 16 0 0 0-2 22.54L14 282.25a16 16 0 0 0 22.53 2L64 261.69V448a32.09 32.09 0 0 0 32 32h128a32.09 32.09 0 0 0 32-32V344h64v104a32.09 32.09 0 0 0 32 32h128a32.07 32.07 0 0 0 32-31.76V261.67l27.53 22.62a16 16 0 0 0 22.53-2L572.29 270a16 16 0 0 0-2.05-22.59zM463.85 432H368V328a32.09 32.09 0 0 0-32-32h-96a32.09 32.09 0 0 0-32 32v104h-96V222.27L288 77.65l176 144.56z" class=""></path></svg></span>
 											</a>
 										</div>
+									</li>
+									<li class="root root-3">
+									    <div class="root-item no-description">
+								            <div class="title title_font">
+								                <span class="">Products</span>
+								                <span class="icon-has-sub fa fa-angle-down"></span>
+								            </div>
+									    </div>
+									    <ul class="menu-items col-md-3 col-xs-3">
+									        <li style="display: block;width: 100%;padding: 10px;">
+									            <div class="title title_font">
+									                <a href="{{ url('brand') }}">
+														By Brand Name
+													</a>
+									            </div>
+									        </li>
+									        <li style="display: block;width: 100%;padding: 10px;">
+									            <div class="title title_font">
+									                <a href="{{ url('generic') }}">
+														By Generic Name
+													</a>
+									            </div>
+									        </li>
+									    </ul>
 									</li>
 									@forelse($categories as $key => $category)
 									<?php
@@ -171,36 +195,17 @@
 									@empty
 			                         -
 			                        @endforelse
-			                       	<li class="root root-3">
+			                        <li class="root root-3">
 									    <div class="root-item no-description">
 								            <div class="title title_font">
-								                <span class="">Pages</span>
+								                <span class="text-white">
+													<a class="text-white" href="{{ url('contacus') }}">
+														Contact Us
+													</a>
+								                </span>
 								                <span class="icon-has-sub fa fa-angle-down"></span>
 								            </div>
 									    </div>
-									    <ul class="menu-items col-md-3 col-xs-3">
-									        <li style="display: block;width: 100%;padding: 10px;">
-									            <div class="title title_font">
-									                <a href="{{ url('brand') }}">
-														By Brand Name
-													</a>
-									            </div>
-									        </li>
-									        <li style="display: block;width: 100%;padding: 10px;">
-									            <div class="title title_font">
-									                <a href="{{ url('generic') }}">
-														By Generic Name
-													</a>
-									            </div>
-									        </li>
-									        <li style="display: block;width: 100%;padding: 10px;">
-									            <div class="title title_font">
-									                <a href="{{ url('contacus') }}">
-														Contact Us
-													</a>
-									            </div>
-									        </li>
-									    </ul>
 									</li>
 								</ul>
 							</nav>
